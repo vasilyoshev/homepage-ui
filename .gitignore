@@ -25,3 +25,5 @@ yarn-error.log*
 .eslintcache
 hosting.*.cache
 firebase-debug.log
+
+/src/react-app-env.d.ts
