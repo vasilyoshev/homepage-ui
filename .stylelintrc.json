@@ -1,0 +1,12 @@
+{
+    "extends": [
+        "stylelint-config-sass-guidelines",
+        "stylelint-config-recess-order"
+    ],
+    "plugins": [
+        "stylelint-scss"
+    ],
+    "rules": {
+        "order/properties-alphabetical-order": null
+    }
+}
