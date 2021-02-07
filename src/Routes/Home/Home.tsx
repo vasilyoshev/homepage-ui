@@ -1,6 +1,13 @@
+import React from 'react';
+import { AddWidgetTooltip } from 'components';
+import { CalendarWidget } from 'widgets';
 import './Home.scss';
-import { CalendarWidget } from 'widgets/CalendarWidget';
 
 export const Home: React.FC = () => {
-  return <CalendarWidget />;
+  return (
+    <>
+      <AddWidgetTooltip />
+      <CalendarWidget />
+    </>
+  );
 };
