@@ -127,7 +127,7 @@ exports[`App renders successfully 1`] = `
               <h4
                 class="MuiTypography-root MuiPickersToolbarText-toolbarTxt MuiPickersToolbarText-toolbarBtnSelected MuiTypography-h4 MuiTypography-alignCenter"
               >
-                Sun, Feb 7
+                Fri, Jan 1
               </h4>
             </span>
             <span
@@ -175,7 +175,7 @@ exports[`App renders successfully 1`] = `
                 <p
                   class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter"
                 >
-                  February 2021
+                  January 2021
                 </p>
               </div>
               <button
@@ -267,6 +267,94 @@ exports[`App renders successfully 1`] = `
                       <p
                         class="MuiTypography-root MuiTypography-body2 MuiTypography-colorInherit"
                       >
+                        27
+                      </p>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+                <div
+                  role="presentation"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day MuiPickersDay-hidden"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-colorInherit"
+                      >
+                        28
+                      </p>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+                <div
+                  role="presentation"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day MuiPickersDay-hidden"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-colorInherit"
+                      >
+                        29
+                      </p>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+                <div
+                  role="presentation"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day MuiPickersDay-hidden"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-colorInherit"
+                      >
+                        30
+                      </p>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+                <div
+                  role="presentation"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day MuiPickersDay-hidden"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-colorInherit"
+                      >
                         31
                       </p>
                     </span>
@@ -279,7 +367,7 @@ exports[`App renders successfully 1`] = `
                   role="presentation"
                 >
                   <button
-                    class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day"
+                    class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day MuiPickersDay-current MuiPickersDay-daySelected"
                     tabindex="0"
                     type="button"
                   >
@@ -319,6 +407,10 @@ exports[`App renders successfully 1`] = `
                     />
                   </button>
                 </div>
+              </div>
+              <div
+                class="MuiPickersCalendar-week"
+              >
                 <div
                   role="presentation"
                 >
@@ -407,15 +499,11 @@ exports[`App renders successfully 1`] = `
                     />
                   </button>
                 </div>
-              </div>
-              <div
-                class="MuiPickersCalendar-week"
-              >
                 <div
                   role="presentation"
                 >
                   <button
-                    class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day MuiPickersDay-current MuiPickersDay-daySelected"
+                    class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day"
                     tabindex="0"
                     type="button"
                   >
@@ -477,6 +565,10 @@ exports[`App renders successfully 1`] = `
                     />
                   </button>
                 </div>
+              </div>
+              <div
+                class="MuiPickersCalendar-week"
+              >
                 <div
                   role="presentation"
                 >
@@ -565,10 +657,6 @@ exports[`App renders successfully 1`] = `
                     />
                   </button>
                 </div>
-              </div>
-              <div
-                class="MuiPickersCalendar-week"
-              >
                 <div
                   role="presentation"
                 >
@@ -635,6 +723,10 @@ exports[`App renders successfully 1`] = `
                     />
                   </button>
                 </div>
+              </div>
+              <div
+                class="MuiPickersCalendar-week"
+              >
                 <div
                   role="presentation"
                 >
@@ -723,10 +815,6 @@ exports[`App renders successfully 1`] = `
                     />
                   </button>
                 </div>
-              </div>
-              <div
-                class="MuiPickersCalendar-week"
-              >
                 <div
                   role="presentation"
                 >
@@ -793,6 +881,10 @@ exports[`App renders successfully 1`] = `
                     />
                   </button>
                 </div>
+              </div>
+              <div
+                class="MuiPickersCalendar-week"
+              >
                 <div
                   role="presentation"
                 >
@@ -881,6 +973,72 @@ exports[`App renders successfully 1`] = `
                     />
                   </button>
                 </div>
+                <div
+                  role="presentation"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-colorInherit"
+                      >
+                        28
+                      </p>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+                <div
+                  role="presentation"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-colorInherit"
+                      >
+                        29
+                      </p>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+                <div
+                  role="presentation"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-colorInherit"
+                      >
+                        30
+                      </p>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
               </div>
               <div
                 class="MuiPickersCalendar-week"
@@ -899,7 +1057,7 @@ exports[`App renders successfully 1`] = `
                       <p
                         class="MuiTypography-root MuiTypography-body2 MuiTypography-colorInherit"
                       >
-                        28
+                        31
                       </p>
                     </span>
                     <span
