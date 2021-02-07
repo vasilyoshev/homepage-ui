@@ -67,7 +67,7 @@ exports[`Home renders successfully 1`] = `
               <h4
                 class="MuiTypography-root MuiPickersToolbarText-toolbarTxt MuiPickersToolbarText-toolbarBtnSelected MuiTypography-h4 MuiTypography-alignCenter"
               >
-                Sun, Feb 7
+                Mon, Feb 8
               </h4>
             </span>
             <span
@@ -355,7 +355,7 @@ exports[`Home renders successfully 1`] = `
                   role="presentation"
                 >
                   <button
-                    class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day MuiPickersDay-current MuiPickersDay-daySelected"
+                    class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day"
                     tabindex="0"
                     type="button"
                   >
@@ -377,7 +377,7 @@ exports[`Home renders successfully 1`] = `
                   role="presentation"
                 >
                   <button
-                    class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day"
+                    class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day MuiPickersDay-current MuiPickersDay-daySelected"
                     tabindex="0"
                     type="button"
                   >
