@@ -31,6 +31,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:ci": "npm install && npm run lint && npm run lint:scss && npm run test && npm run build",
     "lint": "eslint .",
     "lint:scss": "stylelint src/**/*.scss --syntax scss",
     "lint:scss:fix": "stylelint --fix src/**/*.scss --syntax scss",
