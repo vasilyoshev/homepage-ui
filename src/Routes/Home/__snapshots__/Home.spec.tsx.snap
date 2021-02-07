@@ -2,6 +2,30 @@
 
 exports[`Home renders successfully 1`] = `
 <DocumentFragment>
+  <button
+    class="MuiButtonBase-root MuiFab-root add-widget-fab MuiFab-primary"
+    tabindex="0"
+    title="Add Widget"
+    type="button"
+  >
+    <span
+      class="MuiFab-label"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+        />
+      </svg>
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
   <div
     class="MuiPickersStaticWrapper-staticWrapperRoot"
   >
@@ -40,7 +64,7 @@ exports[`Home renders successfully 1`] = `
             <h4
               class="MuiTypography-root MuiPickersToolbarText-toolbarTxt MuiPickersToolbarText-toolbarBtnSelected MuiTypography-h4 MuiTypography-alignLeft"
             >
-              Sat, Feb 6
+              Sun, Feb 7
             </h4>
           </span>
           <span
@@ -302,7 +326,7 @@ exports[`Home renders successfully 1`] = `
                 role="presentation"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day MuiPickersDay-current MuiPickersDay-daySelected"
+                  class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day"
                   tabindex="0"
                   type="button"
                 >
@@ -328,7 +352,7 @@ exports[`Home renders successfully 1`] = `
                 role="presentation"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day"
+                  class="MuiButtonBase-root MuiIconButton-root MuiPickersDay-day MuiPickersDay-current MuiPickersDay-daySelected"
                   tabindex="0"
                   type="button"
                 >
