@@ -9,7 +9,6 @@ export const CalendarWidget: React.FC = () => {
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
       <div className='date-picker'>
         <DatePicker
-          orientation="portrait"
           variant="static"
           value={date}
           onChange={() => null}
@@ -18,6 +17,3 @@ export const CalendarWidget: React.FC = () => {
     </MuiPickersUtilsProvider>
   );
 };
-        
-        
-         
