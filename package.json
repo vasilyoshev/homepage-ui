@@ -65,6 +65,7 @@
     "eslint": "^7.19.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "mockdate": "^3.0.2",
     "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.3.0",
     "stylelint": "^13.9.0",
