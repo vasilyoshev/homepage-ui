@@ -27,7 +27,7 @@ exports[`Home renders successfully 1`] = `
     />
   </button>
   <div
-    class="to-do"
+    class="todo"
   >
     <ul>
       <li>
