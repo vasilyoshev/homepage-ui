@@ -87,7 +87,7 @@ exports[`App renders successfully 1`] = `
     />
   </button>
   <div
-    class="ToDo"
+    class="to-do"
   >
     <ul>
       <li>

@@ -1,1 +1,1 @@
-export * from './CalendarWidget';
+export * from './CalendarWidget/CalendarWidget';
