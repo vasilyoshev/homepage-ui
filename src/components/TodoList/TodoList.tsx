@@ -4,7 +4,7 @@ type TodoItemProps = {
     items: Array<{id: string, text: string}>;
 }
 
-const TodoList: React.FC<TodoItemProps> = ({ items }) => {
+export const TodoList: React.FC<TodoItemProps> = ({ items }) => {
   return <ul>
     {items.map(todoItem => (
       <li key={todoItem.id}>{todoItem.text}</li>
@@ -12,4 +12,4 @@ const TodoList: React.FC<TodoItemProps> = ({ items }) => {
   </ul>;
 };
 
-export default TodoList;
+

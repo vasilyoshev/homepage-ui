@@ -1,11 +1,10 @@
 import React from 'react';
-import TodoList from './TodoList';
+import { TodoList } from 'components';
 
-const TodoWidget: React.FC = () => {
+export const TodoWidget: React.FC = () => {
   const todos = [{id: '1', text: 'Feed the cat'}];
   return <div className='todo'>
     <TodoList items={todos} />
   </div>;
 };
 
-export default TodoWidget;
