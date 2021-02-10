@@ -86,9 +86,7 @@ exports[`App renders successfully 1`] = `
       class="MuiTouchRipple-root"
     />
   </button>
-  <div
-    class="todo"
-  >
+  <div>
     <ul>
       <li>
         Feed the cat
