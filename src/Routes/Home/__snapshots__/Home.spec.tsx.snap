@@ -26,12 +26,10 @@ exports[`Home renders successfully 1`] = `
       class="MuiTouchRipple-root"
     />
   </button>
-  <div>
-    <ul>
-      <li>
-        Feed the cat
-      </li>
-    </ul>
-  </div>
+  <ul>
+    <li>
+      Feed the cat
+    </li>
+  </ul>
 </DocumentFragment>
 `;
