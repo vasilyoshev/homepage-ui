@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AddTodoForm, TodoList } from 'widgets';
-import { AddTodo, Todo, ToggleComplete } from 'types';
+import { AddTodo, Todo, ToggleComplete } from 'interfaces';
 
 export const TodoWidget: React.FC = () => {
   

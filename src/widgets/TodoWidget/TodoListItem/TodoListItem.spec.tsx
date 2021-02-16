@@ -1,4 +1,4 @@
-import { Todo } from 'types';
+import { Todo } from 'interfaces';
 import { render } from 'utils';
 import { TodoListItem } from './TodoListItem';
 

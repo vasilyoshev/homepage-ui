@@ -100,7 +100,9 @@ exports[`App renders successfully 1`] = `
         </label>
       </li>
       <li>
-        <label>
+        <label
+          class=""
+        >
           <input
             type="checkbox"
           />

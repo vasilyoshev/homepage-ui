@@ -3,7 +3,9 @@
 exports[`TodoListItem renders successfully 1`] = `
 <DocumentFragment>
   <li>
-    <label>
+    <label
+      class=""
+    >
       <input
         type="checkbox"
       />
