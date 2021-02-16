@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoWidget renders successfully 1`] = `
+<DocumentFragment>
+  <ul>
+    <li>
+      Feed the cat
+    </li>
+  </ul>
+</DocumentFragment>
+`;
