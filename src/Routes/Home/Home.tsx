@@ -1,13 +1,19 @@
 import React from 'react';
-import { AddWidgetTooltip } from 'components';
-import { TodoWidget } from 'widgets';
+import { useSelector } from 'react-redux';
+import { AddWidgetFab } from 'components';
+import { CalendarWidget, TodoWidget } from 'widgets';
+import { selectIsCalendarWidgetActive, selectIsTodoWidgetActive } from 'slices';
 import './Home.scss';
 
 export const Home: React.FC = () => {
+  const isCalendarWidgetActive = useSelector(selectIsCalendarWidgetActive);
+  const isTodoWidgetActive = useSelector(selectIsTodoWidgetActive);
+
   return (
     <>
-      <AddWidgetTooltip />
-      <TodoWidget />
+      <AddWidgetFab />
+      {isCalendarWidgetActive && <CalendarWidget />}
+      {isTodoWidgetActive && <TodoWidget />}
     </>
   );
 };

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Fab, Tooltip } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
-import './AddWidgetTooltip.scss';
-import { AddWidgetsDialog } from 'components';
+import './AddWidgetFab.scss';
+import { ManageWidgetsDialog } from 'components';
 
-export const AddWidgetTooltip: React.FC = () => {
+export const AddWidgetFab: React.FC = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const openDialog = () => {
@@ -21,7 +21,7 @@ export const AddWidgetTooltip: React.FC = () => {
           <AddIcon />
         </Fab>
       </Tooltip>
-      <AddWidgetsDialog isOpen={isDialogOpen} onClose={closeDialog} />
+      <ManageWidgetsDialog isOpen={isDialogOpen} onClose={closeDialog} />
     </>
   );
 };

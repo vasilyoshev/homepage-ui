@@ -1,0 +1,33 @@
+.add-widgets-dialog-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dialog-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.widget-preview-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+
+.widget-icon {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.add-widgets-dialog-paper {
+  width: 600px;
+}
+
+.add-widgets-action-area-root {
+  display: flex !important;
+  height: 100%;
+}

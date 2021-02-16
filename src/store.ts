@@ -1,9 +1,10 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import { loadingSlice } from 'slices';
+import { loadingSlice, widgetsSlice } from 'slices';
 
 const store = configureStore({
   reducer: {
     loading: loadingSlice.reducer,
+    widgets: widgetsSlice.reducer,
   },
   middleware: [...getDefaultMiddleware()],
 });
