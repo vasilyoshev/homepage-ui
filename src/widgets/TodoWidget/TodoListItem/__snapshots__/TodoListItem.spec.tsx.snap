@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoListItem renders successfully 1`] = `
+<DocumentFragment>
+  <li>
+    <label>
+      <input
+        type="checkbox"
+      />
+    </label>
+  </li>
+</DocumentFragment>
+`;

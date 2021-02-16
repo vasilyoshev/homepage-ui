@@ -2,10 +2,39 @@
 
 exports[`TodoWidget renders successfully 1`] = `
 <DocumentFragment>
-  <ul>
-    <li>
-      Feed the cat
-    </li>
-  </ul>
+  <div>
+    <ul>
+      <li>
+        <label
+          class="complete"
+        >
+          <input
+            checked=""
+            type="checkbox"
+          />
+          Walk the dog
+        </label>
+      </li>
+      <li>
+        <label>
+          <input
+            type="checkbox"
+          />
+          Make app
+        </label>
+      </li>
+    </ul>
+    <form>
+      <input
+        type="text"
+        value=""
+      />
+      <button
+        type="submit"
+      >
+        Add Todo
+      </button>
+    </form>
+  </div>
 </DocumentFragment>
 `;

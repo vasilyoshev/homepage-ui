@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddTodoForm renders successfully 1`] = `
+<DocumentFragment>
+  <form>
+    <input
+      type="text"
+      value=""
+    />
+    <button
+      type="submit"
+    >
+      Add Todo
+    </button>
+  </form>
+</DocumentFragment>
+`;
