@@ -5,8 +5,10 @@ import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
+// TODO extract mocks to separate files, e.g. widgetsMock.js
 const mockState = {
   loading: {},
+  widgets: { widgetsProps: [] },
 };
 const createMockStore = configureStore([thunk]);
 const store = createMockStore(mockState);
@@ -18,10 +20,8 @@ const Providers = ({ children }: any) => (
   </Provider>
 );
 
-const customRender = (
-  ui: React.ReactElement,
-  options?: RenderOptions
-): RenderResult => render(ui, { wrapper: Providers, ...options });
+const customRender = (ui: React.ReactElement, options?: RenderOptions): RenderResult =>
+  render(ui, { wrapper: Providers, ...options });
 
 export * from '@testing-library/react';
 
