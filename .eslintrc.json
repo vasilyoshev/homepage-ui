@@ -29,7 +29,9 @@
     "semi": ["error", "always"],
     "eol-last": ["error", "always"],
     "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "arrow-parens": ["error", "always"],
+    "comma-dangle": ["error", "always-multiline"]
   },
   "ignorePatterns": ["public/**/*", "build/**/*"]
 }

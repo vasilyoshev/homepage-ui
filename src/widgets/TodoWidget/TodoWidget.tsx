@@ -3,7 +3,6 @@ import { AddTodoForm, TodoList } from 'widgets';
 import { Todo } from 'interfaces';
 
 export const TodoWidget: React.FC = () => {
-  
   const initialTodos: Array<Todo> = [
     {
       text: 'Walk the dog',
