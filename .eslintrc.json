@@ -31,7 +31,8 @@
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "arrow-parens": ["error", "always"],
-    "comma-dangle": ["error", "always-multiline"]
+    "comma-dangle": ["error", "always-multiline"],
+    "no-multiple-empty-lines": ["error", { "max": 0 }]
   },
   "ignorePatterns": ["public/**/*", "build/**/*"]
 }
