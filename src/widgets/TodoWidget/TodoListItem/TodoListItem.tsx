@@ -1,9 +1,10 @@
 import { TodoListItemProps } from 'interfaces';
 import React from 'react';
+import './TodoListItem.scss';
 
 export const TodoListItem: React.FC<TodoListItemProps> = ({
   todo,
-  toggleComplete
+  toggleComplete,
 }) => {
   return (
     <li>
