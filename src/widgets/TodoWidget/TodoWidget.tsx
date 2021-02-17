@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AddTodoForm, TodoList } from 'widgets';
-import { AddTodo, Todo, ToggleComplete } from 'interfaces';
+import { Todo } from 'interfaces';
 
 export const TodoWidget: React.FC = () => {
   
@@ -17,7 +17,7 @@ export const TodoWidget: React.FC = () => {
 
   const [todos, setTodos] = useState<Array<Todo>>(initialTodos);
 
-  const toggleComplete: ToggleComplete = selectedTodo => {
+  const toggleComplete = (selectedTodo: Todo): void => {
     const updatedTodos = todos.map(todo => {
       if (todo === selectedTodo) {
         return { ...todo, complete: !todo.complete };
@@ -27,7 +27,7 @@ export const TodoWidget: React.FC = () => {
     setTodos(updatedTodos);
   };
 
-  const addTodo: AddTodo = newTodo => {
+  const addTodo = (newTodo: string): void => {
     newTodo.trim() !== '' &&
       setTodos([...todos, { text: newTodo, complete: false }]);
   };
