@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import { AddTodo } from 'interfaces';
+import { AddNewTodo } from 'interfaces';
 
-export const AddTodoForm: React.FC<AddTodo> = ({ addTodo }) => {
+export const AddTodoForm: React.FC<AddNewTodo> = ({ addTodo }) => {
   const [newTodo, setNewTodo] = useState<string>('');
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -28,6 +28,3 @@ export const AddTodoForm: React.FC<AddTodo> = ({ addTodo }) => {
     </form>
   );
 };
-
-
-

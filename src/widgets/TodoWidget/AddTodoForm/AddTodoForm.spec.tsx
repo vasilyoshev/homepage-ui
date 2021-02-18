@@ -6,6 +6,4 @@ describe('AddTodoForm', () => {
     const { asFragment } = render(<AddTodoForm addTodo={(str: string) => {str;}} />);
     expect(asFragment()).toMatchSnapshot();
   });
-}); 
-  
-
+});
