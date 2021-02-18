@@ -7,9 +7,3 @@ describe('TodoList', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 });
-
-    
-
-  
-  
-
