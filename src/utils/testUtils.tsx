@@ -20,7 +20,7 @@ const Providers = ({ children }: any) => (
 
 const customRender = (
   ui: React.ReactElement,
-  options?: RenderOptions
+  options?: RenderOptions,
 ): RenderResult => render(ui, { wrapper: Providers, ...options });
 
 export * from '@testing-library/react';

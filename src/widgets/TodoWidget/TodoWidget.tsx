@@ -1,23 +1,20 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { AddTodoForm, TodoList } from 'widgets';
 import { Todo } from 'interfaces';
-
 export const TodoWidget: React.FC = () => {
   const initialTodos: Array<Todo> = [
     {
       text: 'Walk the dog',
-      complete: true
+      complete: true,
     },
     {
       text: 'Make app',
-      complete: false
-    }
+      complete: false,
+    },
   ];
-
   const [todos, setTodos] = useState<Array<Todo>>(initialTodos);
-
   const toggleComplete = (selectedTodo: Todo): void => {
-    const updatedTodos = todos.map(todo => {
+    const updatedTodos = todos.map((todo) => {
       if (todo === selectedTodo) {
         return { ...todo, complete: !todo.complete };
       }
@@ -25,16 +22,14 @@ export const TodoWidget: React.FC = () => {
     });
     setTodos(updatedTodos);
   };
-
   const addTodo = (newTodo: string): void => {
     newTodo.trim() !== '' &&
       setTodos([...todos, { text: newTodo, complete: false }]);
   };
-
   return (
-    <div>
+    <Fragment>
       <TodoList todos={todos} toggleComplete={toggleComplete} />
       <AddTodoForm addTodo={addTodo} />
-    </div>
+    </Fragment>
   );
 };

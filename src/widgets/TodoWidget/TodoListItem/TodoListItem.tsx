@@ -1,7 +1,6 @@
 import { TodoListItemProps } from 'interfaces';
 import React from 'react';
 import './TodoListItem.scss';
-
 export const TodoListItem: React.FC<TodoListItemProps> = ({
   todo,
   toggleComplete,
@@ -19,6 +18,3 @@ export const TodoListItem: React.FC<TodoListItemProps> = ({
     </li>
   );
 };
-
-
-
