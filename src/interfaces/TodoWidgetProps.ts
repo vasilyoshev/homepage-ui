@@ -13,6 +13,6 @@ export interface TodoListItemProps {
   toggleComplete: (selectedTodo: Todo) => void;
 }
   
-export interface TodoListAddNewTodo {
+export interface TodoListAddNewTodoProps {
   addTodo: (newTodo: string) => void;
 }
