@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { AddTodoForm, TodoList } from 'widgets';
 import { Todo } from 'interfaces';
 export const TodoWidget: React.FC = () => {
