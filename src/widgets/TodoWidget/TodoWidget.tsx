@@ -27,9 +27,9 @@ export const TodoWidget: React.FC = () => {
       setTodos([...todos, { text: newTodo, complete: false }]);
   };
   return (
-    <Fragment>
+    <>
       <TodoList todos={todos} toggleComplete={toggleComplete} />
       <AddTodoForm addTodo={addTodo} />
-    </Fragment>
+    </>
   );
 };
