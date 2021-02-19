@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import { TodoListAddNewTodoProps } from 'interfaces';
+import { AddTodoFormProps } from 'interfaces';
 
-export const AddTodoForm: React.FC<TodoListAddNewTodoProps> = ({ addTodo }) => {
+export const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
   const [newTodo, setNewTodo] = useState<string>('');
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
