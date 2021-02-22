@@ -1,6 +1,7 @@
 import { TodoListItemProps } from 'interfaces';
 import React from 'react';
-import './TodoListItem.scss';
+import '../TodoListItem/TodoListItem.scss';
+
 export const TodoListItem: React.FC<TodoListItemProps> = ({
   todo,
   toggleComplete,

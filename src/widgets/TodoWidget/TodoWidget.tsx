@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { AddTodoForm, TodoList } from 'widgets';
+import { AddTodoForm, TodoList } from 'components';
 import { Todo } from 'interfaces';
+
 export const TodoWidget: React.FC = () => {
   const initialTodos: Array<Todo> = [
     {

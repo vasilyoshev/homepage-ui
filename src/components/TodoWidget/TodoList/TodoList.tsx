@@ -1,6 +1,6 @@
 import React from 'react';
 import { TodoListProps } from 'interfaces';
-import { TodoListItem } from 'widgets';
+import { TodoListItem } from 'components';
 
 export const TodoList: React.FC<TodoListProps> = ({
   todos,
