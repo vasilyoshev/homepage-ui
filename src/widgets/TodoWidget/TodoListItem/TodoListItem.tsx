@@ -1,13 +1,13 @@
 import { TodoListItemProps } from 'interfaces';
 import React from 'react';
-import todoListItem  from 'stylesheets/widgets/TodoListItem.module.scss';
+import './TodoListItem.scss';
 export const TodoListItem: React.FC<TodoListItemProps> = ({
   todo,
   toggleComplete,
 }) => {
   return (
     <li>
-      <label className={todo.complete ? todoListItem.complete : ''}>
+      <label className={todo.complete ? 'complete' : ''}>
         <input
           type="checkbox"
           onChange={() => toggleComplete(todo)}
