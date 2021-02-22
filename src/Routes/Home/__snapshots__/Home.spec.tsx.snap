@@ -26,39 +26,5 @@ exports[`Home renders successfully 1`] = `
       class="MuiTouchRipple-root"
     />
   </button>
-  <ul>
-    <li>
-      <label
-        class="complete"
-      >
-        <input
-          checked=""
-          type="checkbox"
-        />
-        Walk the dog
-      </label>
-    </li>
-    <li>
-      <label
-        class=""
-      >
-        <input
-          type="checkbox"
-        />
-        Make app
-      </label>
-    </li>
-  </ul>
-  <form>
-    <input
-      type="text"
-      value=""
-    />
-    <button
-      type="submit"
-    >
-      Add Todo
-    </button>
-  </form>
 </DocumentFragment>
 `;
