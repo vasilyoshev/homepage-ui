@@ -3,7 +3,7 @@
 exports[`CalendarWidget renders successfully 1`] = `
 <DocumentFragment>
   <div
-    class=".date-picker"
+    class="date-picker"
   >
     <div
       class="MuiPickersStaticWrapper-staticWrapperRoot"
