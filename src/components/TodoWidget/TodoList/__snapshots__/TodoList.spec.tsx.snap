@@ -2,10 +2,6 @@
 
 exports[`TodoList renders successfully 1`] = `
 <DocumentFragment>
-  <ul>
-    <li>
-      Feed the cat
-    </li>
-  </ul>
+  <ul />
 </DocumentFragment>
 `;

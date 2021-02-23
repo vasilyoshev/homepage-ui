@@ -3,10 +3,7 @@ import { TodoList } from './TodoList';
 
 describe('TodoList', () => {
   it('renders successfully', () => {
-    const todos = [{id: '1', text: 'Feed the cat'}];
-    const { asFragment } = render(<TodoList items={todos} />);
-  
+    const { asFragment } = render(<TodoList todos={[]} toggleComplete={jest.fn()}/>);
     expect(asFragment()).toMatchSnapshot();
   });
 });
-
