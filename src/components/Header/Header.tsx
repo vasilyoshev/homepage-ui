@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { NavLink } from 'react-router-dom';
-import './Header.scss';
+import './Header.module.scss';
 
 export const Header: React.FC = () => {
   return (

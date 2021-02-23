@@ -5,7 +5,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import FormatListNumberedIcon from '@material-ui/icons/FormatListNumbered';
 import { selectIsCalendarWidgetActive, selectIsTodoWidgetActive, toggleWidget } from 'slices';
-import './ManageWidgetsDialog.scss';
+import './ManageWidgetsDialog.module.scss';
 
 type ManageWidgetsDialogType = {
   isOpen: boolean;

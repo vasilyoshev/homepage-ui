@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home, About } from 'Routes';
 import { Header } from 'components';
 import { handleLoadingState } from 'utils';
-import './App.scss';
+import './App.module.scss';
 
 export const App: React.FC = () => {
   useEffect(() => {
