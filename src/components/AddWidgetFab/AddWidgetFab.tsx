@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Fab, Tooltip } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
-import './AddWidgetFab.module.scss';
+import styles from './AddWidgetFab.module.scss';
 import { ManageWidgetsDialog } from 'components';
 
 export const AddWidgetFab: React.FC = () => {
@@ -17,7 +17,7 @@ export const AddWidgetFab: React.FC = () => {
   return (
     <>
       <Tooltip title="Add Widget">
-        <Fab color="primary" className="add-widget-fab" onClick={openDialog}>
+        <Fab color="primary" className={styles['add-widget-fab']} onClick={openDialog}>
           <AddIcon />
         </Fab>
       </Tooltip>

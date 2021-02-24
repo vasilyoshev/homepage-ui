@@ -5,7 +5,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import FormatListNumberedIcon from '@material-ui/icons/FormatListNumbered';
 import { selectIsCalendarWidgetActive, selectIsTodoWidgetActive, toggleWidget } from 'slices';
-import './ManageWidgetsDialog.module.scss';
+import styles from './ManageWidgetsDialog.module.scss';
 
 type ManageWidgetsDialogType = {
   isOpen: boolean;
@@ -22,22 +22,22 @@ export const ManageWidgetsDialog: React.FC<ManageWidgetsDialogType> = ({ isOpen,
   };
 
   return (
-    <Dialog onClose={onClose} open={isOpen} classes={{ paper: 'add-widgets-dialog-paper' }}>
-      <DialogTitle disableTypography className="add-widgets-dialog-title">
+    <Dialog onClose={onClose} open={isOpen} classes={{ paper: styles['add-widgets-dialog-paper'] }}>
+      <DialogTitle disableTypography className={styles['add-widgets-dialog-title']}>
         <Typography variant="h5">Manage Widgets</Typography>
         <IconButton onClick={onClose}>
           <CloseIcon />
         </IconButton>
       </DialogTitle>
-      <DialogContent className="dialog-content">
-        <Card className="widget-preview-card" onClick={() => toggleWidgetByName('calendar')}>
-          <CardActionArea classes={{ root: 'add-widgets-action-area-root' }}>
-            <CalendarTodayIcon color={isCalendarWidgetActive ? 'primary' : 'secondary'} className="widget-icon" />
+      <DialogContent className={styles['dialog-content']}>
+        <Card className={styles['widget-preview-card']} onClick={() => toggleWidgetByName('calendar')}>
+          <CardActionArea classes={{ root: styles['add-widgets-action-area-root'] }}>
+            <CalendarTodayIcon color={isCalendarWidgetActive ? 'primary' : 'secondary'} className={styles['widget-icon']} />
           </CardActionArea>
         </Card>
-        <Card className="widget-preview-card" onClick={() => toggleWidgetByName('todo')}>
-          <CardActionArea classes={{ root: 'add-widgets-action-area-root' }}>
-            <FormatListNumberedIcon color={isTodoWidgetActive ? 'primary' : 'secondary'} className="widget-icon" />
+        <Card className={styles['widget-preview-card']} onClick={() => toggleWidgetByName('todo')}>
+          <CardActionArea classes={{ root: styles['add-widgets-action-area-root'] }}>
+            <FormatListNumberedIcon color={isTodoWidgetActive ? 'primary' : 'secondary'} className={styles['widget-icon']} />
           </CardActionArea>
         </Card>
       </DialogContent>
