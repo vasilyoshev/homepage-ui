@@ -7,6 +7,7 @@
         "stylelint-scss"
     ],
     "rules": {
-        "order/properties-alphabetical-order": null
+        "order/properties-alphabetical-order": null,
+        "selector-class-pattern": null
     }
 }
