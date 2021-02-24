@@ -63,7 +63,7 @@ exports[`App renders successfully 1`] = `
     </div>
   </header>
   <button
-    class="MuiButtonBase-root MuiFab-root add-widget-fab MuiFab-primary"
+    class="MuiButtonBase-root MuiFab-root addWidgetFab MuiFab-primary"
     tabindex="0"
     title="Add Widget"
     type="button"

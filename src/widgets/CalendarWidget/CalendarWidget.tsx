@@ -7,7 +7,7 @@ export const CalendarWidget: React.FC = () => {
   const date = new Date();
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
-      <div className={styles['date-picker']}>
+      <div className={styles.datePicker}>
         <DatePicker
           variant="static"
           value={date}

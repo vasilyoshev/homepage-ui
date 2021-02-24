@@ -17,7 +17,7 @@ export const AddWidgetFab: React.FC = () => {
   return (
     <>
       <Tooltip title="Add Widget">
-        <Fab color="primary" className={styles['add-widget-fab']} onClick={openDialog}>
+        <Fab color="primary" className={styles.addWidgetFab} onClick={openDialog}>
           <AddIcon />
         </Fab>
       </Tooltip>

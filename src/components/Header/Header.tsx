@@ -16,7 +16,7 @@ export const Header: React.FC = () => {
         <IconButton edge="start" color="inherit">
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6" className={styles['title']}>
+        <Typography variant="h6" className={styles.title}>
           <NavLink to="/" activeClassName="selected">
             Homepage Widgets
           </NavLink>

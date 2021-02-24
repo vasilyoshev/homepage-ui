@@ -22,22 +22,22 @@ export const ManageWidgetsDialog: React.FC<ManageWidgetsDialogType> = ({ isOpen,
   };
 
   return (
-    <Dialog onClose={onClose} open={isOpen} classes={{ paper: styles['add-widgets-dialog-paper'] }}>
-      <DialogTitle disableTypography className={styles['add-widgets-dialog-title']}>
+    <Dialog onClose={onClose} open={isOpen} classes={{ paper: styles.addWidgetsDialogPaper }}>
+      <DialogTitle disableTypography className={styles.addWidgetsDialogTitle}>
         <Typography variant="h5">Manage Widgets</Typography>
         <IconButton onClick={onClose}>
           <CloseIcon />
         </IconButton>
       </DialogTitle>
-      <DialogContent className={styles['dialog-content']}>
-        <Card className={styles['widget-preview-card']} onClick={() => toggleWidgetByName('calendar')}>
-          <CardActionArea classes={{ root: styles['add-widgets-action-area-root'] }}>
-            <CalendarTodayIcon color={isCalendarWidgetActive ? 'primary' : 'secondary'} className={styles['widget-icon']} />
+      <DialogContent className={styles.dialogContent}>
+        <Card className={styles.widgetPreviewCard} onClick={() => toggleWidgetByName('calendar')}>
+          <CardActionArea classes={{ root: styles.addWidgetsActionAreaRoot }}>
+            <CalendarTodayIcon color={isCalendarWidgetActive ? 'primary' : 'secondary'} className={styles.widgetIcon} />
           </CardActionArea>
         </Card>
-        <Card className={styles['widget-preview-card']} onClick={() => toggleWidgetByName('todo')}>
-          <CardActionArea classes={{ root: styles['add-widgets-action-area-root'] }}>
-            <FormatListNumberedIcon color={isTodoWidgetActive ? 'primary' : 'secondary'} className={styles['widget-icon']} />
+        <Card className={styles.widgetPreviewCard} onClick={() => toggleWidgetByName('todo')}>
+          <CardActionArea classes={{ root: styles.addWidgetsActionAreaRoot }}>
+            <FormatListNumberedIcon color={isTodoWidgetActive ? 'primary' : 'secondary'} className={styles.widgetIcon} />
           </CardActionArea>
         </Card>
       </DialogContent>
