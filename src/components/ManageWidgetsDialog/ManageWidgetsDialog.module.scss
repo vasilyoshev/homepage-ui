@@ -1,15 +1,15 @@
-.add-widgets-dialog-title {
+.addWidgetsDialogTitle {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.dialog-content {
+.dialogContent {
   display: flex;
   flex-wrap: wrap;
 }
 
-.widget-preview-card {
+.widgetPreviewCard {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,16 +18,16 @@
   margin: 5px;
 }
 
-.widget-icon {
+.widgetIcon {
   width: 50px !important;
   height: 50px !important;
 }
 
-.add-widgets-dialog-paper {
+.addWidgetsDialogPaper {
   width: 600px;
 }
 
-.add-widgets-action-area-root {
+.addWidgetsActionAreaRoot {
   display: flex !important;
   height: 100%;
 }

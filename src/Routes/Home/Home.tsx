@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import { AddWidgetFab } from 'components';
 import { CalendarWidget, TodoWidget } from 'widgets';
 import { selectIsCalendarWidgetActive, selectIsTodoWidgetActive } from 'slices';
-import './Home.scss';
 
 export const Home: React.FC = () => {
   const isCalendarWidgetActive = useSelector(selectIsCalendarWidgetActive);

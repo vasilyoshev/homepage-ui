@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { NavLink } from 'react-router-dom';
-import './Header.scss';
+import styles from './Header.module.scss';
 
 export const Header: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ export const Header: React.FC = () => {
         <IconButton edge="start" color="inherit">
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6" className="title">
+        <Typography variant="h6" className={styles.title}>
           <NavLink to="/" activeClassName="selected">
             Homepage Widgets
           </NavLink>
