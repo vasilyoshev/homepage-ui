@@ -2,16 +2,51 @@
 
 exports[`AddTodoForm renders successfully 1`] = `
 <DocumentFragment>
-  <form>
-    <input
-      type="text"
-      value=""
-    />
+  <div
+    class="MuiFormGroup-root"
+  >
+    <div
+      class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+    >
+      <div
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+      >
+        <input
+          aria-invalid="false"
+          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+          type="text"
+          value=""
+        />
+        <fieldset
+          aria-hidden="true"
+          class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+          style="padding-left: 8px;"
+        >
+          <legend
+            class="PrivateNotchedOutline-legend-2"
+            style="width: 0.01px;"
+          >
+            <span>
+              ​
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+    </div>
     <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+      tabindex="0"
       type="submit"
     >
-      Add Todo
+      <span
+        class="MuiButton-label"
+      >
+        Add Todo
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
     </button>
-  </form>
+  </div>
 </DocumentFragment>
 `;

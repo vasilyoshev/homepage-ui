@@ -2,6 +2,8 @@
 
 exports[`TodoList renders successfully 1`] = `
 <DocumentFragment>
-  <ul />
+  <ul
+    class="MuiList-root MuiList-padding"
+  />
 </DocumentFragment>
 `;

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { AddTodoForm, TodoList } from 'components';
 import { Todo } from 'interfaces';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import styles from './TodoWidget.module.scss';
 
 export const TodoWidget: React.FC = () => {
   const initialTodos: Array<Todo> = [
@@ -29,8 +32,12 @@ export const TodoWidget: React.FC = () => {
   };
   return (
     <>
-      <TodoList todos={todos} toggleComplete={toggleComplete} />
-      <AddTodoForm addTodo={addTodo} />
+      <Card className={styles.todoWidget}>
+        <CardContent>
+          <TodoList todos={todos} toggleComplete={toggleComplete} />
+          <AddTodoForm addTodo={addTodo} />
+        </CardContent>
+      </Card>
     </>
   );
 };
