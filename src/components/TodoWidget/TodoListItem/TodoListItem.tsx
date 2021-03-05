@@ -1,21 +1,28 @@
 import { TodoListItemProps } from 'interfaces';
 import React from 'react';
 import styles from './TodoListItem.module.scss';
+import Checkbox from '@material-ui/core/Checkbox';
+import InputLabel from '@material-ui/core/InputLabel';
+import Typography from '@material-ui/core/Typography';
 
 export const TodoListItem: React.FC<TodoListItemProps> = ({
   todo,
   toggleComplete,
 }) => {
   return (
-    <li>
-      <label className={todo.complete ? styles.complete : ''}>
-        <input
-          type="checkbox"
-          onChange={() => toggleComplete(todo)}
-          checked={todo.complete}
-        />
+    <InputLabel
+      onChange={() => toggleComplete(todo)}
+      className={todo.complete ? styles.complete : ''}
+    >
+      <Checkbox
+        color="primary"
+        checked={todo.complete}
+        edge="start"
+        disableRipple
+      />
+      <Typography className={styles.todoText} display="inline" color="primary">
         {todo.text}
-      </label>
-    </li>
+      </Typography>
+    </InputLabel>
   );
 };

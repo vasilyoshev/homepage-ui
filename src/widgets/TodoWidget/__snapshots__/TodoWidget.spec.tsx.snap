@@ -2,39 +2,132 @@
 
 exports[`TodoWidget renders successfully 1`] = `
 <DocumentFragment>
-  <ul>
-    <li>
-      <label
-        class="complete"
-      >
-        <input
-          checked=""
-          type="checkbox"
-        />
-        Walk the dog
-      </label>
-    </li>
-    <li>
-      <label
-        class=""
-      >
-        <input
-          type="checkbox"
-        />
-        Make app
-      </label>
-    </li>
-  </ul>
-  <form>
-    <input
-      type="text"
-      value=""
-    />
-    <button
-      type="submit"
+  <div
+    class="MuiPaper-root MuiCard-root todoWidget MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <div
+      class="MuiCardContent-root"
     >
-      Add Todo
-    </button>
-  </form>
+      <ul
+        class="MuiList-root MuiList-padding"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root complete MuiInputLabel-animated"
+        >
+          <span
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary MuiIconButton-edgeStart"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <input
+                checked=""
+                class="PrivateSwitchBase-input-4"
+                data-indeterminate="false"
+                type="checkbox"
+                value=""
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+            </span>
+          </span>
+          <p
+            class="MuiTypography-root todoText MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayInline"
+          >
+            Walk the dog
+          </p>
+        </label>
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated"
+        >
+          <span
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary MuiIconButton-edgeStart"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <input
+                class="PrivateSwitchBase-input-4"
+                data-indeterminate="false"
+                type="checkbox"
+                value=""
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                />
+              </svg>
+            </span>
+          </span>
+          <p
+            class="MuiTypography-root todoText MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayInline"
+          >
+            Make app
+          </p>
+        </label>
+      </ul>
+      <div
+        class="MuiFormGroup-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+              style="padding-left: 8px;"
+            >
+              <legend
+                class="PrivateNotchedOutline-legend-6"
+                style="width: 0.01px;"
+              >
+                <span>
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          tabindex="0"
+          type="submit"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Add Todo
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
 </DocumentFragment>
 `;
