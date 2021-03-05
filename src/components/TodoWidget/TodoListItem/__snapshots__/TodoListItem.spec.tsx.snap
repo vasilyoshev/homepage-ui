@@ -31,7 +31,7 @@ exports[`TodoListItem renders successfully 1`] = `
       </span>
     </span>
     <p
-      class="MuiTypography-root MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayInline"
+      class="MuiTypography-root todoText MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayInline"
     />
   </label>
 </DocumentFragment>

@@ -41,7 +41,7 @@ exports[`TodoWidget renders successfully 1`] = `
             </span>
           </span>
           <p
-            class="MuiTypography-root MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayInline"
+            class="MuiTypography-root todoText MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayInline"
           >
             Walk the dog
           </p>
@@ -75,7 +75,7 @@ exports[`TodoWidget renders successfully 1`] = `
             </span>
           </span>
           <p
-            class="MuiTypography-root MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayInline"
+            class="MuiTypography-root todoText MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayInline"
           >
             Make app
           </p>

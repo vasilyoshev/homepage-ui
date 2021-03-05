@@ -20,7 +20,7 @@ export const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
   return (
     <FormGroup>
       <TextField
-        
+        value={newTodo}
         color="primary"
         margin='normal'
         variant="outlined"

@@ -20,7 +20,7 @@ export const TodoListItem: React.FC<TodoListItemProps> = ({
         edge="start"
         disableRipple
       />
-      <Typography display="inline" color="primary">
+      <Typography className={styles.todoText} display="inline" color="primary">
         {todo.text}
       </Typography>
     </InputLabel>
