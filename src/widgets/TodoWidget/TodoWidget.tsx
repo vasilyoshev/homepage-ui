@@ -31,13 +31,11 @@ export const TodoWidget: React.FC = () => {
       setTodos([...todos, { text: newTodo, complete: false }]);
   };
   return (
-    <>
-      <Card className={styles.todoWidget}>
-        <CardContent>
-          <TodoList todos={todos} toggleComplete={toggleComplete} />
-          <AddTodoForm addTodo={addTodo} />
-        </CardContent>
-      </Card>
-    </>
+    <Card className={styles.todoWidget}>
+      <CardContent>
+        <TodoList todos={todos} toggleComplete={toggleComplete} />
+        <AddTodoForm addTodo={addTodo} />
+      </CardContent>
+    </Card>
   );
 };
