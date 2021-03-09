@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Coin renders successfully 1`] = `
+<DocumentFragment>
+  <div
+    class="coinContainer"
+  >
+    <div
+      class="coinRow"
+    >
+      <div
+        class="coin"
+      >
+        <img
+          alt="crypto"
+          src="str"
+        />
+        <h1>
+          str
+        </h1>
+        <p
+          class="coinSymbol"
+        >
+          str
+        </p>
+      </div>
+      <div
+        class="coinData"
+      >
+        <p
+          class="coinPrice"
+        >
+          $0
+        </p>
+        <p
+          class="coinVolume"
+        >
+          $0
+        </p>
+        <p
+          class="coinPercentGreen"
+        >
+          0.00%
+        </p>
+        <p
+          class="coinMarketcap"
+        >
+          Mtk Cap: $0
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
