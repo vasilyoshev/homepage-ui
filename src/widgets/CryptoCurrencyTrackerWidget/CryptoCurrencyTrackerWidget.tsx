@@ -1,11 +1,11 @@
-import React, {ChangeEvent, useState, useEffect} from 'react';
+import React, { ChangeEvent, useState, useEffect } from 'react';
 import axios from 'axios';
 import { Coin } from 'components';
-import { CryptoCurrencyTrackerRes } from 'interfaces';
-import styles from './CryptoCurrencyTracker.module.scss';
+import { CryptoCurrencyTrackerWidgetResProps } from 'interfaces';
+import styles from './CryptoCurrencyTrackerWidget.module.scss';
 
-export const CryptoCurrencyTracker: React.FC = () => {
-  const [coinsRes, setCoinsRes] = useState<Array<CryptoCurrencyTrackerRes>>([]);
+export const CryptoCurrencyTrackerWidget: React.FC = () => {
+  const [coinsRes, setCoinsRes] = useState<Array<CryptoCurrencyTrackerWidgetResProps>>([]);
   const [search, setSearch] = useState<string>('');
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export const CryptoCurrencyTracker: React.FC = () => {
     setSearch(e.target.value);
   };
 
-  const filteredCoins = coinsRes.filter((coin: CryptoCurrencyTrackerRes) => {
+  const filteredCoins = coinsRes.filter((coin: CryptoCurrencyTrackerWidgetResProps) => {
     return coin.name
       .toLowerCase()
       .includes(search.toLowerCase());
@@ -50,7 +50,6 @@ export const CryptoCurrencyTracker: React.FC = () => {
             marketcap={coin.market_cap}
             price={coin.current_price}
             priceChange={coin.price_change_percentage_24h}
-            volume={coin.total_volume}
           />
         );
       })}

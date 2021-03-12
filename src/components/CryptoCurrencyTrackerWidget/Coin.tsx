@@ -2,7 +2,7 @@ import React from 'react';
 import { CoinProps } from 'interfaces';
 import styles from './Coin.module.scss';
 
-export const Coin: React.FC<CoinProps> = ({ name, image, symbol, marketcap, price, priceChange, volume }) => {
+export const Coin: React.FC<CoinProps> = ({ name, image, symbol, marketcap, price, priceChange}) => {
   return (
     <div className={styles.coinContainer}>
       <div className={styles.coinRow}>
@@ -12,8 +12,7 @@ export const Coin: React.FC<CoinProps> = ({ name, image, symbol, marketcap, pric
           <p className={styles.coinSymbol}>{symbol}</p> 
         </div>
         <div className={styles.coinData}>
-          <p className={styles.coinPrice}>${price}</p> 
-          <p className={styles.coinVolume}>${volume.toLocaleString()}</p>
+          <p className={styles.coinPrice}>${price.toFixed(2)}</p>       
           {priceChange < 0 ? (
             <p className={styles.coinPercentRed}>{priceChange.toFixed(2)}%</p>
           ) : (

@@ -41,6 +41,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding-top: 14px;
   text-align: center;
 }
 
@@ -48,20 +49,16 @@
   width: 110px;
 }
 
-.coinVolume {
+.coinMarketcap {
   width: 200px;
 }
 
-.coinMarketcap {
-  width: 240px;
-}
-
 .coinPercentRed {
-  width: 80%;
+  width: 60%;
   color: #f00606;
 }
 
 .coinPercentGreen {
-  width: 80%;
+  width: 60%;
   color: #088a08;
 }

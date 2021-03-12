@@ -30,12 +30,7 @@ exports[`Coin renders successfully 1`] = `
         <p
           class="coinPrice"
         >
-          $0
-        </p>
-        <p
-          class="coinVolume"
-        >
-          $0
+          $0.00
         </p>
         <p
           class="coinPercentGreen"

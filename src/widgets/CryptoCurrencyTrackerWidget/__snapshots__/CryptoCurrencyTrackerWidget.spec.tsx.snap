@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CryptoCurrencyTracker renders successfully 1`] = `
+exports[`CryptoCurrencyTrackerWidget renders successfully 1`] = `
 <DocumentFragment>
   <div
     class="coinApp"
