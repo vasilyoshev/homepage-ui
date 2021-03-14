@@ -9,23 +9,24 @@ export const CryptoCurrencyTrackerWidget: React.FC = () => {
   const [search, setSearch] = useState<string>('');
 
   useEffect(() => {
+    function filterCoins(coinsRes: CryptoCurrencyTrackerWidgetResProps[]) {
+      return coinsRes.filter((coin) => {
+        return coin.name
+          .toLowerCase()
+          .includes(search.toLowerCase());
+      });
+    }
     axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=5&page=1&sparkline=false')
       .then((res) => {
-        setCoinsRes(res.data);
-        console.log(res.data);
+        setCoinsRes(filterCoins(res.data));        
       })
       .catch((err) => console.log(err));
-  },[]);
+
+  },[search]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
   };
-
-  const filteredCoins = coinsRes.filter((coin: CryptoCurrencyTrackerWidgetResProps) => {
-    return coin.name
-      .toLowerCase()
-      .includes(search.toLowerCase());
-  });
   
   return (
     <div className={styles.coinApp}>
@@ -40,7 +41,7 @@ export const CryptoCurrencyTrackerWidget: React.FC = () => {
           />
         </form>
       </div> 
-      {filteredCoins.map((coin) => {
+      {coinsRes.map((coin) => {
         return ( 
           <Coin
             key={coin.id}

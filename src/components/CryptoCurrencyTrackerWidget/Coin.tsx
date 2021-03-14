@@ -2,7 +2,7 @@ import React from 'react';
 import { CoinProps } from 'interfaces';
 import styles from './Coin.module.scss';
 
-export const Coin: React.FC<CoinProps> = ({ name, image, symbol, marketcap, price, priceChange}) => {
+export const Coin: React.FC<CoinProps> = ({ name, image, symbol, marketcap, price, priceChange }) => {
   return (
     <div className={styles.coinContainer}>
       <div className={styles.coinRow}>
