@@ -21,6 +21,62 @@ exports[`CryptoCurrencyTrackerWidget renders successfully 1`] = `
         />
       </form>
     </div>
+    <div
+      class="MuiPaper-root MuiTableContainer-root MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <table
+        aria-label="a dense table"
+        class="MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall"
+              scope="col"
+            >
+              Name
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall"
+              scope="col"
+            >
+              Logo
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall"
+              scope="col"
+            >
+              Symbol
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall"
+              scope="col"
+            >
+              Price
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall"
+              scope="col"
+            >
+              Price change in 24h
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall"
+              scope="col"
+            >
+              Market capitalization
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root"
+        />
+      </table>
+    </div>
   </div>
 </DocumentFragment>
 `;
