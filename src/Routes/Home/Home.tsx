@@ -13,7 +13,7 @@ export const Home: React.FC = () => {
       <AddWidgetFab />
       <CryptoCurrencyTrackerWidget />
       {isCalendarWidgetActive && <CalendarWidget />}
-      {isTodoWidgetActive && <TodoWidget />} 
+      {isTodoWidgetActive && <TodoWidget />}
     </>
   );
 };
