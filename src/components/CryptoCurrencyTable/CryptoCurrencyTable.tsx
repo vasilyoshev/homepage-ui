@@ -6,9 +6,10 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import TableHead from '@material-ui/core/TableHead';
+import { CryptoCurrencyWidgetTable } from 'interfaces';
 import styles from './CryptoCurrencyTable.module.scss';
 
-export const CryptoCurrencyTable: React.FC<any> = ({ coins }: any) => {
+export const CryptoCurrencyTable: React.FC<CryptoCurrencyWidgetTable> = ({ coins }) => {
   return (
     <>
       {!!coins.length && (
@@ -25,7 +26,7 @@ export const CryptoCurrencyTable: React.FC<any> = ({ coins }: any) => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {coins.map((coin: any) => {
+              {coins.map((coin) => {
                 return (
                   <TableRow key={coin.id}>
                     <TableCell className={styles.coinName}>{coin.name}</TableCell>

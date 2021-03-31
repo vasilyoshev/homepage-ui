@@ -1,19 +1,33 @@
 import React from 'react';
-import styles from './CryptoCurrencyTableMobile.module.scss';
 import { Card, CardContent } from '@material-ui/core';
+import { CryptoCurrencyWidgetTable } from 'interfaces';
+import styles from './CryptoCurrencyTableMobile.module.scss';
 
-export const CryptoCurrencyTableMobile: React.FC<any> = ({ coins }: any) => {
+export const CryptoCurrencyTableMobile: React.FC<CryptoCurrencyWidgetTable> = ({ coins }) => {
   return (
     <>
-      {!!coins.length && coins?.map((coin: any) => (
-        <Card key={coin.id}>
+      {!!coins.length && coins?.map((coin) => (
+        <Card className={styles.card} key={coin.id}>
           <CardContent>
-            <div>{coin.name}</div>
-            <div>{coin.image}</div>
-            <div>{coin.symbol}</div>
-            <div>{coin.market_cap}</div>
-            <div>{coin.current_price}</div>
-            <div>{coin.price_change_percentage_24h}</div>
+            <div className={styles.coinName}>
+              {coin.name}
+              <img
+                className={styles.icon}
+                src={coin.image} 
+                alt="crypto" /> 
+            </div>
+            <div>Symbol: {coin.symbol.toUpperCase()}</div>
+            <div>
+              Price: <p className={styles.coinPrice}>${coin.current_price.toFixed(2)}</p>
+            </div>
+            <div>Price change in last 24h: 
+              {coin.price_change_percentage_24h < 0 ? (
+                <p className={styles.coinPercentRed}>-{coin.price_change_percentage_24h.toFixed(2)}%</p>
+              ) : (
+                <p className={styles.coinPercentGreen}>+{coin.price_change_percentage_24h.toFixed(2)}%</p>
+              )}
+            </div>
+            <div>Market Cap: ${coin.market_cap.toFixed(2)}</div>
           </CardContent>
         </Card>
       ))}

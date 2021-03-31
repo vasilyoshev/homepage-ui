@@ -1,4 +1,4 @@
-export interface CryptoCurrencyWidgetMobileResProps {
+export interface CryptoCurrencyTrackerWidgetRespond {
     id: string;
     name: string;
     image: string;
