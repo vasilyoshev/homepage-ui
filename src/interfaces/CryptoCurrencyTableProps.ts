@@ -1,5 +1,5 @@
 import { CryptoCurrencyTrackerWidgetResponse } from 'interfaces';
 
-export interface CryptoCurrencyTrackerWidgetResponseTableProps {
+export interface CryptoCurrencyTableProps {
  coins: CryptoCurrencyTrackerWidgetResponse[];
 }

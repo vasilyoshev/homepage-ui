@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, CardContent } from '@material-ui/core';
-import { CryptoCurrencyTrackerWidgetResponseTableProps } from 'interfaces';
+import { CryptoCurrencyTableProps } from 'interfaces';
 import styles from './CryptoCurrencyTableMobile.module.scss';
 
-export const CryptoCurrencyTableMobile: React.FC<CryptoCurrencyTrackerWidgetResponseTableProps> = ({ coins }) => {
+export const CryptoCurrencyTableMobile: React.FC<CryptoCurrencyTableProps> = ({ coins }) => {
   return (
     <>
       {!!coins.length && coins.map((coin) => (

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Table, TableHead, TableBody, TableCell, TableContainer, TableRow, Paper } from '@material-ui/core';
-import { CryptoCurrencyTrackerWidgetResponseTableProps } from 'interfaces';
+import { CryptoCurrencyTableProps } from 'interfaces';
 import styles from './CryptoCurrencyTable.module.scss';
 
-export const CryptoCurrencyTable: React.FC<CryptoCurrencyTrackerWidgetResponseTableProps> = ({ coins }) => {
+export const CryptoCurrencyTable: React.FC<CryptoCurrencyTableProps> = ({ coins }) => {
   return (
     <>
       {!!coins.length && (
