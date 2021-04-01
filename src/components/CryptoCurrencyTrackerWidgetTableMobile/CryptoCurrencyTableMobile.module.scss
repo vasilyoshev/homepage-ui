@@ -1,0 +1,38 @@
+.card {
+  width: 300px;
+  height: 200px;
+  margin-bottom: 5px;
+  background-color: rgb(241, 237, 237);
+  border: 2px solid rgb(94, 91, 91);
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  padding-left: 5px;
+}
+
+.coinName {
+  padding: 0;
+  font-size: 18px;
+}
+
+.coinPrice {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.coinPercentRed {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #f00606;
+}
+
+.coinPercentGreen {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #17ce17;
+}
