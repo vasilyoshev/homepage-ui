@@ -1,26 +1,26 @@
 import React from 'react';
 import { Card, CardContent } from '@material-ui/core';
-import { CryptoCurrencyWidgetTable } from 'interfaces';
+import { CryptoCurrencyTrackerWidgetResponseTableProps } from 'interfaces';
 import styles from './CryptoCurrencyTableMobile.module.scss';
 
-export const CryptoCurrencyTableMobile: React.FC<CryptoCurrencyWidgetTable> = ({ coins }) => {
+export const CryptoCurrencyTableMobile: React.FC<CryptoCurrencyTrackerWidgetResponseTableProps> = ({ coins }) => {
   return (
     <>
-      {!!coins.length && coins?.map((coin) => (
+      {!!coins.length && coins.map((coin) => (
         <Card className={styles.card} key={coin.id}>
           <CardContent>
             <div className={styles.coinName}>
               {coin.name}
               <img
                 className={styles.icon}
-                src={coin.image} 
-                alt="crypto" /> 
+                src={coin.image}
+                alt="crypto" />
             </div>
             <div>Symbol: {coin.symbol.toUpperCase()}</div>
             <div>
               Price: <p className={styles.coinPrice}>${coin.current_price.toFixed(2)}</p>
             </div>
-            <div>Price change in last 24h: 
+            <div>Price change in last 24h:
               {coin.price_change_percentage_24h < 0 ? (
                 <p className={styles.coinPercentRed}>-{coin.price_change_percentage_24h.toFixed(2)}%</p>
               ) : (

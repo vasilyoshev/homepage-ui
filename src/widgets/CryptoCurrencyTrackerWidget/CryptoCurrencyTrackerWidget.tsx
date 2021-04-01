@@ -1,17 +1,17 @@
 import React, { ChangeEvent, useState, useEffect } from 'react';
 import axios from 'axios';
 import { useMediaQuery } from '@material-ui/core';
-import { CryptoCurrencyTrackerWidgetRespond } from 'interfaces';
+import { CryptoCurrencyTrackerWidgetResponse } from 'interfaces';
 import { CryptoCurrencyTable, CryptoCurrencyTableMobile } from 'components';
 import styles from './CryptoCurrencyTrackerWidget.module.scss';
 
 export const CryptoCurrencyTrackerWidget: React.FC = () => {
-  const [coinsRes, setCoinsRes] = useState<Array<CryptoCurrencyTrackerWidgetRespond>>([]);
+  const [coinsRes, setCoinsRes] = useState<Array<CryptoCurrencyTrackerWidgetResponse>>([]);
   const [search, setSearch] = useState<string>('');
   const isMobile = useMediaQuery('(max-width:600px)');
 
   useEffect(() => {
-    function filterCoins(coinsRes: CryptoCurrencyTrackerWidgetRespond[]) {
+    function filterCoins(coinsRes: CryptoCurrencyTrackerWidgetResponse[]) {
       return coinsRes.filter((coin) => {
         return coin.name.toLowerCase().includes(search.toLowerCase());
       });
@@ -35,10 +35,10 @@ export const CryptoCurrencyTrackerWidget: React.FC = () => {
       <div className={styles.coinSearch}>
         <h1 className={styles.coinText}>Search a currency</h1>
         <form>
-          <input 
-            type="text" 
-            placeholder="Search" 
-            className={styles.coinInput} 
+          <input
+            type="text"
+            placeholder="Search"
+            className={styles.coinInput}
             onChange={handleChange} />
         </form>
       </div>

@@ -1,4 +1,4 @@
-export interface CryptoCurrencyTrackerWidgetRespond {
+export interface CryptoCurrencyTrackerWidgetResponse {
     id: string;
     name: string;
     image: string;
