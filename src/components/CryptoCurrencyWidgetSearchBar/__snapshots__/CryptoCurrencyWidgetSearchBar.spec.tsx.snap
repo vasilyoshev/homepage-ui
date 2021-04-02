@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CryptoCurrencySearchBar renders successfully 1`] = `
+<DocumentFragment>
+  <div
+    class="coinSearch"
+  >
+    <h1
+      class="coinText"
+    >
+      Search a currency
+    </h1>
+    <form>
+      <input
+        class="coinInput"
+        placeholder="Search"
+        type="text"
+      />
+    </form>
+  </div>
+</DocumentFragment>
+`;

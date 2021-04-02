@@ -1,0 +1,20 @@
+.coinSearch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.coinText {
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.coinInput {
+  width: 260px;
+  height: 35px;
+  padding-left: 16px;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
