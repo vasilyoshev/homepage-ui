@@ -1,8 +1,8 @@
 import React from 'react';
-import { CryptoCurrencySearchBarProps } from 'interfaces/CryptoCurrencySearchBarProps';
+import { CryptoCurrencyWidgetSearchBarProps } from 'interfaces';
 import styles from './CryptoCurrencyWidgetSearchBar.module.scss';
 
-export const CryptoCurrencySearchBar: React.FC<CryptoCurrencySearchBarProps> = ({ onChange }) => {
+export const CryptoCurrencyWidgetSearchBar: React.FC<CryptoCurrencyWidgetSearchBarProps> = ({ onChange }) => {
   return (
     <div className={styles.coinSearch}>
       <h1 className={styles.coinText}>Search a currency</h1>

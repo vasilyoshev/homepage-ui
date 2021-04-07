@@ -1,9 +1,9 @@
 import { render } from 'utils';
-import { CryptoCurrencySearchBar } from './CryptoCurrencyWidgetSearchBar';
+import { CryptoCurrencyWidgetSearchBar } from './CryptoCurrencyWidgetSearchBar';
 
-describe('CryptoCurrencySearchBar', () => {
+describe('CryptoCurrencyWidgetSearchBar', () => {
   it('renders successfully', () => {
-    const { asFragment } = render(<CryptoCurrencySearchBar type='text' placeholder='Search' onChange={jest.fn()} />);
+    const { asFragment } = render(<CryptoCurrencyWidgetSearchBar type='text' placeholder='Search' onChange={jest.fn()} />);
 
     expect(asFragment()).toMatchSnapshot();
   });

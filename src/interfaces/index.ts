@@ -4,4 +4,4 @@ export * from './WidgetsSliceState';
 export * from './WidgetProps';
 export * from './CryptoCurrencyTrackerWidgetResponse';
 export * from './CryptoCurrencyTableProps';
-export * from './CryptoCurrencySearchBarProps';
+export * from './CryptoCurrencyWidgetSearchBarProps';
