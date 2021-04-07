@@ -2,7 +2,7 @@ import React, { ChangeEvent, useState, useEffect } from 'react';
 import axios from 'axios';
 import { useMediaQuery } from '@material-ui/core';
 import { CryptoCurrencyTrackerWidgetResponse } from 'interfaces';
-import { CryptoCurrencyTable, CryptoCurrencyTableMobile } from 'components';
+import { CryptoCurrencyWidgetSearchBar, CryptoCurrencyTable, CryptoCurrencyTableMobile } from 'components';
 import styles from './CryptoCurrencyTrackerWidget.module.scss';
 
 export const CryptoCurrencyTrackerWidget: React.FC = () => {
@@ -32,16 +32,7 @@ export const CryptoCurrencyTrackerWidget: React.FC = () => {
 
   return (
     <div className={styles.coinApp}>
-      <div className={styles.coinSearch}>
-        <h1 className={styles.coinText}>Search a currency</h1>
-        <form>
-          <input
-            type="text"
-            placeholder="Search"
-            className={styles.coinInput}
-            onChange={handleChange} />
-        </form>
-      </div>
+      <CryptoCurrencyWidgetSearchBar type='text' placeholder='Search' onChange={handleChange} />
       {isMobile ? <CryptoCurrencyTableMobile coins={coinsRes} /> : <CryptoCurrencyTable coins={coinsRes} />}
     </div>
   );
