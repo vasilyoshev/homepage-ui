@@ -26,25 +26,5 @@ exports[`Home renders successfully 1`] = `
       class="MuiTouchRipple-root"
     />
   </button>
-  <div
-    class="coinApp"
-  >
-    <div
-      class="coinSearch"
-    >
-      <h1
-        class="coinText"
-      >
-        Search a currency
-      </h1>
-      <form>
-        <input
-          class="coinInput"
-          placeholder="Search"
-          type="text"
-        />
-      </form>
-    </div>
-  </div>
 </DocumentFragment>
 `;

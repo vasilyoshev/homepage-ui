@@ -4,7 +4,9 @@ import { Card, CardActionArea, Dialog, DialogContent, DialogTitle, IconButton, T
 import CloseIcon from '@material-ui/icons/Close';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import FormatListNumberedIcon from '@material-ui/icons/FormatListNumbered';
-import { selectIsCalendarWidgetActive, selectIsTodoWidgetActive, toggleWidget } from 'slices';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+
+import { selectIsCalendarWidgetActive, selectIsTodoWidgetActive, selectIsCryptoCurrencyWidgetActive, toggleWidget } from 'slices';
 import styles from './ManageWidgetsDialog.module.scss';
 
 type ManageWidgetsDialogType = {
@@ -16,6 +18,7 @@ export const ManageWidgetsDialog: React.FC<ManageWidgetsDialogType> = ({ isOpen,
   const dispatch = useDispatch();
   const isCalendarWidgetActive = useSelector(selectIsCalendarWidgetActive);
   const isTodoWidgetActive = useSelector(selectIsTodoWidgetActive);
+  const isCryptoCurrencyWidgetActive = useSelector(selectIsCryptoCurrencyWidgetActive);
 
   const toggleWidgetByName = (widgetName: string): void => {
     dispatch(toggleWidget(widgetName));
@@ -38,6 +41,11 @@ export const ManageWidgetsDialog: React.FC<ManageWidgetsDialogType> = ({ isOpen,
         <Card className={styles.widgetPreviewCard} onClick={() => toggleWidgetByName('todo')}>
           <CardActionArea classes={{ root: styles.addWidgetsActionAreaRoot }}>
             <FormatListNumberedIcon color={isTodoWidgetActive ? 'primary' : 'secondary'} className={styles.widgetIcon} />
+          </CardActionArea>
+        </Card>
+        <Card className={styles.widgetPreviewCard} onClick={() => toggleWidgetByName('crypto')}>
+          <CardActionArea classes={{ root: styles.addWidgetsActionAreaRoot }}>
+            <DashboardIcon color={isCryptoCurrencyWidgetActive ? 'primary' : 'secondary'} className={styles.widgetIcon} />
           </CardActionArea>
         </Card>
       </DialogContent>
