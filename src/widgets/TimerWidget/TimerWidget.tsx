@@ -7,7 +7,7 @@ export const TimerWidget: React.FC = () => {
   const [timerOn, setTimerOn] = useState(false);
 
   useEffect(() => {
-    let interval: any = null;
+    let interval = 0;
     if (timerOn) {
       interval = window.setInterval(() => {
         setTime((prevTime) => prevTime + 10);
