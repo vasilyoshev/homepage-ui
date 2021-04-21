@@ -86,5 +86,43 @@ exports[`App renders successfully 1`] = `
       class="MuiTouchRipple-root"
     />
   </button>
+  <main
+    class="timers"
+  >
+    <h2>
+      Timer
+    </h2>
+    <section
+      class="display"
+    >
+      <span>
+        00:
+      </span>
+      <span>
+        00:
+      </span>
+      <span>
+        00
+      </span>
+    </section>
+    <section
+      class="buttons"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Start
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </section>
+  </main>
 </DocumentFragment>
 `;

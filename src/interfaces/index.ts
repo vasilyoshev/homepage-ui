@@ -5,3 +5,4 @@ export * from './WidgetProps';
 export * from './CryptoCurrencyTrackerWidgetResponse';
 export * from './CryptoCurrencyTableProps';
 export * from './CryptoCurrencyWidgetSearchBarProps';
+export * from './TimerWidgetControlsProps';
