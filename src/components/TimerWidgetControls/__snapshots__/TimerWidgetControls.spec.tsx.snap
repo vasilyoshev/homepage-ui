@@ -3,7 +3,7 @@
 exports[`TimerWidgetControls renders successfully 1`] = `
 <DocumentFragment>
   <section
-    class="buttons"
+    class="buttonsContainer"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary"
