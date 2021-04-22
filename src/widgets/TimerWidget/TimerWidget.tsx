@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import styles from './TimerWidget.module.scss';
+import { Card, CardContent } from '@material-ui/core';
 import { TimerWidgetControls } from 'components';
+import styles from './TimerWidget.module.scss';
 
 export const TimerWidget: React.FC = () => {
   const [time, setTime] = useState(0);
@@ -24,20 +25,24 @@ export const TimerWidget: React.FC = () => {
   const resumeTimer = () => setTimerOn(true);
 
   return (
-    <main className={styles.timers}>
-      <h2>Timer</h2>
-      <section className={styles.display}>
-        <span>{('0' + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
-        <span>{('0' + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
-        <span>{('0' + ((time / 10) % 100)).slice(-2)}</span>
-      </section>
-      <TimerWidgetControls
-        time={time}
-        timerOn={timerOn}
-        startTimer={startTimer}
-        stopTimer={stopTimer}
-        resetTimer={resetTimer}
-        resumeTimer={resumeTimer} />
-    </main>
+    <Card className={styles.timers} variant="outlined">
+      <CardContent>
+        <main >
+          <h2>StopWatch</h2>
+          <section className={styles.display}>
+            <span>{('0' + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
+            <span>{('0' + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
+            <span>{('0' + ((time / 10) % 100)).slice(-2)}</span>
+          </section>
+          <TimerWidgetControls
+            time={time}
+            timerOn={timerOn}
+            startTimer={startTimer}
+            stopTimer={stopTimer}
+            resetTimer={resetTimer}
+            resumeTimer={resumeTimer} />
+        </main>
+      </CardContent>
+    </Card>
   );
 };
