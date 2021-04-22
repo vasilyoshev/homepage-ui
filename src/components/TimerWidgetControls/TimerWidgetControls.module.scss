@@ -1,7 +1,8 @@
 .buttonsContainer {
+  display: flex;
   justify-content: space-between;
 
   Button {
-    margin-left: 8px;
+    margin: auto;
   }
 }
