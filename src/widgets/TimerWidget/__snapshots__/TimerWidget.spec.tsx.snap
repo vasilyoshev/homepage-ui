@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimerWidget renders successfully 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiCard-root timers MuiPaper-outlined MuiPaper-rounded"
+  >
+    <div
+      class="MuiCardContent-root"
+    >
+      <main>
+        <h2>
+          StopWatch
+        </h2>
+        <section
+          class="display"
+        >
+          <span>
+            00:
+          </span>
+          <span>
+            00:
+          </span>
+          <span>
+            00
+          </span>
+        </section>
+        <section
+          class="buttonsContainer"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Start
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </section>
+      </main>
+    </div>
+  </div>
+</DocumentFragment>
+`;
