@@ -86,5 +86,39 @@ exports[`App renders successfully 1`] = `
       class="MuiTouchRipple-root"
     />
   </button>
+  <main>
+    <h1>
+      Weather Widget
+    </h1>
+    <section>
+      <label>
+        Add Location
+        <input
+          type="text"
+          value=""
+        />
+      </label>
+      <button
+        disabled=""
+      >
+        Search
+      </button>
+    </section>
+    <section>
+      <h2>
+        Locations
+      </h2>
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Name
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </section>
+  </main>
 </DocumentFragment>
 `;

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherWidgetLocationSearch renders successfully 1`] = `
+<DocumentFragment>
+  <section>
+    <label>
+      Add Location
+      <input
+        type="text"
+        value=""
+      />
+    </label>
+    <button
+      disabled=""
+    >
+      Search
+    </button>
+  </section>
+</DocumentFragment>
+`;

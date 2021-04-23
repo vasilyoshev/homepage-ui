@@ -6,3 +6,5 @@ export * from './CryptoCurrencyTrackerWidgetResponse';
 export * from './CryptoCurrencyTableProps';
 export * from './CryptoCurrencyWidgetSearchBarProps';
 export * from './TimerWidgetControlsProps';
+export * from './WeatherWidgetLocationSearchProps';
+export * from './WeatherWidgetLocationTableProps';

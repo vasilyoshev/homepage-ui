@@ -8,3 +8,5 @@ export * from './CryptoCurrencyTrackerWidgetTable/CryptoCurrencyTable';
 export * from './CryptoCurrencyTrackerWidgetTableMobile/CryptoCurrencyTableMobile';
 export * from './CryptoCurrencyWidgetSearchBar/CryptoCurrencyWidgetSearchBar';
 export * from './TimerWidgetControls/TimerWidgetControls';
+export * from  './WeatherWidgetLocationSearch/WeatherWidgetLocationSearch';
+export * from './WeatherWidgetLocationTable/WeatherWidgetLocationTable';

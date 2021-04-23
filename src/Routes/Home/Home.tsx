@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { AddWidgetFab } from 'components';
-import { CalendarWidget, TodoWidget, CryptoCurrencyTrackerWidget, TimerWidget } from 'widgets';
+import { CalendarWidget, TodoWidget, CryptoCurrencyTrackerWidget, TimerWidget, WeatherWidget } from 'widgets';
 import { selectIsCalendarWidgetActive, selectIsTodoWidgetActive, selectIsCryptoCurrencyWidgetActive, selectIsTimerWidgetActive } from 'slices';
 
 export const Home: React.FC = () => {
@@ -13,6 +13,7 @@ export const Home: React.FC = () => {
   return (
     <>
       <AddWidgetFab />
+      <WeatherWidget />
       {isTimerWidgetActive && <TimerWidget />}
       {isCryptoCurrencyWidgetActive && <CryptoCurrencyTrackerWidget />}
       {isCalendarWidgetActive && <CalendarWidget />}
