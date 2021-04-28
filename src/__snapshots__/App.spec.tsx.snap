@@ -87,37 +87,74 @@ exports[`App renders successfully 1`] = `
     />
   </button>
   <main>
-    <h1>
+    <h1
+      class="title"
+    >
       Weather Widget
     </h1>
     <section>
       <label>
-        Add Location
-        <input
-          type="text"
-          value=""
-        />
+        <div
+          class="MuiFormControl-root MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+              placeholder="add location here"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+              style="padding-left: 8px;"
+            >
+              <legend
+                class="PrivateNotchedOutline-legend-2"
+                style="width: 0.01px;"
+              >
+                <span>
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
       </label>
       <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary Mui-disabled Mui-disabled"
         disabled=""
+        tabindex="-1"
+        type="button"
       >
-        Search
+        <span
+          class="MuiButton-label"
+        >
+          Search
+        </span>
       </button>
     </section>
+    <h2
+      class="title"
+    >
+      Locations
+    </h2>
     <section>
-      <h2>
-        Locations
-      </h2>
-      <table>
-        <thead>
-          <tr>
-            <th>
-              Name
-            </th>
-          </tr>
-        </thead>
-        <tbody />
-      </table>
+      <div
+        class="MuiTableContainer-root"
+      >
+        <table
+          aria-label="a dense table"
+          class="MuiTable-root"
+        >
+          <tbody
+            class="MuiTableBody-root"
+          />
+        </table>
+      </div>
     </section>
   </main>
 </DocumentFragment>

@@ -1,3 +1,7 @@
+import { WeatherLocation } from 'interfaces';
+
 export interface WeatherWidgetLocationTableProps {
-    locations: string[];
+    locations: WeatherLocation[];
+    current: WeatherLocation | null;
+    onSelect: (location: WeatherLocation) => void;
   }

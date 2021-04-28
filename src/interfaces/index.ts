@@ -8,3 +8,4 @@ export * from './CryptoCurrencyWidgetSearchBarProps';
 export * from './TimerWidgetControlsProps';
 export * from './WeatherWidgetLocationSearchProps';
 export * from './WeatherWidgetLocationTableProps';
+export * from './WeatherWidgetModel';
