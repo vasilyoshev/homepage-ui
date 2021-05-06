@@ -26,63 +26,67 @@ exports[`Home renders successfully 1`] = `
       class="MuiTouchRipple-root"
     />
   </button>
-  <main>
-    <h1
-      class="title"
+  <div
+    class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <div
+      class="MuiCardContent-root"
     >
-      Weather Widget
-    </h1>
-    <section>
-      <label>
-        <div
-          class="MuiFormControl-root MuiTextField-root"
-        >
-          <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
-          >
-            <input
-              aria-invalid="false"
-              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
-              placeholder="add location here"
-              type="text"
-              value=""
-            />
-            <fieldset
-              aria-hidden="true"
-              class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
-              style="padding-left: 8px;"
-            >
-              <legend
-                class="PrivateNotchedOutline-legend-2"
-                style="width: 0.01px;"
-              >
-                <span>
-                  ​
-                </span>
-              </legend>
-            </fieldset>
-          </div>
-        </div>
-      </label>
-      <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary Mui-disabled Mui-disabled"
-        disabled=""
-        tabindex="-1"
-        type="button"
+      <h1
+        class="title"
       >
-        <span
-          class="MuiButton-label"
+        Weather Widget
+      </h1>
+      <section>
+        <label>
+          <div
+            class="MuiFormControl-root MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+                placeholder="add location here"
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                style="padding-left: 8px;"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legend-2"
+                  style="width: 0.01px;"
+                >
+                  <span>
+                    ​
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </label>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-outlined searchBtn MuiButton-outlinedPrimary Mui-disabled Mui-disabled"
+          disabled=""
+          tabindex="-1"
+          type="button"
         >
-          Search
-        </span>
-      </button>
-    </section>
-    <h2
-      class="title"
-    >
-      Locations
-    </h2>
-    <section>
+          <span
+            class="MuiButton-label"
+          >
+            Search
+          </span>
+        </button>
+      </section>
+      <h2
+        class="title"
+      >
+        Locations
+      </h2>
       <div
         class="MuiTableContainer-root"
       >
@@ -95,7 +99,7 @@ exports[`Home renders successfully 1`] = `
           />
         </table>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
 </DocumentFragment>
 `;

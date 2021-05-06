@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
-import { WeatherWidgetLocationSearch, WeatherWidgetLocationTable, WeatherWidgetWarningAlert,  WeatherWidgetErrorAlert, WeatherWidgetSummary } from 'components';
+import { WeatherWidgetLocationSearch, WeatherWidgetLocationTable, WeatherWidgetWarningAlert, WeatherWidgetErrorAlert, WeatherWidgetSummary } from 'components';
+import { Card, CardContent } from '@material-ui/core';
 import { WeatherLocation } from 'interfaces';
 import { searchLocation } from 'services';
 import styles from './WeatherWidget.module.scss';
 
 export const WeatherWidget: React.FC = () => {
   const [locations, setLocations] = useState<WeatherLocation[]>([]);
-  const [currentLocation, setCurrentLocation] = useState<WeatherLocation | null>(null);
+  const [currentLocation, setCurrentLocation] = useState<WeatherLocation>();
   const [error, setError] = useState('');
   const [warning, setWarning] = useState('');
 
@@ -29,17 +30,20 @@ export const WeatherWidget: React.FC = () => {
   };
 
   return (
-    <main>
-      <h1 className={styles.title}>Weather Widget</h1>
-      <WeatherWidgetLocationSearch onSearch={addLocation} />
-      <h2 className={styles.title}>Locations</h2>
-      <WeatherWidgetWarningAlert message={error} />
-      <WeatherWidgetErrorAlert message={warning}/>
-      <WeatherWidgetLocationTable
-        locations={locations}
-        current={currentLocation}
-        onSelect={(location) => setCurrentLocation(location)} />
-      <WeatherWidgetSummary location={currentLocation}/>
-    </main>
+    <Card>
+      <CardContent>
+        <h1 className={styles.title}>Weather Widget</h1>
+        <WeatherWidgetLocationSearch onSearch={addLocation} />
+        <h2 className={styles.title}>Locations</h2>
+        {warning && <WeatherWidgetWarningAlert message={warning} />}
+        {error && <WeatherWidgetErrorAlert message={error} />}
+        <WeatherWidgetLocationTable
+          locations={locations}
+          current={currentLocation}
+          onSelect={(location) => setCurrentLocation(location)} />
+        <WeatherWidgetSummary location={currentLocation}/>
+      </CardContent>
+    </Card>
   );
 };
+

@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent } from 'react';
 import { WeatherWidgetLocationSearchProps } from 'interfaces';
 import { TextField, Button } from '@material-ui/core/';
+import styles from './WeatherWidgetLocationSearch.module.scss';
 
 export const WeatherWidgetLocationSearch: React.FC<WeatherWidgetLocationSearchProps> = ({ onSearch }) => {
   const [locationSearch, setLocationSearch] = useState('');
@@ -24,6 +25,7 @@ export const WeatherWidgetLocationSearch: React.FC<WeatherWidgetLocationSearchPr
           onChange={handleInput} />
       </label>
       <Button
+        className={styles.searchBtn}
         variant="outlined"
         size="medium"
         color="primary"

@@ -35,7 +35,7 @@ exports[`WeatherWidgetLocationSearch renders successfully 1`] = `
       </div>
     </label>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary Mui-disabled Mui-disabled"
+      class="MuiButtonBase-root MuiButton-root MuiButton-outlined searchBtn MuiButton-outlinedPrimary Mui-disabled Mui-disabled"
       disabled=""
       tabindex="-1"
       type="button"

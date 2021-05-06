@@ -37,7 +37,7 @@ export interface WeatherWidgetEntryProps {
 }
 
 export interface WeatherWidgetSummaryProps {
-    location: WeatherLocation | null;
+    location?: WeatherLocation;
 }
 
 export interface AlertProps {

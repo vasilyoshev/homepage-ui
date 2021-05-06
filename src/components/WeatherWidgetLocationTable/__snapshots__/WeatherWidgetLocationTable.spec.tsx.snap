@@ -2,19 +2,17 @@
 
 exports[`WeatherWidgetLocationTable renders successfully 1`] = `
 <DocumentFragment>
-  <section>
-    <div
-      class="MuiTableContainer-root"
+  <div
+    class="MuiTableContainer-root"
+  >
+    <table
+      aria-label="a dense table"
+      class="MuiTable-root"
     >
-      <table
-        aria-label="a dense table"
-        class="MuiTable-root"
-      >
-        <tbody
-          class="MuiTableBody-root"
-        />
-      </table>
-    </div>
-  </section>
+      <tbody
+        class="MuiTableBody-root"
+      />
+    </table>
+  </div>
 </DocumentFragment>
 `;

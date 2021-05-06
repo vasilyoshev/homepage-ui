@@ -3,7 +3,7 @@ import { WeatherWidgetSummary } from 'components';
 
 describe('WeatherWidgetSummary', () => {
   it('renders successfully', () => {
-    const { asFragment } = render(<WeatherWidgetSummary location={null}/>);
+    const { asFragment } = render(<WeatherWidgetSummary />);
 
     expect(asFragment()).toMatchSnapshot();
   });

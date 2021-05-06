@@ -10,25 +10,25 @@ export const WeatherWidgetSummary: React.FC<WeatherWidgetSummaryProps> = ({ loca
 
   useEffect(() => {
     (async () => {
-      if (location) {
-        const [weather, forecast] = await Promise.all([
-          readWeather(location.id),
-          readForecast(location.id),
-        ]);
-        setWeather(weather);
-        setForecast(forecast);
-      }
+      if (!location) return;
+
+      const [weather, forecast] = await Promise.all([
+        readWeather(location.id),
+        readForecast(location.id),
+      ]);
+      setWeather(weather);
+      setForecast(forecast);
     })();
   }, [location]);
 
   if (!location || !weather || !forecast) return null;
 
   return (
-    <section>
+    <>
       <hr/>
-      <h2>{location.name}</h2>
+      <h2 className={styles.locName}>{location.name}</h2>
       <WeatherWidgetEntry weather={weather}/>
-      <h2>Forecast</h2>
+      <h3 className={styles.forecast}>Forecast</h3>
       <section>
         <ol className={styles.summary}>
           {forecast.map((timePoint) =>
@@ -38,6 +38,6 @@ export const WeatherWidgetSummary: React.FC<WeatherWidgetSummaryProps> = ({ loca
           )}
         </ol>
       </section>
-    </section>
+    </>
   );
 };
