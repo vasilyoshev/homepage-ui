@@ -13,7 +13,7 @@ export const WeatherWidgetEntry: React.FC<WeatherWidgetEntryProps> = ({ weather 
       <div>Humidity: {weather.main.humidity}%</div>
       {weather.weather.map((condition) =>
         <div key={condition.id}>
-          <img src={getIconUrl(condition.icon)} alt={condition.main}/> {condition.main} {condition.description}
+          <img src={getIconUrl(condition.icon)} alt={condition.main}/> {condition.main}
         </div>)
       }
     </section>

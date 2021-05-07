@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent } from 'react';
 import { WeatherWidgetLocationSearchProps } from 'interfaces';
-import { TextField, Button } from '@material-ui/core/';
+import { TextField, Button, Card, CardContent, CardActions } from '@material-ui/core/';
 import styles from './WeatherWidgetLocationSearch.module.scss';
 
 export const WeatherWidgetLocationSearch: React.FC<WeatherWidgetLocationSearchProps> = ({ onSearch }) => {
@@ -15,22 +15,23 @@ export const WeatherWidgetLocationSearch: React.FC<WeatherWidgetLocationSearchPr
   const handleInput = (e: ChangeEvent<HTMLInputElement>) => setLocationSearch(e.target.value);
 
   return (
-    <section>
-      <label>
+    <Card className={styles.searchContainer}>
+      <CardContent>
         <TextField
           variant="outlined"
           size="small"
           placeholder="add location here"
           value={locationSearch}
           onChange={handleInput} />
-      </label>
-      <Button
-        className={styles.searchBtn}
-        variant="outlined"
-        size="medium"
-        color="primary"
-        onClick={addLocation}
-        disabled={disableSearch}>Search</Button>
-    </section>
+        <CardActions>
+          <Button
+            variant="outlined"
+            size="medium"
+            color="primary"
+            onClick={addLocation}
+            disabled={disableSearch}>Search</Button>
+        </CardActions>
+      </CardContent>
+    </Card>
   );
 };

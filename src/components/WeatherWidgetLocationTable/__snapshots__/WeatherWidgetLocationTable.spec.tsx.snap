@@ -3,7 +3,7 @@
 exports[`WeatherWidgetLocationTable renders successfully 1`] = `
 <DocumentFragment>
   <div
-    class="MuiTableContainer-root"
+    class="MuiTableContainer-root tableContainer"
   >
     <table
       aria-label="a dense table"

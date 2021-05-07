@@ -2,8 +2,12 @@
 
 exports[`WeatherWidgetLocationSearch renders successfully 1`] = `
 <DocumentFragment>
-  <section>
-    <label>
+  <div
+    class="MuiPaper-root MuiCard-root searchContainer MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <div
+      class="MuiCardContent-root"
+    >
       <div
         class="MuiFormControl-root MuiTextField-root"
       >
@@ -33,19 +37,23 @@ exports[`WeatherWidgetLocationSearch renders successfully 1`] = `
           </fieldset>
         </div>
       </div>
-    </label>
-    <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-outlined searchBtn MuiButton-outlinedPrimary Mui-disabled Mui-disabled"
-      disabled=""
-      tabindex="-1"
-      type="button"
-    >
-      <span
-        class="MuiButton-label"
+      <div
+        class="MuiCardActions-root MuiCardActions-spacing"
       >
-        Search
-      </span>
-    </button>
-  </section>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary Mui-disabled Mui-disabled"
+          disabled=""
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Search
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
 </DocumentFragment>
 `;
