@@ -4,6 +4,7 @@ exports[`WeatherWidget renders successfully 1`] = `
 <DocumentFragment>
   <div
     class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+    style="width: 380px; margin-top: 5px; margin-left: 5px;"
   >
     <div
       class="MuiCardContent-root"
@@ -14,60 +15,49 @@ exports[`WeatherWidget renders successfully 1`] = `
         Weather Widget
       </h1>
       <div
-        class="MuiPaper-root MuiCard-root searchContainer MuiPaper-elevation1 MuiPaper-rounded"
+        class="MuiFormControl-root MuiTextField-root"
       >
         <div
-          class="MuiCardContent-root"
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
         >
-          <div
-            class="MuiFormControl-root MuiTextField-root"
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+            placeholder="add location here"
+            type="text"
+            value=""
+          />
+          <fieldset
+            aria-hidden="true"
+            class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+            style="padding-left: 8px;"
           >
-            <div
-              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+            <legend
+              class="PrivateNotchedOutline-legend-2"
+              style="width: 0.01px;"
             >
-              <input
-                aria-invalid="false"
-                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
-                placeholder="add location here"
-                type="text"
-                value=""
-              />
-              <fieldset
-                aria-hidden="true"
-                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
-                style="padding-left: 8px;"
-              >
-                <legend
-                  class="PrivateNotchedOutline-legend-2"
-                  style="width: 0.01px;"
-                >
-                  <span>
-                    ​
-                  </span>
-                </legend>
-              </fieldset>
-            </div>
-          </div>
-          <div
-            class="MuiCardActions-root MuiCardActions-spacing"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary Mui-disabled Mui-disabled"
-              disabled=""
-              tabindex="-1"
-              type="button"
-            >
-              <span
-                class="MuiButton-label"
-              >
-                Search
+              <span>
+                ​
               </span>
-            </button>
-          </div>
+            </legend>
+          </fieldset>
         </div>
       </div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary Mui-disabled Mui-disabled"
+        disabled=""
+        style="margin: 2px 0px 0px 3px;"
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Search
+        </span>
+      </button>
       <h2
-        class="title"
+        class="locations"
       >
         Locations
       </h2>

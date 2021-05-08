@@ -8,6 +8,7 @@ const initialState: WidgetsSliceState = {
     { name: 'todo', isActive: false },
     { name: 'crypto', isActive: false },
     { name: 'timer', isActive: false },
+    { name: 'weather', isActive: true },
   ],
 };
 
@@ -29,7 +30,9 @@ export const selectIsTodoWidgetActive = ({ widgets }: RootState): boolean =>
   widgets.widgetsProps.find((widgetProps) => widgetProps.name === 'todo')?.isActive || false;
 export const selectIsCryptoCurrencyWidgetActive = ({ widgets }: RootState): boolean =>
   widgets.widgetsProps.find((widgetProps) => widgetProps.name === 'crypto')?.isActive || false;
-export const selectIsTimerWidgetActive = ({ widgets}: RootState): boolean =>
+export const selectIsTimerWidgetActive = ({ widgets }: RootState): boolean =>
   widgets.widgetsProps.find((widgetProps) => widgetProps.name === 'timer')?.isActive || false;
+export const selectIsWeatherWidgetActive = ({ widgets }: RootState): boolean =>
+  widgets.widgetsProps.find((widgetProps) => widgetProps.name === 'weather')?.isActive || false;
 
 export const { toggleWidget } = widgetsSlice.actions;

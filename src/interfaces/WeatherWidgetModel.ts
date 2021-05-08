@@ -1,3 +1,5 @@
+import { Color } from '@material-ui/lab/Alert';
+
 export interface Coordinates {
     lon: number;
     lat: number;
@@ -40,6 +42,7 @@ export interface WeatherWidgetSummaryProps {
     location?: WeatherLocation;
 }
 
-export interface AlertProps {
+export interface WeatherWidgetAlertMessageProps {
     message: string;
+    severity: Color;
 }

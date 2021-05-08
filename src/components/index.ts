@@ -10,7 +10,6 @@ export * from './CryptoCurrencyWidgetSearchBar/CryptoCurrencyWidgetSearchBar';
 export * from './TimerWidgetControls/TimerWidgetControls';
 export * from  './WeatherWidgetLocationSearch/WeatherWidgetLocationSearch';
 export * from './WeatherWidgetLocationTable/WeatherWidgetLocationTable';
-export * from './WeatherWidgetWarningAlert/WeatherWidgetWarningAlert';
-export * from './WeatherWidgetErrorAlert/WeatherWidgetErrorAlert';
+export * from './WeatherWidgetAlertMessage/WeatherWidgetAlertMessage';
 export * from './WeatherWidgetEntry/WeatherWidgetEntry';
 export * from './WeatherWidgetSummary/WeatherWidgetSummary';

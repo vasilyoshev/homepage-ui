@@ -1,6 +1,6 @@
 import React from 'react';
 import { WeatherWidgetEntryProps } from 'interfaces';
-import  { getIconUrl, convertUnixTimeToDate } from 'services';
+import { getIconUrl, convertUnixTimeToDate } from 'services';
 
 export const WeatherWidgetEntry: React.FC<WeatherWidgetEntryProps> = ({ weather }) => {
   return (

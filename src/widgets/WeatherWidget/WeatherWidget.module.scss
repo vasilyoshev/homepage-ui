@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+$headers-font: 'Montserrat', sans-serif;
+
 .title {
-  font-family: 'Montserrat', sans-serif;
+  margin-top: 0;
+  font-family: $headers-font;
 };
+
+.locations {
+  font-family: $headers-font;
+}
