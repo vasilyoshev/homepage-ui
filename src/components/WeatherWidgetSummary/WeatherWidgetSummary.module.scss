@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.weatherCard {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.locName,
+.forecastTitle {
+  font-family: 'Montserrat', sans-serif;
+};
+
+.forecastCard {
+  width: 320px;
+  height: 160px;
+  padding: 10px;
+  margin-bottom: 5px;
+  list-style-type: none;
+
+  &:hover {
+    background: #d3d3d3;
+  }
+}

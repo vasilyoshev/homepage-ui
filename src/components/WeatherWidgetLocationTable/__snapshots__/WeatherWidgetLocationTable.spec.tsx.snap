@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherWidgetLocationTable renders successfully 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiTableContainer-root tableContainer"
+  >
+    <table
+      aria-label="a dense table"
+      class="MuiTable-root"
+    >
+      <tbody
+        class="MuiTableBody-root"
+      />
+    </table>
+  </div>
+</DocumentFragment>
+`;
