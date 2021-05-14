@@ -1,0 +1,18 @@
+.gridContainer {
+  display: grid;
+  grid-template-areas:
+    'CryptoWidget WeatherWidget CalendarWidget TodoWidget'
+    'CryptoWidget WeatherWidget TimerWidget TodoWidget'
+    'CryptoWidget WeatherWidget . TodoWidget';
+  grid-template-rows: auto;
+  grid-template-columns: 380px 380px 380px 380px;
+  gap: 5px 5px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+.CryptoWidget { grid-area: CryptoWidget; }
+.WeatherWidget { grid-area: WeatherWidget; }
+.CalendarWidget { grid-area: CalendarWidget; }
+.TimerWidget { grid-area: TimerWidget; }
+.TodoWidget { grid-area: TodoWidget; }

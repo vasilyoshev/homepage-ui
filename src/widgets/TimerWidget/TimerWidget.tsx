@@ -25,23 +25,21 @@ export const TimerWidget: React.FC = () => {
   const resumeTimer = () => setTimerOn(true);
 
   return (
-    <Card className={styles.timers} variant="outlined">
-      <CardContent>
-        <main >
-          <h2>StopWatch</h2>
-          <section className={styles.display}>
-            <span>{('0' + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
-            <span>{('0' + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
-            <span>{('0' + ((time / 10) % 100)).slice(-2)}</span>
-          </section>
-          <TimerWidgetControls
-            time={time}
-            timerOn={timerOn}
-            startTimer={startTimer}
-            stopTimer={stopTimer}
-            resetTimer={resetTimer}
-            resumeTimer={resumeTimer} />
-        </main>
+    <Card>
+      <CardContent className={styles.timerContainer}>
+        <h2>StopWatch</h2>
+        <section className={styles.display}>
+          <span>{('0' + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
+          <span>{('0' + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
+          <span>{('0' + ((time / 10) % 100)).slice(-2)}</span>
+        </section>
+        <TimerWidgetControls
+          time={time}
+          timerOn={timerOn}
+          startTimer={startTimer}
+          stopTimer={stopTimer}
+          resetTimer={resetTimer}
+          resumeTimer={resumeTimer} />
       </CardContent>
     </Card>
   );

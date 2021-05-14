@@ -1,8 +1,12 @@
-.timers {
-  width: 280px;
-  margin: 10px auto;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.timerContainer {
   text-align: center;
-  border: 1px solid #d3d3d3;
+  border: 1px solid rgb(88, 85, 85);
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .display {

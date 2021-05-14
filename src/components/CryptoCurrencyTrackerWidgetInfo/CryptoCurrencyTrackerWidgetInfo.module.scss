@@ -1,0 +1,58 @@
+.mainCard {
+  width: 320px;
+  height: 180px;
+  padding: 3px;
+  margin-bottom: 5px;
+  background-color: rgb(235, 229, 229);
+  border: 1px solid #808080;
+}
+
+.coinName {
+  font-size: 22px;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  padding-left: 5px;
+}
+
+.coinPrice {
+  display: inline-block;
+  padding: 3px;
+  margin: 8px 0 0;
+  font-size: 20px;
+  border: 1px solid #808080;
+  border-radius: 5px;
+}
+
+.marketcap {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.coinPriceChange {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.coinPercentRed {
+  display: inline;
+  padding: 3px;
+  margin: 5px 0 10px 5px;
+  font-size: 22px;
+  color: #f00606;
+  border: 2px solid #f00606;
+  border-radius: 5px;
+}
+
+.coinPercentGreen {
+  display: inline;
+  padding: 3px;
+  margin: 5px 0 10px 5px;
+  font-size: 22px;
+  color: #0fbd0f;
+  border: 2px solid #0fbd0f;
+  border-radius: 5px;
+}

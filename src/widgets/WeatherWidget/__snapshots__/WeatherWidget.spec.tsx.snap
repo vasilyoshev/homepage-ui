@@ -4,10 +4,9 @@ exports[`WeatherWidget renders successfully 1`] = `
 <DocumentFragment>
   <div
     class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
-    style="width: 380px; margin-top: 5px; margin-left: 5px;"
   >
     <div
-      class="MuiCardContent-root"
+      class="MuiCardContent-root weatherWidgetCard"
     >
       <h1
         class="title"
@@ -62,10 +61,9 @@ exports[`WeatherWidget renders successfully 1`] = `
         Locations
       </h2>
       <div
-        class="MuiTableContainer-root tableContainer"
+        class="MuiTableContainer-root"
       >
         <table
-          aria-label="a dense table"
           class="MuiTable-root"
         >
           <tbody

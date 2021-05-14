@@ -3,23 +3,27 @@
 exports[`CryptoCurrencyTrackerWidget renders successfully 1`] = `
 <DocumentFragment>
   <div
-    class="coinApp"
+    class="MuiPaper-root MuiCard-root coinApp MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
-      class="coinSearch"
+      class="MuiCardContent-root coinContent"
     >
-      <h1
-        class="coinText"
+      <div
+        class="coinSearch"
       >
-        Search a currency
-      </h1>
-      <form>
-        <input
-          class="coinInput"
-          placeholder="Search"
-          type="text"
-        />
-      </form>
+        <h1
+          class="coinText"
+        >
+          Crypto currency
+        </h1>
+        <form>
+          <input
+            class="coinInput"
+            placeholder="search..."
+            type="text"
+          />
+        </form>
+      </div>
     </div>
   </div>
 </DocumentFragment>

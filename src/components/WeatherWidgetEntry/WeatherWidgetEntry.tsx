@@ -5,11 +5,9 @@ import { getIconUrl, convertUnixTimeToDate } from 'services';
 export const WeatherWidgetEntry: React.FC<WeatherWidgetEntryProps> = ({ weather }) => {
   return (
     <section>
-      <div>{convertUnixTimeToDate(weather.dt).toLocaleTimeString()}</div>
-      <div>
-        <strong>{weather.main.temp}°C</strong>
-        <div>({weather.main.temp_min}°C / {weather.main.temp_max}°C)</div>
+      <div>{convertUnixTimeToDate(weather.dt).toLocaleTimeString()}
       </div>
+      <strong>{weather.main.temp}°C</strong>
       <div>Humidity: {weather.main.humidity}%</div>
       {weather.weather.map((condition) =>
         <div key={condition.id}>

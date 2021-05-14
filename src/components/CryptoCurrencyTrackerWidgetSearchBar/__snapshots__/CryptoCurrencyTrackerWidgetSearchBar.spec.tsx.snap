@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CryptoCurrencyWidgetSearchBar renders successfully 1`] = `
+exports[`CryptoCurrencyTrackerWidgetSearchBar renders successfully 1`] = `
 <DocumentFragment>
   <div
     class="coinSearch"
@@ -8,12 +8,12 @@ exports[`CryptoCurrencyWidgetSearchBar renders successfully 1`] = `
     <h1
       class="coinText"
     >
-      Search a currency
+      Crypto currency
     </h1>
     <form>
       <input
         class="coinInput"
-        placeholder="Search"
+        placeholder="search..."
         type="text"
       />
     </form>
