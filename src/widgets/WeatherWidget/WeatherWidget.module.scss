@@ -2,6 +2,11 @@
 
 $headers-font: 'Montserrat', sans-serif;
 
+.weatherWidgetCard {
+  border: 1px solid rgb(88, 85, 85);
+  border-radius: 3px;
+}
+
 .title {
   margin-top: 0;
   font-family: $headers-font;

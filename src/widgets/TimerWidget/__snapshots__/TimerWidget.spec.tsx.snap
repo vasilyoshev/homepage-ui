@@ -3,47 +3,45 @@
 exports[`TimerWidget renders successfully 1`] = `
 <DocumentFragment>
   <div
-    class="MuiPaper-root MuiCard-root timers MuiPaper-outlined MuiPaper-rounded"
+    class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
-      class="MuiCardContent-root"
+      class="MuiCardContent-root timerContainer"
     >
-      <main>
-        <h2>
-          StopWatch
-        </h2>
-        <section
-          class="display"
+      <h2>
+        StopWatch
+      </h2>
+      <section
+        class="display"
+      >
+        <span>
+          00:
+        </span>
+        <span>
+          00:
+        </span>
+        <span>
+          00
+        </span>
+      </section>
+      <section
+        class="buttonsContainer"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+          tabindex="0"
+          type="button"
         >
-          <span>
-            00:
-          </span>
-          <span>
-            00:
-          </span>
-          <span>
-            00
-          </span>
-        </section>
-        <section
-          class="buttonsContainer"
-        >
-          <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
-            tabindex="0"
-            type="button"
+          <span
+            class="MuiButton-label"
           >
-            <span
-              class="MuiButton-label"
-            >
-              Start
-            </span>
-            <span
-              class="MuiTouchRipple-root"
-            />
-          </button>
-        </section>
-      </main>
+            Start
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </section>
     </div>
   </div>
 </DocumentFragment>

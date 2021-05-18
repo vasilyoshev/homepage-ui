@@ -1,0 +1,31 @@
+.gridContainer {
+  display: grid;
+  grid-template-areas:
+    'CryptoWidget WeatherWidget CalendarWidget TodoWidget'
+    'CryptoWidget WeatherWidget TimerWidget TodoWidget'
+    'CryptoWidget WeatherWidget . TodoWidget';
+  grid-template-rows: auto;
+  grid-template-columns: 380px 380px 380px 380px;
+  gap: 5px 5px;
+  margin: 8px 0 5px 5px;
+}
+
+.CryptoWidget { grid-area: CryptoWidget; }
+.WeatherWidget { grid-area: WeatherWidget; }
+.CalendarWidget { grid-area: CalendarWidget; }
+.TimerWidget { grid-area: TimerWidget; }
+.TodoWidget { grid-area: TodoWidget; }
+
+@media only screen and (max-width: 399px) {
+  .gridContainer {
+    grid-template-areas:
+      'CryptoWidget'
+      'WeatherWidget'
+      'TodoWidget'
+      'TimerWidget'
+      'CalendarWidget';
+    grid-template-rows: auto;
+    grid-template-columns: 380px;
+    gap: 5px;
+  }
+}

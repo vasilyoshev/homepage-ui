@@ -30,8 +30,8 @@ export const WeatherWidget: React.FC = () => {
   };
 
   return (
-    <Card style={{width: '380px', marginTop: '5px', marginLeft: '5px'}}>
-      <CardContent>
+    <Card>
+      <CardContent className={styles.weatherWidgetCard}>
         <h1 className={styles.title}>Weather Widget</h1>
         <WeatherWidgetLocationSearch onSearch={addLocation} />
         <h2 className={styles.locations}>Locations</h2>
@@ -46,4 +46,3 @@ export const WeatherWidget: React.FC = () => {
     </Card>
   );
 };
-
