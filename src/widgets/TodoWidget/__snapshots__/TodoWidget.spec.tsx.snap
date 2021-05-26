@@ -52,7 +52,6 @@ exports[`TodoWidget renders successfully 1`] = `
           <span
             class="MuiIconButton-label"
           >
-            onClick=
             <svg
               aria-hidden="true"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
@@ -112,7 +111,6 @@ exports[`TodoWidget renders successfully 1`] = `
           <span
             class="MuiIconButton-label"
           >
-            onClick=
             <svg
               aria-hidden="true"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"

@@ -28,8 +28,9 @@ export const TodoListItem: React.FC<TodoListItemProps> = ({
       </Typography>
       <IconButton
         data-testid="removeTodoItem"
-        aria-label="delete">
-          onClick={() => removeTodo(todo.text)}
+        aria-label="delete"
+        onClick={() => removeTodo(todo.text)}
+      >
         <DeleteIcon
           fontSize="small"
         />
