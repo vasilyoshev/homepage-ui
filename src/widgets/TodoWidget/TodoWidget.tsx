@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { AddTodoForm, TodoList } from 'components';
 import { Todo } from 'interfaces';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
+import { Card, CardContent } from '@material-ui/core';
 import styles from './TodoWidget.module.scss';
 
 export const TodoWidget: React.FC = () => {
@@ -30,10 +29,13 @@ export const TodoWidget: React.FC = () => {
     newTodo.trim() !== '' &&
       setTodos([...todos, { text: newTodo, complete: false }]);
   };
+  const removeTodo = (text: string): void => {
+    setTodos(todos.filter((t) => t.text !== text));
+  };
   return (
     <Card className={styles.todoWidget}>
       <CardContent>
-        <TodoList todos={todos} toggleComplete={toggleComplete} />
+        <TodoList todos={todos} toggleComplete={toggleComplete} removeTodo={removeTodo} />
         <AddTodoForm addTodo={addTodo} />
       </CardContent>
     </Card>

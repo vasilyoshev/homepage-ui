@@ -1,8 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { AddTodoFormProps } from 'interfaces';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import FormGroup from '@material-ui/core/FormGroup';
+import { FormGroup, Button, TextField } from '@material-ui/core';
 
 export const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
   const [newTodo, setNewTodo] = useState<string>('');
@@ -20,6 +18,8 @@ export const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
   return (
     <FormGroup>
       <TextField
+        type='text'
+        label="add new task"
         value={newTodo}
         color="primary"
         margin='normal'
@@ -28,10 +28,10 @@ export const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
         onChange={handleInputChange}
       />
       <Button
+        type="submit"
         size="medium"
         variant="contained"
         color="primary"
-        type="submit"
         onClick={submitTodoItem}
       >
         Add Todo

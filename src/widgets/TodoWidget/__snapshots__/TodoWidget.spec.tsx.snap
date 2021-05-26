@@ -8,85 +8,139 @@ exports[`TodoWidget renders successfully 1`] = `
     <div
       class="MuiCardContent-root"
     >
-      <ul
-        class="MuiList-root MuiList-padding"
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root complete MuiInputLabel-animated"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root complete MuiInputLabel-animated"
+        <span
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary MuiIconButton-edgeStart"
         >
           <span
-            aria-disabled="false"
-            class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary MuiIconButton-edgeStart"
+            class="MuiIconButton-label"
           >
-            <span
-              class="MuiIconButton-label"
+            <input
+              checked=""
+              class="PrivateSwitchBase-input-4"
+              data-indeterminate="false"
+              type="checkbox"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <input
-                checked=""
-                class="PrivateSwitchBase-input-4"
-                data-indeterminate="false"
-                type="checkbox"
-                value=""
+              <path
+                d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
               />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                />
-              </svg>
-            </span>
+            </svg>
           </span>
-          <p
-            class="MuiTypography-root todoText MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayInline"
-          >
-            Walk the dog
-          </p>
-        </label>
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated"
+        </span>
+        <p
+          class="MuiTypography-root todoText MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayInline"
+        >
+          Walk the dog
+        </p>
+        <button
+          aria-label="delete"
+          class="MuiButtonBase-root MuiIconButton-root"
+          data-testid="removeTodoItem"
+          tabindex="0"
+          type="button"
         >
           <span
-            aria-disabled="false"
-            class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary MuiIconButton-edgeStart"
+            class="MuiIconButton-label"
           >
-            <span
-              class="MuiIconButton-label"
+            onClick=
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <input
-                class="PrivateSwitchBase-input-4"
-                data-indeterminate="false"
-                type="checkbox"
-                value=""
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
               />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                />
-              </svg>
-            </span>
+            </svg>
           </span>
-          <p
-            class="MuiTypography-root todoText MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayInline"
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </label>
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated"
+      >
+        <span
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary MuiIconButton-edgeStart"
+        >
+          <span
+            class="MuiIconButton-label"
           >
-            Make app
-          </p>
-        </label>
-      </ul>
+            <input
+              class="PrivateSwitchBase-input-4"
+              data-indeterminate="false"
+              type="checkbox"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+              />
+            </svg>
+          </span>
+        </span>
+        <p
+          class="MuiTypography-root todoText MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayInline"
+        >
+          Make app
+        </p>
+        <button
+          aria-label="delete"
+          class="MuiButtonBase-root MuiIconButton-root"
+          data-testid="removeTodoItem"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label"
+          >
+            onClick=
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </label>
       <div
         class="MuiFormGroup-root"
       >
         <div
           class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
         >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense MuiInputLabel-outlined"
+            data-shrink="false"
+          >
+            add new task
+          </label>
           <div
             class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
           >
@@ -99,14 +153,12 @@ exports[`TodoWidget renders successfully 1`] = `
             <fieldset
               aria-hidden="true"
               class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
-              style="padding-left: 8px;"
             >
               <legend
-                class="PrivateNotchedOutline-legend-6"
-                style="width: 0.01px;"
+                class="PrivateNotchedOutline-legendLabelled-7"
               >
                 <span>
-                  ​
+                  add new task
                 </span>
               </legend>
             </fieldset>

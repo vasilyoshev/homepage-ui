@@ -8,6 +8,12 @@ exports[`AddTodoForm renders successfully 1`] = `
     <div
       class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
     >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense MuiInputLabel-outlined"
+        data-shrink="false"
+      >
+        add new task
+      </label>
       <div
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
       >
@@ -20,14 +26,12 @@ exports[`AddTodoForm renders successfully 1`] = `
         <fieldset
           aria-hidden="true"
           class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
-          style="padding-left: 8px;"
         >
           <legend
-            class="PrivateNotchedOutline-legend-2"
-            style="width: 0.01px;"
+            class="PrivateNotchedOutline-legendLabelled-3"
           >
             <span>
-              ​
+              add new task
             </span>
           </legend>
         </fieldset>
