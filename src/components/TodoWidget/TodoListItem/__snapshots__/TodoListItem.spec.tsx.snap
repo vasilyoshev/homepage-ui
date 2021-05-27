@@ -32,7 +32,9 @@ exports[`TodoListItem renders successfully 1`] = `
     </span>
     <p
       class="MuiTypography-root todoText MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayInline"
-    />
+    >
+      Walk the dog
+    </p>
     <button
       aria-label="delete"
       class="MuiButtonBase-root MuiIconButton-root"
