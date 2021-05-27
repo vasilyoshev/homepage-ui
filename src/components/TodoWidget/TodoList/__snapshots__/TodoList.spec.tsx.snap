@@ -1,9 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TodoList renders successfully 1`] = `
-<DocumentFragment>
-  <ul
-    class="MuiList-root MuiList-padding"
-  />
-</DocumentFragment>
-`;
+exports[`TodoList renders successfully 1`] = `<DocumentFragment />`;
