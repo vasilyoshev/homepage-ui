@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { AddTodoForm, TodoList } from 'components';
 import { Todo } from 'interfaces';
 import { Card, CardContent } from '@material-ui/core';
-import styles from './TodoWidget.module.scss';
 
 export const TodoWidget: React.FC = () => {
   const initialTodos: Array<Todo> = [
@@ -33,7 +32,7 @@ export const TodoWidget: React.FC = () => {
     setTodos(todos.filter((t) => t.text !== text));
   };
   return (
-    <Card className={styles.todoWidget}>
+    <Card>
       <CardContent>
         <TodoList todos={todos} toggleComplete={toggleComplete} removeTodo={removeTodo} />
         <AddTodoForm addTodo={addTodo} />
