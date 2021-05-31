@@ -1,18 +1,19 @@
 import React from 'react';
 import { CryptoCurrencyTrackerWidgetSearchBarProps } from 'interfaces';
+import { FormGroup, TextField } from '@material-ui/core/';
 import styles from './CryptoCurrencyTrackerWidgetSearchBar.module.scss';
 
 export const CryptoCurrencyTrackerWidgetSearchBar: React.FC<CryptoCurrencyTrackerWidgetSearchBarProps> = ({ onChange }) => {
   return (
     <div className={styles.coinSearch}>
-      <h1 className={styles.coinText}>Crypto currency</h1>
-      <form>
-        <input
-          className={styles.coinInput}
+      <FormGroup>
+        <TextField
+          variant="outlined"
+          size='small'
           type="text"
           placeholder='search...'
           onChange={onChange} />
-      </form>
+      </FormGroup>
     </div>
   );
 };
