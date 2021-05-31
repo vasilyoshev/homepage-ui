@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { WeatherWidgetEntry } from 'components';
 import { readWeather, readForecast } from 'services';
 import { Weather, WeatherWidgetSummaryProps } from 'interfaces';
-import { Card, CardContent } from '@material-ui/core';
+import { Card } from '@material-ui/core';
 import styles from './WeatherWidgetSummary.module.scss';
 
 export const WeatherWidgetSummary: React.FC<WeatherWidgetSummaryProps> = ({ location }) => {
@@ -33,9 +33,7 @@ export const WeatherWidgetSummary: React.FC<WeatherWidgetSummaryProps> = ({ loca
       <h3 className={styles.forecastTitle}>Forecast 24h</h3>
       {forecast.map((timePoint) =>
         <Card className={styles.forecastCard} key={timePoint.dt}>
-          <CardContent>
-            <WeatherWidgetEntry weather={timePoint} />
-          </CardContent>
+          <WeatherWidgetEntry weather={timePoint} />
         </Card>,
       )}
     </>
