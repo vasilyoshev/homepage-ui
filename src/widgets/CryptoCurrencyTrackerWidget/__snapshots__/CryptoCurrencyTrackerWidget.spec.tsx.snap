@@ -5,24 +5,46 @@ exports[`CryptoCurrencyTrackerWidget renders successfully 1`] = `
   <div
     class="MuiPaper-root MuiCard-root coinApp MuiPaper-elevation1 MuiPaper-rounded"
   >
+    <h2
+      class="coinText"
+    >
+      Crypto Tracker
+    </h2>
     <div
-      class="MuiCardContent-root coinContent"
+      class="coinSearch"
     >
       <div
-        class="coinSearch"
+        class="MuiFormGroup-root"
       >
-        <h1
-          class="coinText"
+        <div
+          class="MuiFormControl-root MuiTextField-root"
         >
-          Crypto currency
-        </h1>
-        <form>
-          <input
-            class="coinInput"
-            placeholder="search..."
-            type="text"
-          />
-        </form>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+              placeholder="search..."
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+              style="padding-left: 8px;"
+            >
+              <legend
+                class="PrivateNotchedOutline-legend-2"
+                style="width: 0.01px;"
+              >
+                <span>
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
       </div>
     </div>
   </div>

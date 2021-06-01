@@ -15,19 +15,19 @@ export const Home: React.FC = () => {
   return (
     <div className={styles.gridContainer}>
       <AddWidgetFab />
-      <div className={styles.CryptoWidget}>
+      <div>
         {isCryptoCurrencyWidgetActive && <CryptoCurrencyTrackerWidget />}
       </div>
-      <div className={styles.WeatherWidget}>
+      <div>
         {isWeatherWidgetActive && <WeatherWidget />}
       </div>
-      <div className={styles.TimerWidget}>
+      <div>
         {isTimerWidgetActive && <TimerWidget />}
       </div>
-      <div className={styles.TodoWidget}>
+      <div>
         {isTodoWidgetActive && <TodoWidget />}
       </div>
-      <div className={styles.CalendarWidget}>
+      <div>
         {isCalendarWidgetActive && <CalendarWidget />}
       </div>
     </div>

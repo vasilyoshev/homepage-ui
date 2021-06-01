@@ -12,7 +12,7 @@ export const WeatherWidgetLocationTable: React.FC<WeatherWidgetLocationTableProp
           {locations.map((location) =>
             <TableRow  key={location.id} onClick={() => onSelect(location)}>
               <TableCell className={styles.cityTableCell}>{location.name}</TableCell>
-              <TableCell>{current?.id === location.id ? <Alert className={styles.alert} severity="info">Current City</Alert> : ''}</TableCell>
+              <TableCell>{current?.id === location.id ? <Alert severity="info">Current City</Alert> : ''}</TableCell>
             </TableRow>,
           )}
         </TableBody>

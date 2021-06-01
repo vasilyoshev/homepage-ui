@@ -3,46 +3,53 @@
 exports[`WeatherWidgetLocationSearch renders successfully 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root MuiTextField-root"
+    class="searchContainer"
   >
     <div
-      class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+      class="MuiFormGroup-root"
     >
-      <input
-        aria-invalid="false"
-        class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
-        placeholder="add location here"
-        type="text"
-        value=""
-      />
-      <fieldset
-        aria-hidden="true"
-        class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
-        style="padding-left: 8px;"
+      <div
+        class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
       >
-        <legend
-          class="PrivateNotchedOutline-legend-2"
-          style="width: 0.01px;"
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
         >
-          <span>
-            ​
-          </span>
-        </legend>
-      </fieldset>
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+            placeholder="add location here"
+            type="text"
+            value=""
+          />
+          <fieldset
+            aria-hidden="true"
+            class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+            style="padding-left: 8px;"
+          >
+            <legend
+              class="PrivateNotchedOutline-legend-2"
+              style="width: 0.01px;"
+            >
+              <span>
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+      </div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled Mui-disabled"
+        disabled=""
+        tabindex="-1"
+        type="submit"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Search
+        </span>
+      </button>
     </div>
   </div>
-  <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary Mui-disabled Mui-disabled"
-    disabled=""
-    style="margin: 2px 0px 0px 3px;"
-    tabindex="-1"
-    type="button"
-  >
-    <span
-      class="MuiButton-label"
-    >
-      Search
-    </span>
-  </button>
 </DocumentFragment>
 `;

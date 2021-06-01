@@ -5,18 +5,39 @@ exports[`CryptoCurrencyTrackerWidgetSearchBar renders successfully 1`] = `
   <div
     class="coinSearch"
   >
-    <h1
-      class="coinText"
+    <div
+      class="MuiFormGroup-root"
     >
-      Crypto currency
-    </h1>
-    <form>
-      <input
-        class="coinInput"
-        placeholder="search..."
-        type="text"
-      />
-    </form>
+      <div
+        class="MuiFormControl-root MuiTextField-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+            placeholder="search..."
+            type="text"
+            value=""
+          />
+          <fieldset
+            aria-hidden="true"
+            class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+            style="padding-left: 8px;"
+          >
+            <legend
+              class="PrivateNotchedOutline-legend-2"
+              style="width: 0.01px;"
+            >
+              <span>
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;

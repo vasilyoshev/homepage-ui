@@ -1,32 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+$headers-font: 'Montserrat', sans-serif;
+
+.weatherCard {
+  padding: 8px;
+  font-family: $headers-font;
+  border: 1px solid rgb(129, 125, 125);
+}
+
 .forecastCard {
-  width: 300px;
-  height: 140px;
+  padding: 8px;
   margin-bottom: 5px;
-  list-style-type: none;
 
   &:hover {
     cursor: pointer;
     background-color: rgb(238, 237, 237);
-    border: 2px solid rgb(129, 125, 125);
   }
 }
 
-.weatherCard {
-  width: 270px;
-  padding: 16px;
-  margin-top: 5px;
-  font-family: 'Montserrat', sans-serif;
-  border: 2px solid rgb(129, 125, 125);
-}
+.forecastTitle {
+  margin: 6px;
+  font-family: $headers-font;
+  text-align: center;
+};
 
 .locName {
   margin-top: 5px;
   margin-bottom: 5px;
-  font-family: 'Montserrat', sans-serif;;
+  font-family: $headers-font;
 }
 
-.forecastTitle {
-  font-family: 'Montserrat', sans-serif;;
-};
