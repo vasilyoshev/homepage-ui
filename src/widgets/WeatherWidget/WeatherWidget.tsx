@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { WeatherWidgetLocationSearch, WeatherWidgetLocationTable, WeatherWidgetAlertMessage, WeatherWidgetSummary } from 'components';
-import { Card, CardContent } from '@material-ui/core';
+import { Card } from '@material-ui/core';
 import { WeatherLocation } from 'interfaces';
 import { searchLocation } from 'services';
 import styles from './WeatherWidget.module.scss';
@@ -30,19 +30,16 @@ export const WeatherWidget: React.FC = () => {
   };
 
   return (
-    <Card>
-      <CardContent className={styles.weatherWidgetCard}>
-        <h1 className={styles.title}>Weather Widget</h1>
-        <WeatherWidgetLocationSearch onSearch={addLocation} />
-        <h2 className={styles.locations}>Locations</h2>
-        {error && <WeatherWidgetAlertMessage severity='error' message={error}/>}
-        {warning && <WeatherWidgetAlertMessage severity='warning' message={warning}/>}
-        <WeatherWidgetLocationTable
-          locations={locations}
-          current={currentLocation}
-          onSelect={(location) => setCurrentLocation(location)} />
-        <WeatherWidgetSummary location={currentLocation}/>
-      </CardContent>
+    <Card className={styles.weatherWidgetContainer}>
+      <h2 className={styles.title}>Weather Widget</h2>
+      <WeatherWidgetLocationSearch onSearch={addLocation} />
+      {error && <WeatherWidgetAlertMessage severity='error' message={error}/>}
+      {warning && <WeatherWidgetAlertMessage severity='warning' message={warning}/>}
+      <WeatherWidgetLocationTable
+        locations={locations}
+        current={currentLocation}
+        onSelect={(location) => setCurrentLocation(location)} />
+      <WeatherWidgetSummary location={currentLocation}/>
     </Card>
   );
 };

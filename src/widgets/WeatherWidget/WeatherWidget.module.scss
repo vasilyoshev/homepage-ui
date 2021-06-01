@@ -2,16 +2,13 @@
 
 $headers-font: 'Montserrat', sans-serif;
 
-.weatherWidgetCard {
-  border: 1px solid rgb(88, 85, 85);
-  border-radius: 3px;
+.weatherWidgetContainer {
+  padding: 8px;
 }
 
-.title {
-  margin-top: 0;
-  font-family: $headers-font;
-};
-
+.title,
 .locations {
+  margin: 0 auto;
   font-family: $headers-font;
-}
+  text-align: center;
+};

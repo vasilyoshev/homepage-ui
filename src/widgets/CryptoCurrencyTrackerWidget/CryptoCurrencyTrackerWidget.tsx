@@ -2,7 +2,7 @@ import React, { ChangeEvent, useState, useEffect } from 'react';
 import axios from 'axios';
 import { CryptoCurrencyTrackerWidgetResponse } from 'interfaces';
 import { CryptoCurrencyTrackerWidgetSearchBar, CryptoCurrencyTrackerWidgetInfo } from 'components';
-import { Card, CardContent } from '@material-ui/core';
+import { Card } from '@material-ui/core';
 import styles from './CryptoCurrencyTrackerWidget.module.scss';
 
 export const CryptoCurrencyTrackerWidget: React.FC = () => {
@@ -17,7 +17,7 @@ export const CryptoCurrencyTrackerWidget: React.FC = () => {
     }
     axios
       .get(
-        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=5&page=1&sparkline=false',
+        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=8&page=1&sparkline=false',
       )
       .then((res) => {
         setCoinsRes(filterCoins(res.data));
@@ -31,10 +31,9 @@ export const CryptoCurrencyTrackerWidget: React.FC = () => {
 
   return (
     <Card className={styles.coinApp}>
-      <CardContent className={styles.coinContent}>
-        <CryptoCurrencyTrackerWidgetSearchBar type='text' placeholder='Search' onChange={handleChange} />
-        <CryptoCurrencyTrackerWidgetInfo coins={coinsRes} />
-      </CardContent>
+      <h2 className={styles.coinText}>Crypto Tracker</h2>
+      <CryptoCurrencyTrackerWidgetSearchBar type='text' placeholder='Search' onChange={handleChange} />
+      <CryptoCurrencyTrackerWidgetInfo coins={coinsRes} />
     </Card>
   );
 };

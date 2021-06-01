@@ -89,21 +89,11 @@ exports[`App renders successfully 1`] = `
         class="MuiTouchRipple-root"
       />
     </button>
-    <div
-      class="CryptoWidget"
-    />
-    <div
-      class="WeatherWidget"
-    />
-    <div
-      class="TimerWidget"
-    />
-    <div
-      class="TodoWidget"
-    />
-    <div
-      class="CalendarWidget"
-    />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
   </div>
 </DocumentFragment>
 `;

@@ -1,58 +1,63 @@
-.mainCard {
-  width: 320px;
-  height: 180px;
-  padding: 3px;
-  margin-bottom: 5px;
-  background-color: rgb(235, 229, 229);
-  border: 1px solid #808080;
+.coinCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px;
+  margin-bottom: 6px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(238, 237, 237);
+  }
 }
 
 .coinName {
-  font-size: 22px;
+  position: relative;
+  font-size: 1.1rem;
 }
 
 .icon {
-  width: 35px;
-  height: 35px;
-  padding-left: 5px;
+  position: absolute;
+  top: 15px;
+  left: 244px;
+  width: 70px;
+  height: 70px;
 }
 
 .coinPrice {
-  display: inline-block;
-  padding: 3px;
-  margin: 8px 0 0;
-  font-size: 20px;
-  border: 1px solid #808080;
+  padding: 1px 4px;
+  font-size: 1rem;
+  border: 1px solid #474747;
   border-radius: 5px;
 }
 
-.marketcap {
-  display: inline-block;
-  margin-top: 5px;
+.coinMarketcap {
+  margin-top: 8px;
+  font-size: 0.8rem;
 }
 
 .coinPriceChange {
-  display: inline-block;
   margin-top: 8px;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .coinPercentRed {
   display: inline;
-  padding: 3px;
-  margin: 5px 0 10px 5px;
-  font-size: 22px;
+  padding: 0 2px;
+  margin-left: 8px;
+  font-size: 1.1rem;
   color: #f00606;
-  border: 2px solid #f00606;
+  border: 1px solid #f00606;
   border-radius: 5px;
 }
 
 .coinPercentGreen {
   display: inline;
-  padding: 3px;
-  margin: 5px 0 10px 5px;
-  font-size: 22px;
+  padding: 0 2px;
+  margin-left: 8px;
+  font-size: 1.1rem;
   color: #0fbd0f;
-  border: 2px solid #0fbd0f;
+  border: 1px solid #0fbd0f;
   border-radius: 5px;
 }

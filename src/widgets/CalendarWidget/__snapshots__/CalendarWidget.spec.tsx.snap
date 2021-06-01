@@ -6,7 +6,7 @@ exports[`CalendarWidget renders successfully 1`] = `
     class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
-      class="MuiCardContent-root calendarCard"
+      class="MuiCardContent-root"
     >
       <div
         class="MuiPickersStaticWrapper-staticWrapperRoot"

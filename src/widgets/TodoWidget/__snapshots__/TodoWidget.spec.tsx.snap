@@ -3,7 +3,7 @@
 exports[`TodoWidget renders successfully 1`] = `
 <DocumentFragment>
   <div
-    class="MuiPaper-root MuiCard-root todoWidget MuiPaper-elevation1 MuiPaper-rounded"
+    class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
       class="MuiCardContent-root"
