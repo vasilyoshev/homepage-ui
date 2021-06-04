@@ -15,14 +15,21 @@ export const CryptoCurrencyTrackerWidget: React.FC = () => {
         return coin.name.toLowerCase().includes(search.toLowerCase());
       });
     }
+    let isActive = true;
     axios
       .get(
         'https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=8&page=1&sparkline=false',
+
       )
       .then((res) => {
-        setCoinsRes(filterCoins(res.data));
+        if (isActive) {
+          setCoinsRes(filterCoins(res.data));
+        }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err.message));
+    return () => {
+      isActive = false;
+    };
   }, [search]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
