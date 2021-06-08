@@ -3,7 +3,7 @@
 exports[`Home renders successfully 1`] = `
 <DocumentFragment>
   <div
-    class="gridContainer"
+    class="widgetsContainer"
   >
     <button
       class="MuiButtonBase-root MuiFab-root addWidgetFab MuiFab-primary"

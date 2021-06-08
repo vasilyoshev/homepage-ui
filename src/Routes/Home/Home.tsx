@@ -13,7 +13,7 @@ export const Home: React.FC = () => {
   const isWeatherWidgetActive = useSelector(selectIsWeatherWidgetActive);
 
   return (
-    <div className={styles.gridContainer}>
+    <div className={styles.widgetsContainer}>
       <AddWidgetFab />
       <div>
         {isCryptoCurrencyWidgetActive && <CryptoCurrencyTrackerWidget />}
