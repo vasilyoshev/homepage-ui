@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { v4 as uuidv4 } from 'uuid';
-import { Todo } from 'interfaces';
+import { TodoSliceState } from 'interfaces';
 
-const initialState: Array<Todo> = [
+const initialState: Array<TodoSliceState> = [
   {
     id: '12412',
     text: 'Walk the dog',

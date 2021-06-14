@@ -9,7 +9,7 @@ export const TodoList: React.FC = () => {
   );
   return (
     <>
-      {todos && todos.map((todo) => (
+      {todos?.map((todo) => (
         <TodoListItem
           key={todo.id}
           todo={todo}
