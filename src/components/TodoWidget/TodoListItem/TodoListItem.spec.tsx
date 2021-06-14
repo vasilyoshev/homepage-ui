@@ -4,7 +4,7 @@ import { TodoListItem } from './TodoListItem';
 
 describe('TodoListItem', () => {
   it('renders successfully', () => {
-    const { asFragment } = render(<TodoListItem todo={{} as Todo} removeTodo={jest.fn()} toggleComplete={jest.fn()} />);
+    const { asFragment } = render(<TodoListItem todo={{} as Todo} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });
