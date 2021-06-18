@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles, Container, Typography, TextField, Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 export const Signup: React.FC = () => {
   const { heading, submitButton } = useStyles();
 
-  const [json, setJson] = useState<string>();
+  /* const [json, setJson] = useState<string>(); */
 
   return (
     <Container maxWidth="xs">
@@ -53,14 +53,14 @@ export const Signup: React.FC = () => {
         >
         Sign Up
         </Button>
-        {json && (
+        {/* {json && (
           <>
             <Typography variant="body1">
 
             </Typography>
             <Typography variant="body2">{json}</Typography>
           </>
-        )}
+        )} */}
       </form>
     </Container>
   );
