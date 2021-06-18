@@ -22,8 +22,8 @@ export const Header: React.FC = () => {
           </NavLink>
         </Typography>
         <Button color="inherit">
-          <NavLink to="/about" activeClassName="selected">
-            About
+          <NavLink to="/signup" activeClassName="selected">
+            SIGN UP
           </NavLink>
         </Button>
       </Toolbar>

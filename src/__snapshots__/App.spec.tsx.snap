@@ -51,9 +51,9 @@ exports[`App renders successfully 1`] = `
           class="MuiButton-label"
         >
           <a
-            href="/about"
+            href="/signup"
           >
-            About
+            SIGN UP
           </a>
         </span>
         <span
