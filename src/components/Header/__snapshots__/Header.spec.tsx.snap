@@ -53,7 +53,25 @@ exports[`Header renders successfully 1`] = `
           <a
             href="/signup"
           >
-            SIGN UP
+            SIGNUP
+          </a>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-colorInherit"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          <a
+            href="/login"
+          >
+            LOGIN
           </a>
         </span>
         <span

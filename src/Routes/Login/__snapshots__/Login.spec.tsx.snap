@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Signup renders successfully 1`] = `
+exports[`Login renders successfully 1`] = `
 <DocumentFragment>
   <div
     class="MuiContainer-root MuiContainer-maxWidthXs"
@@ -8,7 +8,7 @@ exports[`Signup renders successfully 1`] = `
     <h3
       class="MuiTypography-root makeStyles-heading-1 MuiTypography-h3"
     >
-      Register
+      Please Login
     </h3>
     <form
       novalidate=""
