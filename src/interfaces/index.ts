@@ -10,3 +10,4 @@ export * from './WeatherWidgetLocationSearchProps';
 export * from './WeatherWidgetLocationTableProps';
 export * from './WeatherWidgetModel';
 export * from './TodoSliceState';
+export * from './FormInput';
