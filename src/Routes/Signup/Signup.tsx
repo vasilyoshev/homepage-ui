@@ -1,27 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { FormInput } from 'interfaces';
 import { Container, Typography, TextField, Button } from '@material-ui/core';
 import { useStyles } from 'styles';
 import { useDispatch } from 'react-redux';
-import { signupUser } from 'slices';
-// import { useAppSelector } from 'store';
+import { signupUser, clearState } from 'slices';
+import { useAppSelector } from 'store';
+import { useHistory } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 export const Signup: React.FC = () => {
   const { heading, submitButton } = useStyles();
   const { register, handleSubmit } = useForm<FormInput>();
   const dispatch = useDispatch();
-  // const isSuccess = useAppSelector((state) => state.user.isSuccess);
+  const history = useHistory();
+  const { isSuccess, isError } = useAppSelector((state) => state.user);
 
   const onSubmit = (data: FormInput) => {
     dispatch(signupUser(data));
   };
 
-  /* useEffect(() => {
+  useEffect(() => {
     if (isSuccess) {
-      window.location.href = '/login';
+      toast.success('Your registration is successfull');
+      dispatch(clearState());
+      history.push('/login');
     }
-  },[isSuccess]); */
+    if (isError) {
+      dispatch(clearState());
+      toast.error('Something gets wrong!');
+    }
+  },[isSuccess, isError, history, dispatch]);
 
   return (
     <Container maxWidth="xs">

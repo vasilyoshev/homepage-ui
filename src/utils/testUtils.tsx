@@ -9,6 +9,7 @@ import thunk from 'redux-thunk';
 const mockState = {
   loading: {},
   widgets: { widgetsProps: [] },
+  user: {},
 };
 const createMockStore = configureStore([thunk]);
 const store = createMockStore(mockState);

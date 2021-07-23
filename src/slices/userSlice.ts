@@ -1,16 +1,18 @@
-import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios, { AxiosResponse } from 'axios';
-import { User, UserSignUp, UserAuthState, ThunkApi } from 'interfaces';
+import { User, UserInfoRes, UserAuthState } from 'interfaces';
 
 const initialState: UserAuthState = {
-  user: '',
+  username: '',
   isSuccess: false,
   isAuth: false,
+  isError: false,
+  message: '',
 };
 
-export const signupUser = createAsyncThunk<User,UserSignUp,ThunkApi>(
+export const signupUser = createAsyncThunk<User,UserInfoRes>(
   'user/signupUser',
-  async (userData, thunkAPI) => {
+  async (userData) => {
     const { username, password } = userData;
     const response: AxiosResponse = await axios.post('http://localhost:4000/users/signup',{
       username,
@@ -22,20 +24,29 @@ export const signupUser = createAsyncThunk<User,UserSignUp,ThunkApi>(
     if(userInfoRes.status == 201) {
       return userInfoRes.data;
     }
-    return thunkAPI.rejectWithValue({ message: userInfoRes.statusText });
   });
 
 export const userSlice = createSlice({
   name: 'user',
   initialState,
-  reducers: {},
+  reducers: {
+    clearState: (state) => {
+      state.isError = false;
+      state.isSuccess = false;
+      return state;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(signupUser.pending, (state) => {
       state.isSuccess = false;
     });
-    builder.addCase(signupUser.fulfilled, (state,  action: PayloadAction<UserSignUp>) => {
-      state.user = action.payload.username;
+    builder.addCase(signupUser.fulfilled, (state) => {
       state.isSuccess = true;
+    });
+    builder.addCase(signupUser.rejected, (state) => {
+      state.isError = true;
     });
   },
 });
+
+export const { clearState } = userSlice.actions;
