@@ -12,7 +12,5 @@ export * from './WeatherWidgetModel';
 export * from './TodoSliceState';
 export * from './FormInput';
 export * from './User';
-export * from './UserSignUp';
+export * from './UserInfoRes';
 export * from './UserAuthState';
-export * from './UserAuthError';
-export * from './thunkApi';
