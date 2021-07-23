@@ -14,7 +14,7 @@ export const App: React.FC = () => {
       <Header />
 
       <Switch>
-        <Route path="/signup" exact component={Signup} />
+        <Route path="/signup" component={Signup} />
         <Route path='/login' component={Login} />
         <Route path="/" component={Home} />
       </Switch>

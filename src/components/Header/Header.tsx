@@ -13,7 +13,7 @@ export const Header: React.FC = () => {
     axios.get('http://localhost:4000/logout', {
       withCredentials: true,
     }).then((res : AxiosResponse) => {
-      if (res.data === 'success') {
+      if (res.status === 200) {
         window.location.href = '/login';
       }
     });
