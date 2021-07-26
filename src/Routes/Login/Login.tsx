@@ -1,28 +1,36 @@
-import React from 'react';
-import axios, { AxiosResponse } from 'axios';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { FormInput } from 'interfaces';
 import { Container, Typography, TextField, Button } from '@material-ui/core';
+import { loginUser, clearState } from 'slices';
 import { useStyles } from 'styles';
+import { useDispatch } from 'react-redux';
+import { useAppSelector } from 'store';
+import { useHistory } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
 
 export const Login: React.FC = () => {
   const { heading, submitButton } = useStyles();
   const { register, handleSubmit } = useForm<FormInput>();
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const { isSuccess, isError, errorMessage } = useAppSelector((state) => state.user);
 
   const onSubmit = (data: FormInput) => {
-    axios.post('http://localhost:4000/login', {
-      username: data.username,
-      password: data.password,
-    }, {
-      withCredentials: true,
-    }).then((res: AxiosResponse) => {
-      if (res.data === 'success') {
-        window.location.href = '/';
-      }
-    }, () => {
-      console.log('Failure');
-    });
+    dispatch(loginUser(data));
   };
+
+  useEffect(() => {
+    if (isSuccess) {
+      toast.success('Authentication successfull', { duration: 2000 });
+      dispatch(clearState());
+      history.push('/');
+    }
+    if (isError) {
+      toast.error('Something gets wrong!', { duration: 2000 });
+      dispatch(clearState());
+    }
+  },[isSuccess, isError, errorMessage, dispatch, history]);
 
   return (
     <Container maxWidth="xs">

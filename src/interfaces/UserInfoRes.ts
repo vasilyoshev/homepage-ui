@@ -1,6 +1,6 @@
 export interface UserInfoRes {
-    username?: string;
+    username?: string | undefined;
     password?: string;
     accessToken?: string;
-    message?: string;
+
   }

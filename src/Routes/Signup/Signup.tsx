@@ -7,14 +7,14 @@ import { useDispatch } from 'react-redux';
 import { signupUser, clearState } from 'slices';
 import { useAppSelector } from 'store';
 import { useHistory } from 'react-router-dom';
-import toast from 'react-hot-toast';
+import { toast } from 'react-hot-toast';
 
 export const Signup: React.FC = () => {
   const { heading, submitButton } = useStyles();
   const { register, handleSubmit } = useForm<FormInput>();
   const dispatch = useDispatch();
   const history = useHistory();
-  const { isSuccess, isError } = useAppSelector((state) => state.user);
+  const { isSuccess, isError, errorMessage } = useAppSelector((state) => state.user);
 
   const onSubmit = (data: FormInput) => {
     dispatch(signupUser(data));
@@ -27,10 +27,10 @@ export const Signup: React.FC = () => {
       history.push('/login');
     }
     if (isError) {
+      toast.error('Something gets wrong!', { duration: 2000 });
       dispatch(clearState());
-      toast.error('Something gets wrong!');
     }
-  },[isSuccess, isError, history, dispatch]);
+  },[isSuccess, isError, errorMessage, history, dispatch]);
 
   return (
     <Container maxWidth="xs">
