@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home, About } from 'Routes';
+import { Home, Signup, Login } from 'Routes';
 import { Header } from 'components';
 import { handleLoadingState } from 'utils';
 
@@ -14,8 +14,9 @@ export const App: React.FC = () => {
       <Header />
 
       <Switch>
-        <Route path="/about" component={About} />
-        <Route exact path="/" component={Home} />
+        <Route path="/signup" component={Signup} />
+        <Route path='/login' component={Login} />
+        <Route path="/" component={Home} />
       </Switch>
     </Router>
   );
