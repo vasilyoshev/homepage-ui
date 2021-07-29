@@ -46,6 +46,8 @@ exports[`App renders successfully 1`] = `
           class="MuiButton-label"
         >
           <a
+            aria-current="page"
+            class="selected"
             href="/login"
           >
             LOGIN
@@ -76,37 +78,111 @@ exports[`App renders successfully 1`] = `
     </div>
   </header>
   <div
-    class="widgetsContainer"
+    class="MuiContainer-root MuiContainer-maxWidthXs"
   >
-    <button
-      class="MuiButtonBase-root MuiFab-root addWidgetFab MuiFab-primary"
-      tabindex="0"
-      title="Add Widget"
-      type="button"
+    <h3
+      class="MuiTypography-root makeStyles-heading-1 MuiTypography-h3"
     >
-      <span
-        class="MuiFab-label"
+      Please Login
+    </h3>
+    <form
+      novalidate=""
+    >
+      <div
+        class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
       >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root"
-          focusable="false"
-          viewBox="0 0 24 24"
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
+          data-shrink="false"
         >
-          <path
-            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          Username
+          <span
+            aria-hidden="true"
+            class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+          >
+             *
+          </span>
+        </label>
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiOutlinedInput-input"
+            name="username"
+            required=""
+            type="text"
+            value=""
           />
-        </svg>
-      </span>
-      <span
-        class="MuiTouchRipple-root"
-      />
-    </button>
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
+          <fieldset
+            aria-hidden="true"
+            class="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="PrivateNotchedOutline-legendLabelled-5"
+            >
+              <span>
+                Username *
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
+          data-shrink="false"
+        >
+          Password
+          <span
+            aria-hidden="true"
+            class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+          >
+             *
+          </span>
+        </label>
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiOutlinedInput-input"
+            name="password"
+            required=""
+            type="password"
+            value=""
+          />
+          <fieldset
+            aria-hidden="true"
+            class="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="PrivateNotchedOutline-legendLabelled-5"
+            >
+              <span>
+                Password *
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+      </div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-submitButton-2 MuiButton-containedPrimary MuiButton-fullWidth"
+        tabindex="0"
+        type="submit"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          SUBMIT
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </form>
   </div>
 </DocumentFragment>
 `;
