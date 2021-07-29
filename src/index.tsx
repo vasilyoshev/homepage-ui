@@ -6,6 +6,7 @@ import { App } from './App';
 import store from 'store';
 import 'fontsource-roboto';
 import { Toaster } from 'react-hot-toast';
+
 ReactDOM.render(
   <Provider store={store}>
     <App />

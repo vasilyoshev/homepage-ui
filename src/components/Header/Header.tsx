@@ -1,9 +1,4 @@
-import {
-  AppBar,
-  Button,
-  Toolbar,
-  Typography,
-} from '@material-ui/core';
+import { AppBar, Button, Toolbar, Typography } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
 
