@@ -1,8 +1,10 @@
 import { AppBar, Button, Toolbar, Typography } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
+import { useAppSelector } from 'store';
 import styles from './Header.module.scss';
 
 export const Header: React.FC = () => {
+  const { isLoggedIn } = useAppSelector((state) => state.user);
   const logout = () => {
     localStorage.removeItem('token');
     window.location.href = '/login';
@@ -16,21 +18,29 @@ export const Header: React.FC = () => {
             Homepage Widgets
           </NavLink>
         </Typography>
-        <Button color="inherit">
-          <NavLink to="/signup" activeClassName="selected">
-            SIGNUP
-          </NavLink>
-        </Button>
-        <Button color="inherit">
-          <NavLink to="/login" activeClassName="selected">
-            LOGIN
-          </NavLink>
-        </Button>
-        <Button color="inherit">
-          <NavLink onClick={logout} to="/logout" activeClassName="selected">
+        {isLoggedIn ? (
+          <>
+            <Button color="inherit">
+              <NavLink onClick={logout} to="/logout" activeClassName="selected">
             LOGOUT
-          </NavLink>
-        </Button>
+              </NavLink>
+            </Button>
+          </>
+        ):(
+          <>
+            <Button color="inherit">
+              <NavLink to="/signup" activeClassName="selected">
+          SIGNUP
+              </NavLink>
+            </Button>
+            <Button color="inherit">
+              <NavLink to="/login" activeClassName="selected">
+          LOGIN
+              </NavLink>
+            </Button>
+          </>
+        )}
+
       </Toolbar>
     </AppBar>
   );
