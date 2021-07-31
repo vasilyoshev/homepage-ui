@@ -33,7 +33,9 @@ export const Login: React.FC = () => {
 
   return (
     <Container maxWidth="xs">
-      <Typography className={heading} variant="h3">Please Login</Typography>
+      <Typography className={heading} variant="h4">
+        Please Login
+      </Typography>
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <TextField
           {...register('username')}
