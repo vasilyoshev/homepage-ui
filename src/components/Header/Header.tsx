@@ -1,4 +1,5 @@
-import { AppBar, Button, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Button, Toolbar, Typography, IconButton } from '@material-ui/core';
+import { AccountCircle } from '@material-ui/icons';
 import { NavLink } from 'react-router-dom';
 import { useAppSelector } from 'store';
 import styles from './Header.module.scss';
@@ -20,6 +21,11 @@ export const Header: React.FC = () => {
         </Typography>
         {isLoggedIn ? (
           <>
+            <IconButton  color="inherit">
+              <NavLink to='/dashboard' activeClassName="selected">
+                <AccountCircle />
+              </NavLink>
+            </IconButton>
             <Button color="inherit">
               <NavLink onClick={logout} to="/logout" activeClassName="selected">
             LOGOUT

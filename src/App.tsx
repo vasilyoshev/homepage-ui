@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home, Signup, Login, PrivateRoute } from 'Routes';
+import { Home, Signup, Login, PrivateRoute, Dashboard } from 'Routes';
 import { Header } from 'components';
 import { handleLoadingState } from 'utils';
 
@@ -14,9 +14,10 @@ export const App: React.FC = () => {
       <Header />
 
       <Switch>
-        <Route path="/signup" exact component={Signup} />
-        <Route path='/login' exact component={Login} />
         <PrivateRoute path="/" exact component={Home} />
+        <PrivateRoute path="/dashboard" exact component={Dashboard} />
+        <Route path="/signup" exact component={Signup} />
+        <Route path="/login" exact component={Login} />
       </Switch>
     </Router>
   );
