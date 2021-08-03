@@ -4,7 +4,7 @@ exports[`Dashboard renders successfully 1`] = `
 <DocumentFragment>
   <div>
     <h3>
-      Hello User
+      Hello 
     </h3>
   </div>
 </DocumentFragment>

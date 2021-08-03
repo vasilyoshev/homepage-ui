@@ -23,7 +23,7 @@ export const Login: React.FC = () => {
   useEffect(() => {
     if (isSuccess) {
       toast.success('Authentication successfull', { duration: 2000 });
-      history.push('/');
+      history.push('/dashboard');
     }
     if (isError) {
       toast.error('Something gets wrong!', { duration: 2000 });

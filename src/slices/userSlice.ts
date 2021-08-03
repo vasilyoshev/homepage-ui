@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios, { AxiosResponse } from 'axios';
-import { User, UserInfoRes, UserAuthState } from 'interfaces';
+import { UserInfoRes, UserAuthState } from 'interfaces';
 
 const initialState: UserAuthState = {
   username: undefined,
@@ -10,9 +10,9 @@ const initialState: UserAuthState = {
   errorMessage: null,
 };
 
-export const signupUser = createAsyncThunk<User,UserInfoRes>(
+export const signupUser = createAsyncThunk(
   'user/signupUser',
-  async (userData) => {
+  async (userData: UserInfoRes) => {
     const { username, password } = userData;
     const response: AxiosResponse = await axios.post('http://localhost:4000/users/signup',{
       username,
@@ -27,9 +27,9 @@ export const signupUser = createAsyncThunk<User,UserInfoRes>(
     return userInfoRes.data.message;
   });
 
-export const loginUser = createAsyncThunk<User,UserInfoRes>(
+export const loginUser = createAsyncThunk(
   'user/loginUser',
-  async (userData) => {
+  async (userData: UserInfoRes) => {
     const { username, password } = userData;
     const response: AxiosResponse = await axios.post('http://localhost:4000/users/login', {
       username,
@@ -74,7 +74,7 @@ export const userSlice = createSlice({
     builder.addCase(loginUser.fulfilled, (state, action) => {
       state.isSuccess = true;
       state.isLoggedIn = true;
-      state.username = action.payload.username;
+      state.username = action.payload.user.username;
       return state;
     });
     builder.addCase(loginUser.rejected, (state) => {
