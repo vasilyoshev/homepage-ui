@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+$headers-font: 'Montserrat', sans-serif;
+
+.dashboardCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 360px;
+}
+
+.userText {
+  margin: auto;
+  font-family: $headers-font;
+}
+
+.timeText {
+  margin: 5px 0 0;
+  font-family: $headers-font;
+}
