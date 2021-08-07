@@ -1,12 +1,16 @@
 import { Dashboard } from './Dashboard';
 import { render } from 'utils';
-import MockDate from 'mockdate';
 
+const realDate = Date.now;
 describe('Dashboard', () => {
-  afterAll(() => MockDate.reset());
+  beforeAll(() => {
+    global.Date.now = jest.fn(() => 1628366059052);
+  });
   it('renders successfully', () => {
     const { asFragment } = render(<Dashboard />);
-    MockDate.set('2021');
     expect(asFragment()).toMatchSnapshot();
+  });
+  afterAll(() => {
+    global.Date.now = realDate;
   });
 });
