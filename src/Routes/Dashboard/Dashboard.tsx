@@ -7,7 +7,7 @@ import styles from './Dashboard.module.scss';
 
 export const Dashboard: React.FC = () => {
   const date = new Date().toDateString();
-  const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
   const { username } = useAppSelector((state) => state.user);
 
   return (
