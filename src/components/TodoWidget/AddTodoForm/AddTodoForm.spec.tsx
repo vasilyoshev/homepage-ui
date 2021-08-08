@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 
 describe('AddTodoForm', () => {
   it('renders successfully', () => {
-    const { asFragment } = render(<AddTodoForm addTodo={(str: string) => {str;}} />);
+    const { asFragment } = render(<AddTodoForm />);
     expect(asFragment()).toMatchSnapshot();
   });
   it('should render empty input field', () => {

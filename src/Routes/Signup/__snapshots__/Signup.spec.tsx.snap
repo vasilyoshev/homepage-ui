@@ -1,71 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders successfully 1`] = `
+exports[`Signup renders successfully 1`] = `
 <DocumentFragment>
-  <header
-    class="MuiPaper-root MuiAppBar-root MuiAppBar-positionSticky MuiAppBar-colorPrimary MuiPaper-elevation4"
-  >
-    <div
-      class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
-    >
-      <h6
-        class="MuiTypography-root title MuiTypography-h6"
-      >
-        <a
-          aria-current="page"
-          class="selected"
-          href="/"
-        >
-          Homepage Widgets
-        </a>
-      </h6>
-      <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-colorInherit"
-        tabindex="0"
-        type="button"
-      >
-        <span
-          class="MuiButton-label"
-        >
-          <a
-            href="/signup"
-          >
-            SIGNUP
-          </a>
-        </span>
-        <span
-          class="MuiTouchRipple-root"
-        />
-      </button>
-      <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-colorInherit"
-        tabindex="0"
-        type="button"
-      >
-        <span
-          class="MuiButton-label"
-        >
-          <a
-            aria-current="page"
-            class="selected"
-            href="/login"
-          >
-            LOGIN
-          </a>
-        </span>
-        <span
-          class="MuiTouchRipple-root"
-        />
-      </button>
-    </div>
-  </header>
   <div
     class="MuiContainer-root MuiContainer-maxWidthXs"
   >
     <h4
       class="MuiTypography-root makeStyles-heading-1 MuiTypography-h4"
     >
-      Please Login
+      Register
     </h4>
     <form
       novalidate=""

@@ -1,20 +1,18 @@
 import React from 'react';
-import { TodoListProps } from 'interfaces';
+import { RootState } from 'store';
+import { useSelector } from 'react-redux';
 import { TodoListItem } from 'components';
 
-export const TodoList: React.FC<TodoListProps> = ({
-  todos,
-  toggleComplete,
-  removeTodo,
-}) => {
+export const TodoList: React.FC = () => {
+  const todos = useSelector(
+    (state: RootState) => state.todos,
+  );
   return (
     <>
-      {todos.map((todo, index) => (
+      {todos?.map((todo) => (
         <TodoListItem
-          key={index}
+          key={todo.id}
           todo={todo}
-          toggleComplete={toggleComplete}
-          removeTodo={removeTodo}
         />
       ))}
     </>

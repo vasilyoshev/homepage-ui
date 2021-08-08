@@ -1,24 +1,25 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { TodoListItemProps } from 'interfaces';
+import { removeTodo, completeTodo } from 'slices';
 import { Checkbox, InputLabel, Typography, IconButton } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import styles from './TodoListItem.module.scss';
 
 export const TodoListItem: React.FC<TodoListItemProps> = ({
   todo,
-  toggleComplete,
-  removeTodo,
 }) => {
+  const dispatch = useDispatch();
   return (
     <InputLabel
-      className={todo.complete ? styles.complete : ''}
+      className={todo.completed ? styles.completed : ''}
     >
       <Checkbox
-        checked={todo.complete}
+        checked={todo.completed}
         color="primary"
         edge="start"
         disableRipple
-        onChange={() => toggleComplete(todo)}
+        onChange={() => dispatch(completeTodo(todo.id))}
       />
       <Typography
         className={styles.todoText}
@@ -29,7 +30,7 @@ export const TodoListItem: React.FC<TodoListItemProps> = ({
       <IconButton
         data-testid="removeTodoItem"
         aria-label="delete"
-        onClick={() => removeTodo(todo.text)}
+        onClick={() => dispatch(removeTodo(todo.id))}
       >
         <DeleteIcon
           fontSize="small"

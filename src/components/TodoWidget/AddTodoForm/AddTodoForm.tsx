@@ -1,8 +1,10 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import { AddTodoFormProps } from 'interfaces';
 import { FormGroup, Button, TextField } from '@material-ui/core';
+import { useDispatch } from 'react-redux';
+import { addTodo } from 'slices';
 
-export const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
+export const AddTodoForm: React.FC = () => {
+  const dispatch = useDispatch();
   const [newTodo, setNewTodo] = useState<string>('');
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -11,7 +13,10 @@ export const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
 
   const submitTodoItem = (e: FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    addTodo(newTodo);
+    if(!newTodo.trim()) {
+      return;
+    }
+    dispatch(addTodo(newTodo));
     setNewTodo('');
   };
 

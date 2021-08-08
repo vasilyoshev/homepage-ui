@@ -8,7 +8,11 @@ const mockData = [{
 }];
 describe('TodoListItem', () => {
   it('renders successfully', () => {
+<<<<<<< HEAD
     const { asFragment } = render(<TodoListItem todo={mockData[0]} removeTodo={jest.fn()} toggleComplete={jest.fn()} />);
+=======
+    const { asFragment } = render(<TodoListItem todo={{} as Todo} />);
+>>>>>>> main
     expect(asFragment()).toMatchSnapshot();
   });
   it('should render todo item with checkbox and delete button', () => {

@@ -11,7 +11,7 @@ const mockData = [{
 }];
 describe('TodoList', () => {
   it('renders successfully', () => {
-    const { asFragment } = render(<TodoList todos={[]} toggleComplete={jest.fn()} removeTodo={jest.fn()}/>);
+    const { asFragment } = render(<TodoList />);
     expect(asFragment()).toMatchSnapshot();
   });
   it('should show list of todos', () => {
