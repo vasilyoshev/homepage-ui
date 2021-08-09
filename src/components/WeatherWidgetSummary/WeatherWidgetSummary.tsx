@@ -27,10 +27,10 @@ export const WeatherWidgetSummary: React.FC<WeatherWidgetSummaryProps> = ({ loca
   return (
     <>
       <Card className={styles.weatherCard}>
-        <h2 className={styles.locName}>{location.name}</h2>
+        <h3>{location.name}</h3>
         <WeatherWidgetEntry weather={weather} />
       </Card>
-      <h3 className={styles.forecastTitle}>Forecast 24h</h3>
+      <h4>Forecast 24h</h4>
       {forecast.map((timePoint) =>
         <Card className={styles.forecastCard} key={timePoint.dt}>
           <WeatherWidgetEntry weather={timePoint} />

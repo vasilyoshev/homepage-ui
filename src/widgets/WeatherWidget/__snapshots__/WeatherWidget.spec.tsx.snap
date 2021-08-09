@@ -5,13 +5,11 @@ exports[`WeatherWidget renders successfully 1`] = `
   <div
     class="MuiPaper-root MuiCard-root weatherWidgetContainer MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <h2
-      class="title"
-    >
+    <h3>
       Weather Widget
-    </h2>
+    </h3>
     <div
-      class="searchContainer"
+      class="MuiCardActions-root MuiCardActions-spacing"
     >
       <div
         class="MuiFormGroup-root"
@@ -63,6 +61,7 @@ exports[`WeatherWidget renders successfully 1`] = `
       class="MuiTableContainer-root"
     >
       <table
+        aria-label="a dense table"
         class="MuiTable-root"
       >
         <tbody

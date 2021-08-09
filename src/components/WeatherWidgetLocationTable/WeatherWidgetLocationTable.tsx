@@ -7,11 +7,11 @@ import styles from './WeatherWidgetLocationTable.module.scss';
 export const WeatherWidgetLocationTable: React.FC<WeatherWidgetLocationTableProps> = ({ locations, onSelect, current }) => {
   return (
     <TableContainer>
-      <Table size="small">
+      <Table size="small" aria-label="a dense table">
         <TableBody>
           {locations.map((location) =>
-            <TableRow  key={location.id} onClick={() => onSelect(location)}>
-              <TableCell className={styles.cityTableCell}>{location.name}</TableCell>
+            <TableRow className={styles.cityTableCell} key={location.id} onClick={() => onSelect(location)}>
+              <TableCell >{location.name}</TableCell>
               <TableCell>{current?.id === location.id ? <Alert severity="info">Current City</Alert> : ''}</TableCell>
             </TableRow>,
           )}

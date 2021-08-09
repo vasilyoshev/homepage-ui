@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { WeatherWidgetLocationSearch, WeatherWidgetLocationTable, WeatherWidgetAlertMessage, WeatherWidgetSummary } from 'components';
-import { Card } from '@material-ui/core';
+import { Card, CardActions } from '@material-ui/core';
 import { WeatherLocation } from 'interfaces';
 import { searchLocation } from 'services';
 import styles from './WeatherWidget.module.scss';
@@ -31,10 +31,12 @@ export const WeatherWidget: React.FC = () => {
 
   return (
     <Card className={styles.weatherWidgetContainer}>
-      <h2 className={styles.title}>Weather Widget</h2>
-      <WeatherWidgetLocationSearch onSearch={addLocation} />
-      {error && <WeatherWidgetAlertMessage severity='error' message={error}/>}
-      {warning && <WeatherWidgetAlertMessage severity='warning' message={warning}/>}
+      <h3>Weather Widget</h3>
+      <CardActions>
+        <WeatherWidgetLocationSearch onSearch={addLocation} />
+      </CardActions>
+      {error && <WeatherWidgetAlertMessage severity='error' message={error} />}
+      {warning && <WeatherWidgetAlertMessage severity='warning' message={warning} />}
       <WeatherWidgetLocationTable
         locations={locations}
         current={currentLocation}

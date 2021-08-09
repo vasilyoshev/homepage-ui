@@ -6,6 +6,7 @@ exports[`WeatherWidgetLocationTable renders successfully 1`] = `
     class="MuiTableContainer-root"
   >
     <table
+      aria-label="a dense table"
       class="MuiTable-root"
     >
       <tbody

@@ -3,53 +3,49 @@
 exports[`WeatherWidgetLocationSearch renders successfully 1`] = `
 <DocumentFragment>
   <div
-    class="searchContainer"
+    class="MuiFormGroup-root"
   >
     <div
-      class="MuiFormGroup-root"
+      class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
     >
       <div
-        class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
       >
-        <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+        <input
+          aria-invalid="false"
+          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+          placeholder="add location here"
+          type="text"
+          value=""
+        />
+        <fieldset
+          aria-hidden="true"
+          class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+          style="padding-left: 8px;"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
-            placeholder="add location here"
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
-            style="padding-left: 8px;"
+          <legend
+            class="PrivateNotchedOutline-legend-2"
+            style="width: 0.01px;"
           >
-            <legend
-              class="PrivateNotchedOutline-legend-2"
-              style="width: 0.01px;"
-            >
-              <span>
-                ​
-              </span>
-            </legend>
-          </fieldset>
-        </div>
+            <span>
+              ​
+            </span>
+          </legend>
+        </fieldset>
       </div>
-      <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled Mui-disabled"
-        disabled=""
-        tabindex="-1"
-        type="submit"
-      >
-        <span
-          class="MuiButton-label"
-        >
-          Search
-        </span>
-      </button>
     </div>
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled Mui-disabled"
+      disabled=""
+      tabindex="-1"
+      type="submit"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Search
+      </span>
+    </button>
   </div>
 </DocumentFragment>
 `;
