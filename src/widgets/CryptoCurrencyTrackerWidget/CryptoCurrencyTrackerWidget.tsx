@@ -31,7 +31,7 @@ export const CryptoCurrencyTrackerWidget: React.FC = () => {
 
   return (
     <Card className={styles.coinApp}>
-      <h2 className={styles.coinText}>Crypto Tracker</h2>
+      <h3>Crypto Tracker</h3>
       <CryptoCurrencyTrackerWidgetSearchBar type='text' placeholder='Search' onChange={handleChange} />
       <CryptoCurrencyTrackerWidgetInfo coins={coinsRes} />
     </Card>

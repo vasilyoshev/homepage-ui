@@ -5,11 +5,9 @@ exports[`CryptoCurrencyTrackerWidget renders successfully 1`] = `
   <div
     class="MuiPaper-root MuiCard-root coinApp MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <h2
-      class="coinText"
-    >
+    <h3>
       Crypto Tracker
-    </h2>
+    </h3>
     <div
       class="coinSearch"
     >
