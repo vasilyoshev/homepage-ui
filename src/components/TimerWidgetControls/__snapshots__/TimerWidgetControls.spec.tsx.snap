@@ -2,11 +2,11 @@
 
 exports[`TimerWidgetControls renders successfully 1`] = `
 <DocumentFragment>
-  <section
+  <div
     class="buttonsContainer"
   >
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary"
       tabindex="0"
       type="button"
     >
@@ -19,6 +19,6 @@ exports[`TimerWidgetControls renders successfully 1`] = `
         class="MuiTouchRipple-root"
       />
     </button>
-  </section>
+  </div>
 </DocumentFragment>
 `;

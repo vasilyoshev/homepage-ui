@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@material-ui/core';
 import { TimerWidgetControls } from 'components';
+import TimerIcon from '@material-ui/icons/Timer';
 import styles from './TimerWidget.module.scss';
 
 export const TimerWidget: React.FC = () => {
-  const [time, setTime] = useState(0);
-  const [timerOn, setTimerOn] = useState(false);
+  const [time, setTime] = useState<number>(0);
+  const [timerOn, setTimerOn] = useState<boolean>(false);
 
   useEffect(() => {
     let interval = 0;
@@ -25,14 +26,14 @@ export const TimerWidget: React.FC = () => {
   const resumeTimer = () => setTimerOn(true);
 
   return (
-    <Card>
-      <CardContent className={styles.timerContainer}>
-        <h2>StopWatch</h2>
-        <section className={styles.display}>
+    <Card className={styles.timerContainer}>
+      <CardContent>
+        <TimerIcon fontSize="large" />
+        <div className={styles.display}>
           <span>{('0' + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
           <span>{('0' + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
           <span>{('0' + ((time / 10) % 100)).slice(-2)}</span>
-        </section>
+        </div>
         <TimerWidgetControls
           time={time}
           timerOn={timerOn}
