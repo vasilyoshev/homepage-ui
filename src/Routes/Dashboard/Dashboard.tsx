@@ -14,15 +14,9 @@ export const Dashboard: React.FC = () => {
     <Card className={styles.dashboardCard}>
       <CardContent>
         <Avatar style={{ width: '70px', height: '70px', margin: 'auto' }} alt="avatar" />
-        <h3 className={styles.userText}>
-          {`Welcome, ${username}.`}
-        </h3>
-        <h5 className={styles.timeText}>
-          {date}
-        </h5>
-        <h5 className={styles.timeText}>
-          {time}
-        </h5>
+        <h2 className={styles.userText}>{`Welcome, ${username}.`}</h2>
+        <h5>{date}</h5>
+        <h5>{time}</h5>
       </CardContent>
       <CardActions>
         <Button

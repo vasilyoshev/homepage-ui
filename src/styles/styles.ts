@@ -1,11 +1,17 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles((theme) => ({
-  heading: {
-    textAlign: 'center',
-    margin: theme.spacing(1, 0, 4),
+  paper: {
+    marginTop: theme.spacing(2),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
   },
   submitButton: {
-    marginTop: theme.spacing(4),
+    margin: theme.spacing(3, 0, 2),
   },
 }));

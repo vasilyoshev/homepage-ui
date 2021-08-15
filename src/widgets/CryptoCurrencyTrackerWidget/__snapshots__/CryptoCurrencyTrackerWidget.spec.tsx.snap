@@ -3,46 +3,45 @@
 exports[`CryptoCurrencyTrackerWidget renders successfully 1`] = `
 <DocumentFragment>
   <div
-    class="MuiPaper-root MuiCard-root coinApp MuiPaper-elevation1 MuiPaper-rounded"
+    class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <h2
-      class="coinText"
-    >
-      Crypto Tracker
-    </h2>
     <div
-      class="coinSearch"
+      class="MuiCardContent-root"
     >
       <div
-        class="MuiFormGroup-root"
+        class="coinSearch"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root"
+          class="MuiFormGroup-root"
         >
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+            class="MuiFormControl-root MuiTextField-root"
           >
-            <input
-              aria-invalid="false"
-              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
-              placeholder="search..."
-              type="text"
-              value=""
-            />
-            <fieldset
-              aria-hidden="true"
-              class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
-              style="padding-left: 8px;"
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
             >
-              <legend
-                class="PrivateNotchedOutline-legend-2"
-                style="width: 0.01px;"
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+                placeholder="search..."
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                style="padding-left: 8px;"
               >
-                <span>
-                  ​
-                </span>
-              </legend>
-            </fieldset>
+                <legend
+                  class="PrivateNotchedOutline-legend-2"
+                  style="width: 0.01px;"
+                >
+                  <span>
+                    ​
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
           </div>
         </div>
       </div>

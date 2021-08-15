@@ -3,16 +3,16 @@
 exports[`WeatherWidget renders successfully 1`] = `
 <DocumentFragment>
   <div
-    class="MuiPaper-root MuiCard-root weatherWidgetContainer MuiPaper-elevation1 MuiPaper-rounded"
+    class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
   >
-    <h2
-      class="title"
-    >
-      Weather Widget
-    </h2>
     <div
-      class="searchContainer"
+      class="MuiCardContent-root"
     >
+      <div
+        class="MuiBox-root MuiBox-root-1"
+      >
+        Weather Widget
+      </div>
       <div
         class="MuiFormGroup-root"
       >
@@ -31,11 +31,11 @@ exports[`WeatherWidget renders successfully 1`] = `
             />
             <fieldset
               aria-hidden="true"
-              class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+              class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
               style="padding-left: 8px;"
             >
               <legend
-                class="PrivateNotchedOutline-legend-2"
+                class="PrivateNotchedOutline-legend-3"
                 style="width: 0.01px;"
               >
                 <span>
@@ -58,17 +58,6 @@ exports[`WeatherWidget renders successfully 1`] = `
           </span>
         </button>
       </div>
-    </div>
-    <div
-      class="MuiTableContainer-root"
-    >
-      <table
-        class="MuiTable-root"
-      >
-        <tbody
-          class="MuiTableBody-root"
-        />
-      </table>
     </div>
   </div>
 </DocumentFragment>

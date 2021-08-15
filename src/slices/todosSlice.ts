@@ -31,7 +31,7 @@ export const todosSlice = createSlice({
     },
     completeTodo: (state, action: PayloadAction<string>) => {
       const todo = state.find((todo) => todo.id === action.payload);
-      if(todo) {
+      if (todo) {
         todo.completed = !todo.completed;
       }
     },

@@ -1,46 +1,47 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import { FormGroup, Button, TextField } from '@material-ui/core';
+import { Button, TextField, Container } from '@material-ui/core';
+import { AddCircleOutlineRounded } from '@material-ui/icons';
 import { useDispatch } from 'react-redux';
 import { addTodo } from 'slices';
 
 export const AddTodoForm: React.FC = () => {
   const dispatch = useDispatch();
   const [newTodo, setNewTodo] = useState<string>('');
-
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setNewTodo(e.target.value);
-  };
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => setNewTodo(e.target.value);
 
   const submitTodoItem = (e: FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    if(!newTodo.trim()) {
-      return;
-    }
+    if (!newTodo.trim()) return;
     dispatch(addTodo(newTodo));
     setNewTodo('');
   };
 
   return (
-    <FormGroup>
-      <TextField
-        type='text'
-        label="add new task"
-        value={newTodo}
-        color="primary"
-        margin='normal'
-        variant="outlined"
-        size="small"
-        onChange={handleInputChange}
-      />
-      <Button
-        type="submit"
-        size="medium"
-        variant="contained"
-        color="primary"
-        onClick={submitTodoItem}
-      >
+    <Container maxWidth="sm">
+      <form noValidate>
+        <TextField
+          variant="outlined"
+          margin='normal'
+          required
+          fullWidth
+          type='text'
+          color="primary"
+          label="What needs to be done?"
+          autoFocus
+          value={newTodo}
+          onChange={handleInputChange}
+        />
+        <Button
+          type="submit"
+          variant="contained"
+          fullWidth
+          color="primary"
+          onClick={submitTodoItem}
+          startIcon={<AddCircleOutlineRounded />}
+        >
         Add Todo
-      </Button>
-    </FormGroup>
+        </Button>
+      </form>
+    </Container>
   );
 };

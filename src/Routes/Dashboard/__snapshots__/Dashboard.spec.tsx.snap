@@ -23,19 +23,15 @@ exports[`Dashboard renders successfully 1`] = `
           />
         </svg>
       </div>
-      <h3
+      <h2
         class="userText"
       >
         Welcome, undefined.
-      </h3>
-      <h5
-        class="timeText"
-      >
+      </h2>
+      <h5>
         Fri Jan 01 2021
       </h5>
-      <h5
-        class="timeText"
-      >
+      <h5>
         2020-04-15
       </h5>
     </div>

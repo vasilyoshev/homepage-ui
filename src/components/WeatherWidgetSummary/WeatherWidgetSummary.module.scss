@@ -1,32 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-$headers-font: 'Montserrat', sans-serif;
-
-.weatherCard {
-  padding: 8px;
-  font-family: $headers-font;
-  border: 1px solid rgb(129, 125, 125);
-}
 
 .forecastCard {
-  padding: 8px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 
   &:hover {
     cursor: pointer;
     background-color: rgb(238, 237, 237);
   }
 }
-
-.forecastTitle {
-  margin: 6px;
-  font-family: $headers-font;
-  text-align: center;
-};
-
-.locName {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-family: $headers-font;
-}
-

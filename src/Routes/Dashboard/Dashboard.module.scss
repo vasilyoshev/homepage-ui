@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 $headers-font: 'Montserrat', sans-serif;
 
 .dashboardCard {
@@ -6,14 +7,14 @@ $headers-font: 'Montserrat', sans-serif;
   flex-direction: column;
   align-items: center;
   width: 360px;
+  font-family: $headers-font;
 }
 
 .userText {
   margin: auto;
-  font-family: $headers-font;
 }
 
-.timeText {
+h5 {
   margin: 5px 0 0;
-  font-family: $headers-font;
+  font-size: 1.2rem;
 }

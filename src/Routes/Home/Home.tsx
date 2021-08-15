@@ -13,23 +13,25 @@ export const Home: React.FC = () => {
   const isWeatherWidgetActive = useSelector(selectIsWeatherWidgetActive);
 
   return (
-    <div className={styles.widgetsContainer}>
+    <>
       <AddWidgetFab />
-      <div>
-        {isCryptoCurrencyWidgetActive && <CryptoCurrencyTrackerWidget />}
+      <div className={styles.widgetsContainer}>
+        <div>
+          {isCryptoCurrencyWidgetActive && <CryptoCurrencyTrackerWidget />}
+        </div>
+        <div>
+          {isWeatherWidgetActive && <WeatherWidget />}
+        </div>
+        <div>
+          {isTimerWidgetActive && <TimerWidget />}
+        </div>
+        <div>
+          {isTodoWidgetActive && <TodoWidget />}
+        </div>
+        <div>
+          {isCalendarWidgetActive && <CalendarWidget />}
+        </div>
       </div>
-      <div>
-        {isWeatherWidgetActive && <WeatherWidget />}
-      </div>
-      <div>
-        {isTimerWidgetActive && <TimerWidget />}
-      </div>
-      <div>
-        {isTodoWidgetActive && <TodoWidget />}
-      </div>
-      <div>
-        {isCalendarWidgetActive && <CalendarWidget />}
-      </div>
-    </div>
+    </>
   );
 };

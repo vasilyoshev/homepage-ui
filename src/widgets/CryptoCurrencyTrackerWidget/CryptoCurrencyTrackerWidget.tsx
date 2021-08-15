@@ -2,8 +2,7 @@ import React, { ChangeEvent, useState, useEffect } from 'react';
 import axios from 'axios';
 import { CryptoCurrencyTrackerWidgetResponse } from 'interfaces';
 import { CryptoCurrencyTrackerWidgetSearchBar, CryptoCurrencyTrackerWidgetInfo } from 'components';
-import { Card } from '@material-ui/core';
-import styles from './CryptoCurrencyTrackerWidget.module.scss';
+import { Card, CardContent } from '@material-ui/core';
 
 export const CryptoCurrencyTrackerWidget: React.FC = () => {
   const [coinsRes, setCoinsRes] = useState<Array<CryptoCurrencyTrackerWidgetResponse>>([]);
@@ -25,15 +24,17 @@ export const CryptoCurrencyTrackerWidget: React.FC = () => {
       .catch((err) => console.log(err));
   }, [search]);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearch(e.target.value);
-  };
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => setSearch(e.target.value);
 
   return (
-    <Card className={styles.coinApp}>
-      <h2 className={styles.coinText}>Crypto Tracker</h2>
-      <CryptoCurrencyTrackerWidgetSearchBar type='text' placeholder='Search' onChange={handleChange} />
-      <CryptoCurrencyTrackerWidgetInfo coins={coinsRes} />
+    <Card>
+      <CardContent>
+        <CryptoCurrencyTrackerWidgetSearchBar
+          type='text'
+          placeholder='Search'
+          onChange={handleChange} />
+        <CryptoCurrencyTrackerWidgetInfo coins={coinsRes} />
+      </CardContent>
     </Card>
   );
 };

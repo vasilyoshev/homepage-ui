@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  padding: 5px;
+  width: 300px;
   margin-bottom: 6px;
 
   &:hover {
@@ -12,52 +11,10 @@
   }
 }
 
-.coinName {
-  position: relative;
-  font-size: 1.1rem;
-}
-
 .icon {
   position: absolute;
-  top: 15px;
-  left: 244px;
-  width: 70px;
-  height: 70px;
-}
-
-.coinPrice {
-  padding: 1px 4px;
-  font-size: 1rem;
-  border: 1px solid #474747;
-  border-radius: 5px;
-}
-
-.coinMarketcap {
-  margin-top: 8px;
-  font-size: 0.8rem;
-}
-
-.coinPriceChange {
-  margin-top: 8px;
-  font-size: 1rem;
-}
-
-.coinPercentRed {
-  display: inline;
-  padding: 0 2px;
-  margin-left: 8px;
-  font-size: 1.1rem;
-  color: #f00606;
-  border: 1px solid #f00606;
-  border-radius: 5px;
-}
-
-.coinPercentGreen {
-  display: inline;
-  padding: 0 2px;
-  margin-left: 8px;
-  font-size: 1.1rem;
-  color: #0fbd0f;
-  border: 1px solid #0fbd0f;
-  border-radius: 5px;
+  top: 25px;
+  left: 176px;
+  width: 90px;
+  height: 90px;
 }

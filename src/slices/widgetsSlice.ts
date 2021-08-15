@@ -5,8 +5,8 @@ import { RootState } from 'store';
 const initialState: WidgetsSliceState = {
   widgetsProps: [
     { name: 'calendar', isActive: false },
-    { name: 'todo', isActive: true },
-    { name: 'crypto', isActive: false },
+    { name: 'todo', isActive: false },
+    { name: 'crypto', isActive: true },
     { name: 'timer', isActive: false },
     { name: 'weather', isActive: false },
   ],

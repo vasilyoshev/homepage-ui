@@ -3,15 +3,22 @@
 exports[`TimerWidget renders successfully 1`] = `
 <DocumentFragment>
   <div
-    class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+    class="MuiPaper-root MuiCard-root timerContainer MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
-      class="MuiCardContent-root timerContainer"
+      class="MuiCardContent-root"
     >
-      <h2>
-        StopWatch
-      </h2>
-      <section
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+        />
+      </svg>
+      <div
         class="display"
       >
         <span>
@@ -23,12 +30,12 @@ exports[`TimerWidget renders successfully 1`] = `
         <span>
           00
         </span>
-      </section>
-      <section
+      </div>
+      <div
         class="buttonsContainer"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
           tabindex="0"
           type="button"
         >
@@ -41,7 +48,7 @@ exports[`TimerWidget renders successfully 1`] = `
             class="MuiTouchRipple-root"
           />
         </button>
-      </section>
+      </div>
     </div>
   </div>
 </DocumentFragment>

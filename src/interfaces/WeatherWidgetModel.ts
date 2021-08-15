@@ -34,8 +34,7 @@ export interface Weather {
 }
 
 export interface WeatherWidgetEntryProps {
- weather: Weather;
-
+    weather: Weather;
 }
 
 export interface WeatherWidgetSummaryProps {
