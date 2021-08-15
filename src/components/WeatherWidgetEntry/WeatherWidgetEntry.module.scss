@@ -1,32 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-$headers-font: 'Montserrat', sans-serif;
-
 .weatherEntry {
   position: relative;
 }
 
-.flex {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.temp {
-  margin: 0;
-  font-family: $headers-font;
-}
-
-.time {
-  margin: 0;
-  font-family: $headers-font;
-  font-size: 1.1rem;
-}
-
 .weatherIcon {
   position: absolute;
-  top: -94px;
-  right: 29px;
-  width: 100px;
-  height: 100px;
+  top: -116px;
+  right: -7px;
+  width: 120px;
+  height: 120px;
 }

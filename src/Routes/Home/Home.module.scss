@@ -1,9 +1,6 @@
 .widgetsContainer {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
-.widgetsContainer {
-  height: min-content;
-  margin: 2px;
-}
