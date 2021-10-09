@@ -3,7 +3,8 @@
 exports[`TimerWidget renders successfully 1`] = `
 <DocumentFragment>
   <div
-    class="MuiPaper-root MuiCard-root timerContainer MuiPaper-elevation1 MuiPaper-rounded"
+    class="MuiPaper-root MuiCard-root timerContainer MuiPaper-elevation6 MuiPaper-rounded"
+    style="width: 320px;"
   >
     <div
       class="MuiCardContent-root"

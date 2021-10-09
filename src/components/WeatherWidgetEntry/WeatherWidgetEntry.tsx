@@ -1,7 +1,7 @@
 import React from 'react';
 import { WeatherWidgetEntryProps } from 'interfaces';
 import { getIconUrl, convertUnixTimeToDate } from 'services';
-import { Box } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import styles from './WeatherWidgetEntry.module.scss';
 
 export const WeatherWidgetEntry: React.FC<WeatherWidgetEntryProps> = ({ weather }) => {
@@ -12,71 +12,23 @@ export const WeatherWidgetEntry: React.FC<WeatherWidgetEntryProps> = ({ weather 
         flexDirection="row"
         justifyContent='space-around'
         mb={1}>
-        <Box
-          p={0.5}
-          border={1}
-          borderRadius={16}
-          textAlign='center'
-          width='40%'
-          color="info.contrastText"
-          bgcolor="success.main"
-          fontSize={20}
-          fontWeight="fontWeightBold">
+        <Typography variant="h5" color="primary" gutterBottom>
           {convertUnixTimeToDate(weather.dt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })}
-        </Box>
-        <Box
-          p={0.5}
-          border={1}
-          borderRadius={16}
-          textAlign='center'
-          width='40%'
-          color="error.contrastText"
-          bgcolor="error.main"
-          fontSize={20}
-          fontWeight="fontWeightBold"
-        >
+        </Typography>
+        <Typography variant="h5" color="primary" gutterBottom>
           {weather.main.temp.toFixed(1)}°C
-        </Box>
+        </Typography>
       </Box>
       <Box display='flex' flexDirection="column">
-        <Box
-          p={0.5}
-          mb={1}
-          border={1}
-          borderRadius={16}
-          textAlign='center'
-          color="info.contrastText"
-          fontWeight="fontWeightMedium"
-          width='50%'
-          fontSize={16}
-          bgcolor="text.secondary">
+        <Typography>
           Humidity: {weather.main.humidity}%
-        </Box>
-        <Box
-          p={0.5}
-          mb={1}
-          border={1}
-          borderRadius={16}
-          textAlign='center'
-          color="info.contrastText"
-          fontWeight="fontWeightMedium"
-          width='50%'
-          fontSize={16}
-          bgcolor="text.secondary">
+        </Typography>
+        <Typography>
             Max Temp: {weather.main.temp_max.toFixed(1)}°C
-        </Box>
-        <Box
-          p={0.5}
-          border={1}
-          borderRadius={16}
-          textAlign='center'
-          color="info.contrastText"
-          fontWeight="fontWeightMedium"
-          width='50%'
-          fontSize={16}
-          bgcolor="text.secondary">
+        </Typography>
+        <Typography>
             Mix Temp: {weather.main.temp_min.toFixed(1)}°C
-        </Box>
+        </Typography>
       </Box>
       {weather.weather.map((condition) =>
         <div className={styles.weatherEntry} key={condition.id}>

@@ -6,7 +6,7 @@ exports[`TodoListItem renders successfully 1`] = `
     class="MuiListItem-container"
   >
     <div
-      class="MuiListItem-root listItem MuiListItem-gutters MuiListItem-secondaryAction"
+      class="MuiListItem-root listItem MuiListItem-dense MuiListItem-gutters MuiListItem-secondaryAction"
     >
       <div
         class="MuiListItemIcon-root"
@@ -38,7 +38,7 @@ exports[`TodoListItem renders successfully 1`] = `
         </span>
       </div>
       <div
-        class="MuiListItemText-root"
+        class="MuiListItemText-root MuiListItemText-dense"
       />
     </div>
     <div

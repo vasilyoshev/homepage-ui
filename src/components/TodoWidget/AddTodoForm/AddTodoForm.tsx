@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import { Button, TextField, Container } from '@material-ui/core';
+import { Button, TextField } from '@material-ui/core';
 import { AddCircleOutlineRounded } from '@material-ui/icons';
 import { useDispatch } from 'react-redux';
 import { addTodo } from 'slices';
@@ -17,31 +17,29 @@ export const AddTodoForm: React.FC = () => {
   };
 
   return (
-    <Container maxWidth="sm">
-      <form noValidate>
-        <TextField
-          variant="outlined"
-          margin='normal'
-          required
-          fullWidth
-          type='text'
-          color="primary"
-          label="What needs to be done?"
-          autoFocus
-          value={newTodo}
-          onChange={handleInputChange}
-        />
-        <Button
-          type="submit"
-          variant="contained"
-          fullWidth
-          color="primary"
-          onClick={submitTodoItem}
-          startIcon={<AddCircleOutlineRounded />}
-        >
+    <form noValidate>
+      <TextField
+        variant="outlined"
+        margin='normal'
+        required
+        fullWidth
+        type='text'
+        color="primary"
+        label="What needs to be done?"
+        autoFocus
+        value={newTodo}
+        onChange={handleInputChange}
+      />
+      <Button
+        type="submit"
+        variant="contained"
+        fullWidth
+        color="primary"
+        onClick={submitTodoItem}
+        startIcon={<AddCircleOutlineRounded />}
+      >
         Add Todo
-        </Button>
-      </form>
-    </Container>
+      </Button>
+    </form>
   );
 };
