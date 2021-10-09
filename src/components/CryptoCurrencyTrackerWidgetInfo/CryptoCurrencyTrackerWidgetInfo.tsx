@@ -1,45 +1,32 @@
 import React from 'react';
 import { CryptoCurrencyTrackerWidgetInfoProps } from 'interfaces';
-import { Card, CardContent, Box } from '@material-ui/core';
-import styles from './CryptoCurrencyTrackerWidgetInfo.module.scss';
+import { Card, CardContent, Box, CardMedia, Typography } from '@material-ui/core';
+import useStyles from './styles';
 
 export const CryptoCurrencyTrackerWidgetInfo: React.FC<CryptoCurrencyTrackerWidgetInfoProps> = ({ coins }) => {
+  const classes = useStyles();
   return (
     <>
       {!!coins.length && coins.map((coin) => (
-        <Card className={styles.coinCard} key={coin.id}>
+        <Card className={classes.root} key={coin.id} elevation={5}>
           <CardContent>
-            <Box
-              mb={0.5}
-              position="relative"
-              color="text.primary"
-              fontSize={22}
-              fontWeight="fontWeightMedium">
+            <CardMedia
+              className={classes.icon}
+              image={coin.image}
+              component="img"
+              alt="crypto"
+            />
+            <Typography align='center' variant="h5" gutterBottom>
               {coin.name}
-              <img
-                className={styles.icon}
-                src={coin.image}
-                alt="crypto" />
-            </Box>
-            <Box
-              bgcolor="info.main"
-              color="info.contrastText"
-              fontSize={18}
-              p={1}
-              border={1}
-              borderBottom={1}
-              borderRadius={16}>
+            </Typography>
+            <Typography align='center' variant="h5" color="primary" >
             Price: ${coin.current_price.toLocaleString()}
-            </Box>
-            <Box
-              mb={0.5}
-              color="primary.main"
-              fontSize={16}
-              fontWeight="fontWeightRegular">
-          Cap: ${coin.market_cap.toLocaleString()}
-            </Box>
+            </Typography>
+            <hr/>
             <div>
+              <Typography align='center' variant="body1" gutterBottom>
               Price change 24h:
+              </Typography>
               {coin.price_change_percentage_24h < 0 ? (
                 <Box
                   bgcolor="error.main"

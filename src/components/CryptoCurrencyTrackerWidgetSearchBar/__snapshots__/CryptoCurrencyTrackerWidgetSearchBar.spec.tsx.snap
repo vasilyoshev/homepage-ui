@@ -6,36 +6,32 @@ exports[`CryptoCurrencyTrackerWidgetSearchBar renders successfully 1`] = `
     class="coinSearch"
   >
     <div
-      class="MuiFormGroup-root"
+      class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
     >
       <div
-        class="MuiFormControl-root MuiTextField-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
       >
-        <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense"
+        <input
+          aria-invalid="false"
+          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
+          placeholder="search..."
+          type="text"
+          value=""
+        />
+        <fieldset
+          aria-hidden="true"
+          class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+          style="padding-left: 8px;"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMarginDense MuiOutlinedInput-inputMarginDense"
-            placeholder="search..."
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
-            style="padding-left: 8px;"
+          <legend
+            class="PrivateNotchedOutline-legend-2"
+            style="width: 0.01px;"
           >
-            <legend
-              class="PrivateNotchedOutline-legend-2"
-              style="width: 0.01px;"
-            >
-              <span>
-                ​
-              </span>
-            </legend>
-          </fieldset>
-        </div>
+            <span>
+              ​
+            </span>
+          </legend>
+        </fieldset>
       </div>
     </div>
   </div>
