@@ -6,7 +6,7 @@ import { Card, CardContent } from '@material-ui/core';
 export const CalendarWidget: React.FC = () => {
   const date = new Date();
   return (
-    <Card>
+    <Card style={{width: '320px'}} elevation={6}>
       <CardContent>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
           <DatePicker
