@@ -9,7 +9,7 @@ import styles from './TodoListItem.module.scss';
 export const TodoListItem: React.FC<TodoListItemProps> = ({ todo }) => {
   const dispatch = useDispatch();
   return (
-    <ListItem className={styles.listItem}>
+    <ListItem dense className={styles.listItem}>
       <ListItemIcon>
         <Checkbox
           checked={todo.completed}
