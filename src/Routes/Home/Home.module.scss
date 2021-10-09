@@ -1,6 +1,8 @@
 .widgetsContainer {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  gap: 10px;
+  justify-content: space-around;
+  margin-top: 5px;
 }
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { WeatherWidgetEntry } from 'components';
 import { readWeather, readForecast } from 'services';
 import { Weather, WeatherWidgetSummaryProps } from 'interfaces';
-import { Card, CardContent, Box } from '@material-ui/core';
+import { Card, CardContent, Typography } from '@material-ui/core';
 import styles from './WeatherWidgetSummary.module.scss';
 
 export const WeatherWidgetSummary: React.FC<WeatherWidgetSummaryProps> = ({ location }) => {
@@ -26,37 +26,19 @@ export const WeatherWidgetSummary: React.FC<WeatherWidgetSummaryProps> = ({ loca
 
   return (
     <>
-      <Card>
+      <Card elevation={5}>
         <CardContent>
-          <Box
-            bgcolor="info.main"
-            color="info.contrastText"
-            mb={1}
-            p={0.5}
-            border={1}
-            borderRadius={16}
-            fontSize={22}
-            textAlign="center"
-            fontWeight="fontWeightBold">
+          <Typography align='center' variant="h5" color='primary'>
             {location.name}
-          </Box>
+          </Typography>
           <WeatherWidgetEntry weather={weather} />
         </CardContent>
       </Card>
-      <Box
-        bgcolor="primary.main"
-        color="primary.contrastText"
-        m={1}
-        p={1}
-        border={1}
-        borderRadius={16}
-        fontSize={16}
-        textAlign="center"
-        fontWeight="fontWeightBold">
-          Forecast 24h
-      </Box>
+      <Typography style={{marginTop: '10px'}} align='center' variant="h5" gutterBottom>
+          Forecast next 24h
+      </Typography>
       {forecast.map((timePoint) =>
-        <Card className={styles.forecastCard} key={timePoint.dt}>
+        <Card elevation={5} className={styles.forecastCard} key={timePoint.dt}>
           <CardContent>
             <WeatherWidgetEntry weather={timePoint} />
           </CardContent>

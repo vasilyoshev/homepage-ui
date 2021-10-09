@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { WeatherWidgetLocationSearch, WeatherWidgetLocationTable, WeatherWidgetAlertMessage, WeatherWidgetSummary } from 'components';
-import { Card, CardContent, Box } from '@material-ui/core';
+import { Card, CardContent, Typography } from '@material-ui/core';
 import { WeatherLocation } from 'interfaces';
 import { searchLocation } from 'services';
 
@@ -29,19 +29,11 @@ export const WeatherWidget: React.FC = () => {
   };
 
   return (
-    <Card>
+    <Card style={{width: '320px'}} elevation={6}>
       <CardContent>
-        <Box
-          letterSpacing={6}
-          p={1}
-          textAlign='center'
-          border={1}
-          borderRadius={16}
-          bgcolor="text.secondary"
-          color="background.paper"
-          fontSize={30}>
-            Weather Widget
-        </Box>
+        <Typography variant="h5" color="primary">
+          Enter city name...
+        </Typography>
         <WeatherWidgetLocationSearch onSearch={addLocation} />
         {error && <WeatherWidgetAlertMessage severity='error' message={error} />}
         {warning && <WeatherWidgetAlertMessage severity='warning' message={warning} />}
