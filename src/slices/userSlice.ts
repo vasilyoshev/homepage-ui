@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { api } from 'api';
 import axios, { AxiosResponse } from 'axios';
 import { UserInfoRes, UserAuthState } from 'interfaces';
 
@@ -13,7 +14,7 @@ export const signupUser = createAsyncThunk(
   'user/signupUser',
   async (userData: UserInfoRes) => {
     const { username, password } = userData;
-    const response: AxiosResponse = await axios.post('http://localhost:4000/user/signup', {
+    const response: AxiosResponse = await axios.post(`${api}/user/signup`, {
       username,
       password,
     } ,{
@@ -30,7 +31,7 @@ export const loginUser = createAsyncThunk(
   'user/loginUser',
   async (userData: UserInfoRes) => {
     const { username, password } = userData;
-    const response: AxiosResponse = await axios.post('http://localhost:4000/user/login', {
+    const response: AxiosResponse = await axios.post(`${api}/user/login`, {
       username,
       password,
     },{
@@ -49,7 +50,7 @@ export const loginUser = createAsyncThunk(
 export const validateUserByToken = createAsyncThunk('user/validateUserByToken',
   async (userData: UserInfoRes) => {
     const { token } = userData;
-    const response: AxiosResponse = await axios.get('http://localhost:4000/user/validate', {
+    const response: AxiosResponse = await axios.get(`${api}/user/validate`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
