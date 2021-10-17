@@ -19,15 +19,21 @@ export const Signup: React.FC = () => {
   });
   const dispatch = useDispatch();
   const history = useHistory();
-  const { isSuccess, isError, errorMessage } = useAppSelector((state) => state.user);
+  const { isSuccess, isError } = useAppSelector((state) => state.user);
 
   const onSubmit = (data: FormInput) => {
     dispatch(signupUser(data));
   };
 
   useEffect(() => {
+    return () => {
+      dispatch(clearState());
+    };
+  }, [dispatch]);
+
+  useEffect(() => {
     if (isSuccess) {
-      toast.success('Your registration is successfull');
+      toast.success('Your registration is successfull', { duration: 2000 });
       dispatch(clearState());
       history.push('/login');
     }
@@ -35,7 +41,7 @@ export const Signup: React.FC = () => {
       toast.error('Something gets wrong!', { duration: 2000 });
       dispatch(clearState());
     }
-  },[isSuccess, isError, errorMessage, history, dispatch]);
+  },[isSuccess, isError, history, dispatch]);
 
   return (
     <Container maxWidth="xs">

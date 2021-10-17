@@ -15,22 +15,28 @@ export const Login: React.FC = () => {
   const { register, handleSubmit } = useForm<FormInput>();
   const dispatch = useDispatch();
   const history = useHistory();
-  const { isSuccess, isError, errorMessage } = useAppSelector((state) => state.user);
+  const { isSuccess, isError } = useAppSelector((state) => state.user);
 
   const onSubmit = (data: FormInput) => {
     dispatch(loginUser(data));
   };
 
   useEffect(() => {
-    if (isSuccess) {
-      toast.success('Authentication successfull', { duration: 2000 });
-      history.push('/dashboard');
-    }
+    return () => {
+      dispatch(clearState());
+    };
+  }, [dispatch]);
+
+  useEffect(() => {
     if (isError) {
-      toast.error('Something gets wrong!', { duration: 2000 });
       dispatch(clearState());
     }
-  },[isSuccess, isError, errorMessage, dispatch, history]);
+    if (isSuccess) {
+      dispatch(clearState());
+      toast.success('Authentication successfull');
+      history.push('/dashboard');
+    }
+  },[isSuccess, isError, dispatch, history]);
 
   return (
     <Container maxWidth="xs">
