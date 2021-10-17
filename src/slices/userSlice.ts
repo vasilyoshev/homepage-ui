@@ -5,16 +5,15 @@ import { UserInfoRes, UserAuthState } from 'interfaces';
 const initialState: UserAuthState = {
   username: undefined,
   isSuccess: false,
-  isLoggedIn: false,
   isError: false,
-  errorMessage: null,
+  isLoggedIn: false,
 };
 
 export const signupUser = createAsyncThunk(
   'user/signupUser',
   async (userData: UserInfoRes) => {
     const { username, password } = userData;
-    const response: AxiosResponse = await axios.post('http://localhost:4000/users/signup',{
+    const response: AxiosResponse = await axios.post('http://localhost:4000/user/signup', {
       username,
       password,
     } ,{
@@ -31,7 +30,7 @@ export const loginUser = createAsyncThunk(
   'user/loginUser',
   async (userData: UserInfoRes) => {
     const { username, password } = userData;
-    const response: AxiosResponse = await axios.post('http://localhost:4000/users/login', {
+    const response: AxiosResponse = await axios.post('http://localhost:4000/user/login', {
       username,
       password,
     },{
@@ -40,11 +39,28 @@ export const loginUser = createAsyncThunk(
     const userInfoRes = response;
     if (userInfoRes.status === 200) {
       localStorage.setItem('token', userInfoRes.data.token);
+      localStorage.setItem('user', userInfoRes.data.user.username);
       return userInfoRes.data;
     }
     return userInfoRes.data.message;
   },
 );
+
+export const validateUserByToken = createAsyncThunk('user/validateUserByToken',
+  async (userData: UserInfoRes) => {
+    const { token } = userData;
+    const response: AxiosResponse = await axios.get('http://localhost:4000/user/validate', {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      withCredentials: true,
+    });
+    const userInfoRes = response;
+    if (response.status === 200)  {
+      return { ...userInfoRes };
+    }
+    return userInfoRes.data.message;
+  });
 
 export const userSlice = createSlice({
   name: 'user',
@@ -53,7 +69,6 @@ export const userSlice = createSlice({
     clearState: (state) => {
       state.isSuccess = false;
       state.isError = false;
-      state.isLoggedIn = false;
       return state;
     },
   },
@@ -67,7 +82,6 @@ export const userSlice = createSlice({
     builder.addCase(signupUser.rejected, (state) => {
       state.isError = true;
     });
-
     builder.addCase(loginUser.pending, (state) => {
       state.isSuccess = false;
     });
@@ -78,6 +92,15 @@ export const userSlice = createSlice({
       return state;
     });
     builder.addCase(loginUser.rejected, (state) => {
+      state.isError = true;
+    });
+    builder.addCase(validateUserByToken.pending, (state) => {
+      state.isLoggedIn = false;
+    });
+    builder.addCase(validateUserByToken.fulfilled, (state) => {
+      state.isLoggedIn = true;
+    });
+    builder.addCase(validateUserByToken.rejected, (state) => {
       state.isError = true;
     });
   },
