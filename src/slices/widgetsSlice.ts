@@ -7,7 +7,7 @@ const initialState: WidgetsSliceState = {
     { name: 'calendar', isActive: true },
     { name: 'todo', isActive: false },
     { name: 'crypto', isActive: true },
-    { name: 'timer', isActive: true },
+    { name: 'timer', isActive: false },
     { name: 'weather', isActive: true },
   ],
 };
