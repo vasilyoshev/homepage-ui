@@ -4,10 +4,11 @@ import axios, { AxiosResponse } from 'axios';
 import { UserInfoRes, UserAuthState } from 'interfaces';
 
 const initialState: UserAuthState = {
-  username: undefined,
+  username: null,
   isSuccess: false,
   isError: false,
   isLoggedIn: false,
+  token: null,
 };
 
 export const signupUser = createAsyncThunk(
@@ -39,29 +40,11 @@ export const loginUser = createAsyncThunk(
     });
     const userInfoRes = response;
     if (userInfoRes.status === 200) {
-      localStorage.setItem('token', userInfoRes.data.token);
-      localStorage.setItem('user', userInfoRes.data.user.username);
       return userInfoRes.data;
     }
     return userInfoRes.data.message;
   },
 );
-
-export const validateUserByToken = createAsyncThunk('user/validateUserByToken',
-  async (userData: UserInfoRes) => {
-    const { token } = userData;
-    const response: AxiosResponse = await axios.get(`${api}/user/validate`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      withCredentials: true,
-    });
-    const userInfoRes = response;
-    if (response.status === 200)  {
-      return { ...userInfoRes };
-    }
-    return userInfoRes.data.message;
-  });
 
 export const userSlice = createSlice({
   name: 'user',
@@ -90,18 +73,10 @@ export const userSlice = createSlice({
       state.isSuccess = true;
       state.isLoggedIn = true;
       state.username = action.payload.user.username;
+      state.token = action.payload.token;
       return state;
     });
     builder.addCase(loginUser.rejected, (state) => {
-      state.isError = true;
-    });
-    builder.addCase(validateUserByToken.pending, (state) => {
-      state.isLoggedIn = false;
-    });
-    builder.addCase(validateUserByToken.fulfilled, (state) => {
-      state.isLoggedIn = true;
-    });
-    builder.addCase(validateUserByToken.rejected, (state) => {
       state.isError = true;
     });
   },

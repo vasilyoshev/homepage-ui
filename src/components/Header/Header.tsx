@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { validateUserByToken } from 'slices';
+import React from 'react';
 import { AppBar, Button, Toolbar, Typography, IconButton } from '@material-ui/core';
 import { AccountCircle } from '@material-ui/icons';
 import { NavLink } from 'react-router-dom';
@@ -9,14 +7,9 @@ import styles from './Header.module.scss';
 
 export const Header: React.FC = () => {
   const { isLoggedIn } = useAppSelector((state) => state.user);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(validateUserByToken({ token: localStorage.getItem('token') }));
-  }, [dispatch]);
 
   const logout = () => {
-    localStorage.clear();
+    localStorage.removeItem('persist:user');
     window.location.href = '/login';
   };
 
