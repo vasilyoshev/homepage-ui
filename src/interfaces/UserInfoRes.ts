@@ -1,5 +1,5 @@
 export interface UserInfoRes {
-    username?: string | undefined;
+    username?: string | null;
     password?: string;
     token?: string | null;
   }

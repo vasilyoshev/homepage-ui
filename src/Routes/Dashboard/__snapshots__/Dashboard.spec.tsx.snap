@@ -24,7 +24,7 @@ exports[`Dashboard renders successfully 1`] = `
         </svg>
       </div>
       <h2>
-        Welcome, .
+        Welcome, undefined.
       </h2>
       <h5>
         Fri Jan 01 2021

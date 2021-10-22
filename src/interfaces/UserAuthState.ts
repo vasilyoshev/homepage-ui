@@ -1,6 +1,7 @@
 export interface UserAuthState {
-    username: string | undefined;
+    username: string | null;
     isSuccess: boolean;
     isError: boolean;
     isLoggedIn: boolean;
+    token?: string | null
 }
