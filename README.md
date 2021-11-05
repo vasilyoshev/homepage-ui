@@ -14,13 +14,15 @@ Builds the app for production to the `build` folder.\
 
 ## :arrow_down: Instructions
 ### 1. Populate the empty fields to make your account
-<img src="" alt="signup" />
+<img src="https://github.com/vasilyoshev/homepage-ui/blob/main/src/assets/signup.png" alt="signup" />
 
-### 2. ----------
-<img src="" alt="signin" />
+### 2. Use your `username` and `password` to login
+<img src="https://github.com/vasilyoshev/homepage-ui/blob/main/src/assets/login.png" alt="signin" />
 
-### 3. ---------
-<img src="" alt="dashboard" />
+### 3. Click onto `GO TO WIDGETS` button
+<img src="https://github.com/vasilyoshev/homepage-ui/blob/main/src/assets/dashboard.png" alt="dashboard" />
 
-### 4. --------
-<img src="" alt="addwidgetBtn" />
+### 4. By clicking the button that is shown on the picture, you can turn on or turn off widgets
+<img src="https://github.com/vasilyoshev/homepage-ui/blob/main/src/assets/info.png" alt="addwidgetBtn" />
+
+### This project is for eduction purposes... It is created with TypeScript and ReactJS.
