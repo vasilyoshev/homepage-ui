@@ -5,7 +5,7 @@ if (key === undefined) {
   throw new Error('No Open Weather API Key defined');
 }
 const keyQuery = `appid=${key}`;
-const server = 'http://api.openweathermap.org/data/2.5';
+const server = 'https://api.openweathermap.org/data/2.5';
 
 export const searchLocation = async (term: string): Promise<WeatherLocation | undefined> => {
   const result = await fetch(`${server}/weather?q=${term}&${keyQuery}`);
