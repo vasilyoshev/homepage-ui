@@ -26,3 +26,5 @@ Builds the app for production to the `build` folder.\
 <img src="https://github.com/vasilyoshev/homepage-ui/blob/main/src/assets/info.png" alt="addwidgetBtn" />
 
 ### This project is for eduction purposes... It is created with TypeScript and ReactJS.
+
+### TESTTTTTT
