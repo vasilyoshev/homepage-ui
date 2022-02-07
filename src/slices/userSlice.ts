@@ -21,7 +21,7 @@ export const signupUser = createAsyncThunk('user/signupUser', async (userData: U
     },
     {
       withCredentials: true,
-    }
+    },
   );
   const userInfoRes = response;
   if (userInfoRes.status === 201) {
@@ -40,7 +40,7 @@ export const loginUser = createAsyncThunk('user/loginUser', async (userData: Use
     },
     {
       withCredentials: true,
-    }
+    },
   );
   const userInfoRes = response;
   if (userInfoRes.status === 200) {
