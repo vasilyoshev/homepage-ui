@@ -11,40 +11,43 @@ const initialState: UserAuthState = {
   token: null,
 };
 
-export const signupUser = createAsyncThunk(
-  'user/signupUser',
-  async (userData: UserInfoRes) => {
-    const { username, password } = userData;
-    const response: AxiosResponse = await axios.post(`${api}/user/signup`, {
+export const signupUser = createAsyncThunk('user/signupUser', async (userData: UserInfoRes) => {
+  const { username, password } = userData;
+  const response: AxiosResponse = await axios.post(
+    `${api}/user/signup`,
+    {
       username,
       password,
-    } ,{
+    },
+    {
       withCredentials: true,
-    });
-    const userInfoRes = response;
-    if (userInfoRes.status === 201) {
-      return userInfoRes.data;
-    }
-    return userInfoRes.data.message;
-  });
+    },
+  );
+  const userInfoRes = response;
+  if (userInfoRes.status === 201) {
+    return userInfoRes.data;
+  }
+  return userInfoRes.data.message;
+});
 
-export const loginUser = createAsyncThunk(
-  'user/loginUser',
-  async (userData: UserInfoRes) => {
-    const { username, password } = userData;
-    const response: AxiosResponse = await axios.post(`${api}/user/login`, {
+export const loginUser = createAsyncThunk('user/loginUser', async (userData: UserInfoRes) => {
+  const { username, password } = userData;
+  const response: AxiosResponse = await axios.post(
+    `${api}/user/login`,
+    {
       username,
       password,
-    },{
+    },
+    {
       withCredentials: true,
-    });
-    const userInfoRes = response;
-    if (userInfoRes.status === 200) {
-      return userInfoRes.data;
-    }
-    return userInfoRes.data.message;
-  },
-);
+    },
+  );
+  const userInfoRes = response;
+  if (userInfoRes.status === 200) {
+    return userInfoRes.data;
+  }
+  return userInfoRes.data.message;
+});
 
 export const userSlice = createSlice({
   name: 'user',
