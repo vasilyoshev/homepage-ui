@@ -26,7 +26,7 @@ export const TimerWidget: React.FC = () => {
   const resumeTimer = () => setTimerOn(true);
 
   return (
-    <Card className={styles.timerContainer} style={{width: '320px'}} elevation={6}>
+    <Card className={styles.timerContainer} elevation={6}>
       <CardContent>
         <TimerIcon fontSize="large" />
         <div className={styles.display}>
