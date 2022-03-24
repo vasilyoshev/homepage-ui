@@ -8,7 +8,6 @@ import styles from './WeatherWidgetSummary.module.scss';
 export const WeatherWidgetSummary: React.FC<WeatherWidgetSummaryProps> = ({ location }) => {
   const [weather, setWeather] = useState<Weather | null>(null);
   const [forecast, setForecast] = useState<Weather[] | null>(null);
-
   useEffect(() => {
     (async () => {
       if (!location) return;
