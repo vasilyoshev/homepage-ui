@@ -31,9 +31,6 @@ exports[`Home renders successfully 1`] = `
   >
     <div />
     <div />
-    <div />
-    <div />
-    <div />
   </div>
 </DocumentFragment>
 `;

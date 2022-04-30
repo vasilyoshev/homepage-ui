@@ -30,8 +30,6 @@
     "eol-last": ["error", "always"],
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    "arrow-parens": ["error", "always"],
-    "comma-dangle": ["error", "always-multiline"],
     "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0 }]
   },
   "ignorePatterns": ["public/**/*", "build/**/*"]

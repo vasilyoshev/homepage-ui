@@ -4,11 +4,8 @@ import { RootState } from 'store';
 
 const initialState: WidgetsSliceState = {
   widgetsProps: [
-    { name: 'calendar', isActive: true },
     { name: 'todo', isActive: true },
     { name: 'crypto', isActive: true },
-    { name: 'timer', isActive: true },
-    { name: 'weather', isActive: true },
   ],
 };
 
@@ -24,15 +21,9 @@ export const widgetsSlice = createSlice({
 });
 
 export const selectAllWidgetsProps = ({ widgets }: RootState): Array<WidgetProps> => widgets.widgetsProps;
-export const selectIsCalendarWidgetActive = ({ widgets }: RootState): boolean =>
-  widgets.widgetsProps.find((widgetProps) => widgetProps.name === 'calendar')?.isActive || false;
 export const selectIsTodoWidgetActive = ({ widgets }: RootState): boolean =>
   widgets.widgetsProps.find((widgetProps) => widgetProps.name === 'todo')?.isActive || false;
 export const selectIsCryptoCurrencyWidgetActive = ({ widgets }: RootState): boolean =>
   widgets.widgetsProps.find((widgetProps) => widgetProps.name === 'crypto')?.isActive || false;
-export const selectIsTimerWidgetActive = ({ widgets }: RootState): boolean =>
-  widgets.widgetsProps.find((widgetProps) => widgetProps.name === 'timer')?.isActive || false;
-export const selectIsWeatherWidgetActive = ({ widgets }: RootState): boolean =>
-  widgets.widgetsProps.find((widgetProps) => widgetProps.name === 'weather')?.isActive || false;
 
 export const { toggleWidget } = widgetsSlice.actions;
