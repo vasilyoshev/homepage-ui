@@ -3,13 +3,13 @@
 exports[`Header renders successfully 1`] = `
 <DocumentFragment>
   <header
-    class="MuiPaper-root MuiAppBar-root MuiAppBar-positionSticky MuiAppBar-colorPrimary MuiPaper-elevation4"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionSticky css-7e0s21-MuiPaper-root-MuiAppBar-root"
   >
     <div
-      class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1t29gy6-MuiToolbar-root"
     >
       <h6
-        class="MuiTypography-root title MuiTypography-h6"
+        class="MuiTypography-root MuiTypography-h6 title css-2ulfj5-MuiTypography-root"
       >
         <a
           aria-current="page"
@@ -20,39 +20,31 @@ exports[`Header renders successfully 1`] = `
         </a>
       </h6>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-colorInherit"
+        class="MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit MuiButtonBase-root  css-1y942vo-MuiButtonBase-root-MuiButton-root"
         tabindex="0"
         type="button"
       >
-        <span
-          class="MuiButton-label"
+        <a
+          href="/signup"
         >
-          <a
-            href="/signup"
-          >
-            SIGNUP
-          </a>
-        </span>
+          SIGNUP
+        </a>
         <span
-          class="MuiTouchRipple-root"
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
         />
       </button>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-colorInherit"
+        class="MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit MuiButtonBase-root  css-1y942vo-MuiButtonBase-root-MuiButton-root"
         tabindex="0"
         type="button"
       >
-        <span
-          class="MuiButton-label"
+        <a
+          href="/login"
         >
-          <a
-            href="/login"
-          >
-            LOGIN
-          </a>
-        </span>
+          LOGIN
+        </a>
         <span
-          class="MuiTouchRipple-root"
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
         />
       </button>
     </div>

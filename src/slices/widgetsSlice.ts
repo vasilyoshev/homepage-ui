@@ -3,10 +3,7 @@ import { WidgetProps, WidgetsSliceState } from 'interfaces';
 import { RootState } from 'store';
 
 const initialState: WidgetsSliceState = {
-  widgetsProps: [
-    { name: 'todo', isActive: true },
-    { name: 'crypto', isActive: true },
-  ],
+  widgetsProps: [{ name: 'todo', isActive: true }],
 };
 
 export const widgetsSlice = createSlice({
@@ -23,7 +20,4 @@ export const widgetsSlice = createSlice({
 export const selectAllWidgetsProps = ({ widgets }: RootState): Array<WidgetProps> => widgets.widgetsProps;
 export const selectIsTodoWidgetActive = ({ widgets }: RootState): boolean =>
   widgets.widgetsProps.find((widgetProps) => widgetProps.name === 'todo')?.isActive || false;
-export const selectIsCryptoCurrencyWidgetActive = ({ widgets }: RootState): boolean =>
-  widgets.widgetsProps.find((widgetProps) => widgetProps.name === 'crypto')?.isActive || false;
-
 export const { toggleWidget } = widgetsSlice.actions;
