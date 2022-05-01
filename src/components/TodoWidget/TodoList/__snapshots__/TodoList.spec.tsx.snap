@@ -3,7 +3,7 @@
 exports[`TodoList renders successfully 1`] = `
 <DocumentFragment>
   <ul
-    class="MuiList-root MuiList-padding"
+    class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
   />
 </DocumentFragment>
 `;
