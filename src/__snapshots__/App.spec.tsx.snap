@@ -49,32 +49,5 @@ exports[`App renders successfully 1`] = `
       </button>
     </div>
   </header>
-  <button
-    aria-label="Add Widget"
-    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary addWidgetFab css-1suf56w-MuiButtonBase-root-MuiFab-root"
-    data-mui-internal-clone-element="true"
-    tabindex="0"
-    type="button"
-  >
-    <svg
-      aria-hidden="true"
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-      data-testid="AddIcon"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-      />
-    </svg>
-    <span
-      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-    />
-  </button>
-  <div
-    class="widgetsContainer"
-  >
-    <div />
-  </div>
 </DocumentFragment>
 `;
