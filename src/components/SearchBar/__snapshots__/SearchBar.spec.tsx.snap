@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders successfully 1`] = `
+exports[`SearchBar renders successfully 1`] = `
 <DocumentFragment>
   <div
     class="MuiBox-root css-i9gxme"
@@ -48,34 +48,6 @@ exports[`App renders successfully 1`] = `
         </div>
       </div>
     </header>
-  </div>
-  <div
-    class="MuiBox-root css-1v0opno"
-  >
-    <div
-      class="MuiBox-root css-1vzrpsd"
-    >
-      Heading
-    </div>
-    <div
-      class="MuiBox-root css-66dtc1"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet nisl in nulla aliquet condimentum. Cras non eros ultrices, ullamcorper nulla ac, tempor magna.
-    </div>
-    <div
-      class="MuiBox-root css-75v9m0"
-    >
-      <a
-        class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButtonBase-root  css-jh47zj-MuiButtonBase-root-MuiButton-root"
-        href="/search"
-        tabindex="0"
-      >
-        Search
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
-      </a>
-    </div>
   </div>
 </DocumentFragment>
 `;
