@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { FormInput } from 'interfaces';
 import { Container, Typography, TextField, Button } from '@mui/material';
@@ -29,7 +29,6 @@ export const Login: React.FC = () => {
     }
     if (isSuccess) {
       dispatch(clearState());
-      history.push('/dashboard');
     }
   }, [isSuccess, isError, dispatch, history]);
 

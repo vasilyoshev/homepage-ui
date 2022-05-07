@@ -1,9 +1,9 @@
 import { render } from 'utils';
-import { Header } from './Header';
+import { SearchBar } from './SearchBar';
 
-describe('Header', () => {
+describe('SearchBar', () => {
   it('renders successfully', () => {
-    const { asFragment } = render(<Header />);
+    const { asFragment } = render(<SearchBar />);
 
     expect(asFragment()).toMatchSnapshot();
   });
