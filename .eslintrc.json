@@ -30,7 +30,8 @@
     "eol-last": ["error", "always"],
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0 }]
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0 }],
+    "@typescript-eslint/explicit-module-boundary-types": "off"
   },
   "ignorePatterns": ["public/**/*", "build/**/*"]
 }
