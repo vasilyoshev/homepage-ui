@@ -5,7 +5,7 @@ import { Container, Typography, TextField, Button } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { signupUser, clearState } from 'slices';
 import { useAppSelector } from 'store';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { schema } from 'schemas';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -18,9 +18,8 @@ export const Signup: React.FC = () => {
     resolver: yupResolver(schema),
   });
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
   const { isSuccess, isError } = useAppSelector((state) => state.user);
-
   const onSubmit = (data: FormInput) => dispatch(signupUser(data));
 
   useEffect(() => {
@@ -32,12 +31,12 @@ export const Signup: React.FC = () => {
   useEffect(() => {
     if (isSuccess) {
       dispatch(clearState());
-      history.push('/login');
+      navigate('/login');
     }
     if (isError) {
       dispatch(clearState());
     }
-  }, [isSuccess, isError, history, dispatch]);
+  }, [isSuccess, isError, navigate, dispatch]);
 
   return (
     <Container maxWidth="xs">

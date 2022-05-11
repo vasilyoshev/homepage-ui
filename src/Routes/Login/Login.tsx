@@ -5,12 +5,12 @@ import { Container, Typography, TextField, Button } from '@mui/material';
 import { loginUser, clearState } from 'slices';
 import { useDispatch } from 'react-redux';
 import { useAppSelector } from 'store';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const Login: React.FC = () => {
   const { register, handleSubmit } = useForm<FormInput>();
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
   const { isSuccess, isError } = useAppSelector((state) => state.user);
 
   const onSubmit = (data: FormInput) => {
@@ -30,7 +30,7 @@ export const Login: React.FC = () => {
     if (isSuccess) {
       dispatch(clearState());
     }
-  }, [isSuccess, isError, dispatch, history]);
+  }, [isSuccess, isError, dispatch, navigate]);
 
   return (
     <Container maxWidth="xs">
