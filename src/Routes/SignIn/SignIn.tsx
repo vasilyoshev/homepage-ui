@@ -12,7 +12,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme();
 
-export function SignIn() {
+export const SignIn: React.FC = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -67,7 +67,7 @@ export function SignIn() {
             <Grid container>
               <Grid item>
                 <Link href="#" variant="body2">
-                  {'Don\'t have an account? Sign Up'}
+                  {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
             </Grid>
@@ -76,4 +76,4 @@ export function SignIn() {
       </Container>
     </ThemeProvider>
   );
-}
+};
