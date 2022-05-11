@@ -1,9 +1,9 @@
 import { render } from 'utils';
-import { Signup } from './Signup';
+import { SignUp } from './SignUp';
 
-describe('Signup', () => {
+describe('SignUp', () => {
   it('renders successfully', () => {
-    const { asFragment } = render(<Signup />);
+    const { asFragment } = render(<SignUp />);
 
     expect(asFragment()).toMatchSnapshot();
   });

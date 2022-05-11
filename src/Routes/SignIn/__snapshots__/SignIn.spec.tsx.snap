@@ -1,29 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Login renders successfully 1`] = `
+exports[`SignIn renders successfully 1`] = `
 <DocumentFragment>
-  <div
+  <main
     class="MuiContainer-root MuiContainer-maxWidthXs css-nzinn5-MuiContainer-root"
   >
-    <div>
+    <div
+      class="MuiBox-root css-binzgt"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-1999axt-MuiAvatar-root"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="LockOutlinedIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+          />
+        </svg>
+      </div>
       <h1
         class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
       >
-        Please Login
+        Sign in
       </h1>
       <form
+        class="MuiBox-root css-164r41r"
         novalidate=""
       >
         <div
           class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            for="mui-1"
-            id="mui-1-label"
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-focused Mui-required css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for="email"
+            id="email-label"
           >
-            Username
+            Email Address
             <span
               aria-hidden="true"
               class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
@@ -32,13 +50,14 @@ exports[`Login renders successfully 1`] = `
             </span>
           </label>
           <div
-            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-invalid="false"
+              autocomplete="email"
               class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-              id="mui-1"
-              name="username"
+              id="email"
+              name="email"
               required=""
               type="text"
               value=""
@@ -48,10 +67,10 @@ exports[`Login renders successfully 1`] = `
               class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-1ftyaf0"
+                class="css-1in441m"
               >
                 <span>
-                  Username *
+                  Email Address *
                 </span>
               </legend>
             </fieldset>
@@ -63,8 +82,8 @@ exports[`Login renders successfully 1`] = `
           <label
             class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
-            for="mui-2"
-            id="mui-2-label"
+            for="password"
+            id="password-label"
           >
             Password
             <span
@@ -79,8 +98,9 @@ exports[`Login renders successfully 1`] = `
           >
             <input
               aria-invalid="false"
+              autocomplete="current-password"
               class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-              id="mui-2"
+              id="password"
               name="password"
               required=""
               type="password"
@@ -101,17 +121,31 @@ exports[`Login renders successfully 1`] = `
           </div>
         </div>
         <button
-          class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButtonBase-root  css-1fu7jd5-MuiButtonBase-root-MuiButton-root"
+          class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButtonBase-root  css-1vhaqj4-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="submit"
         >
-          SUBMIT
+          Sign In
           <span
             class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
           />
         </button>
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          >
+            <a
+              class="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-underlineAlways css-101ca9i-MuiTypography-root-MuiLink-root"
+              href="#"
+            >
+              Don't have an account? Sign Up
+            </a>
+          </div>
+        </div>
       </form>
     </div>
-  </div>
+  </main>
 </DocumentFragment>
 `;
