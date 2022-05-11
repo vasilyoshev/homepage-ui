@@ -1,5 +1,5 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import { loadingSlice, userSlice } from 'slices';
+import { userSlice } from 'slices';
 import { TypedUseSelectorHook, useSelector } from 'react-redux';
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
@@ -11,7 +11,6 @@ const persistConfig = {
 
 const store = configureStore({
   reducer: {
-    loading: loadingSlice.reducer,
     user: persistReducer(persistConfig, userSlice.reducer),
   },
   middleware: [
