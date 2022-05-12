@@ -12,13 +12,13 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme();
 
-export const SignIn: React.FC = () => {
+export function SignIn(): JSX.Element {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get('email'),
-      password: data.get('password'),
+      password: data.get('password')
     });
   };
 
@@ -31,7 +31,7 @@ export const SignIn: React.FC = () => {
             marginTop: 8,
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
+            alignItems: 'center'
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
@@ -40,7 +40,12 @@ export const SignIn: React.FC = () => {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <Box
+            component="form"
+            onSubmit={handleSubmit}
+            noValidate
+            sx={{ mt: 1 }}
+          >
             <TextField
               margin="normal"
               required
@@ -61,7 +66,12 @@ export const SignIn: React.FC = () => {
               id="password"
               autoComplete="current-password"
             />
-            <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
               Sign In
             </Button>
             <Grid container>
@@ -76,4 +86,4 @@ export const SignIn: React.FC = () => {
       </Container>
     </ThemeProvider>
   );
-};
+}

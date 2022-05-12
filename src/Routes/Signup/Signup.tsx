@@ -12,7 +12,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme();
 
-export const SignUp: React.FC = () => {
+export function SignUp(): JSX.Element {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -80,4 +80,4 @@ export const SignUp: React.FC = () => {
       </Container>
     </ThemeProvider>
   );
-};
+}
