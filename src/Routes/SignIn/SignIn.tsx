@@ -12,7 +12,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme();
 
-export function SignIn(): JSX.Element {
+export const SignIn: React.FC = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -86,4 +86,4 @@ export function SignIn(): JSX.Element {
       </Container>
     </ThemeProvider>
   );
-}
+};
