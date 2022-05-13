@@ -5,6 +5,13 @@ export interface ExpenseItemProps {
   date: Date;
 }
 
+export interface ExpenseFormItemProps {
+  id?: string;
+  enteredTitle: string;
+  enteredAmount: string;
+  enteredDate: Date | string;
+}
+
 export interface ExpensesListsProps {
   items: ExpenseItemProps[];
 }
