@@ -26,6 +26,18 @@ const initialExpenses: Array<ExpenseItemProps> = [
     title: 'New Desk (Wooden)',
     amount: 450,
     date: new Date(2022, 2, 12)
+  },
+  {
+    id: 'e5',
+    title: 'Apartment Rent',
+    amount: 650.0,
+    date: new Date(2020, 1, 14)
+  },
+  {
+    id: 'e6',
+    title: 'Apartment Rent',
+    amount: 650.0,
+    date: new Date(2021, 1, 14)
   }
 ];
 

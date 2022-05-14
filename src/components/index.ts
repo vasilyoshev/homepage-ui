@@ -7,3 +7,4 @@ export * from './ExpensesApp/ExpenseDate';
 export * from './ExpensesApp/ExpenseForm';
 export * from './ExpensesApp/NewExpense';
 export * from './ExpensesApp/ExpensesList';
+export * from './ExpensesApp/ExpensesFilter';

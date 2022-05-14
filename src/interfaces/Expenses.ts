@@ -28,3 +28,8 @@ export interface ExpenseCardProps {
   className: string;
   children?: any;
 }
+
+export interface ExpensesFilterProps {
+  selected: string;
+  onChangeFilter: (args: string) => void;
+}
