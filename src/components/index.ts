@@ -6,3 +6,4 @@ export * from './ExpensesApp/Card';
 export * from './ExpensesApp/ExpenseDate';
 export * from './ExpensesApp/ExpenseForm';
 export * from './ExpensesApp/NewExpense';
+export * from './ExpensesApp/ExpensesList';

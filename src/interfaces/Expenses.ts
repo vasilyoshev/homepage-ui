@@ -5,6 +5,10 @@ export interface ExpenseItemProps {
   date: Date;
 }
 
+export interface NewExpenseItemOnAddProps {
+  onAddExpense: (args: ExpenseItemProps) => void;
+}
+
 export interface NewExpenseItemSaveProps {
   onSaveExpenseData: (args: ExpenseItemProps) => void;
 }
@@ -16,11 +20,11 @@ export interface ExpenseFormItemProps {
   enteredDate: string;
 }
 
-export interface ExpensesListsProps {
-  items: ExpenseItemProps[];
+export interface ExpensesListProp {
+  items: Array<ExpenseItemProps>;
 }
 
 export interface ExpenseCardProps {
   className: string;
-  children: JSX.Element | JSX.Element[];
+  children?: any;
 }
