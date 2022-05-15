@@ -7,13 +7,12 @@ import './Expenses.css';
 export const Expenses: React.FC<ExpensesListProp> = ({ items }) => {
   const [filteredYear, setFilteredYear] = useState('2021');
 
-  const filterChangeHandler = (selectedYear: string) => {
+  const filterChangeHandler = (selectedYear: string) =>
     setFilteredYear(selectedYear);
-  };
 
-  const filteredExpenses = items.filter((expense) => {
-    return expense.date.getFullYear().toString() === filteredYear;
-  });
+  const filteredExpenses = items.filter(
+    (expense) => expense.date.getFullYear().toString() === filteredYear
+  );
 
   return (
     <div>

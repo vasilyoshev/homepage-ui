@@ -10,8 +10,8 @@ export const NewExpense: React.FC<NewExpenseItemOnAddProps> = ({
       ...enteredExpenseData,
       id: Math.random().toString()
     };
+
     onAddExpense(expenseData);
-    console.log(expenseData);
   };
   return (
     <div className='new-expense'>

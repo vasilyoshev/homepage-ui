@@ -36,6 +36,7 @@ export const ExpenseForm: React.FC<NewExpenseItemSaveProps> = ({
       amount: userInput.enteredAmount,
       date: new Date(userInput.enteredDate)
     };
+
     onSaveExpenseData(expenseData);
     setUserInput({
       enteredTitle: '',
