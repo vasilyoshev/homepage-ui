@@ -11,6 +11,7 @@ export interface NewExpenseItemOnAddProps {
 
 export interface NewExpenseItemSaveProps {
   onSaveExpenseData: (args: ExpenseItemProps) => void;
+  onCancel: () => void;
 }
 
 export interface ExpenseFormItemProps {
@@ -27,4 +28,9 @@ export interface ExpensesListProp {
 export interface ExpenseCardProps {
   className: string;
   children?: any;
+}
+
+export interface ExpensesFilterProps {
+  selected: string;
+  onChangeFilter: (args: string) => void;
 }
