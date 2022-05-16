@@ -3,7 +3,8 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 import './ExpenseForm.css';
 
 export const ExpenseForm: React.FC<NewExpenseItemSaveProps> = ({
-  onSaveExpenseData
+  onSaveExpenseData,
+  onCancel
 }) => {
   const [userInput, setUserInput] = useState<ExpenseFormItemProps>({
     enteredTitle: '',
@@ -78,6 +79,9 @@ export const ExpenseForm: React.FC<NewExpenseItemSaveProps> = ({
         </div>
       </div>
       <div className='new-expense__actions'>
+        <button type='button' onClick={onCancel}>
+          Cancel
+        </button>
         <button type='submit'>Add Expense</button>
       </div>
     </form>

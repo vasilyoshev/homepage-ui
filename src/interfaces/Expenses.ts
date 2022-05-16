@@ -11,6 +11,7 @@ export interface NewExpenseItemOnAddProps {
 
 export interface NewExpenseItemSaveProps {
   onSaveExpenseData: (args: ExpenseItemProps) => void;
+  onCancel: () => void;
 }
 
 export interface ExpenseFormItemProps {
