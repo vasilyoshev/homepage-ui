@@ -1,6 +1,6 @@
 import { ExpenseItemProps } from 'interfaces';
 import { ExpenseDate } from 'components';
-import { Card } from './Card';
+import { Card } from './UI/Card';
 import './ExpenseItem.css';
 
 export const ExpenseItem: React.FC<ExpenseItemProps> = ({

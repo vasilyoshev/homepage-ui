@@ -1,7 +1,7 @@
 import { ExpensesFilter, ExpensesList } from 'components';
 import { ExpensesListProp } from 'interfaces';
 import { useState } from 'react';
-import { Card } from './Card';
+import { Card } from './UI/Card';
 import './Expenses.css';
 
 export const Expenses: React.FC<ExpensesListProp> = ({ items }) => {
