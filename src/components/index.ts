@@ -9,3 +9,4 @@ export * from './ExpensesApp/NewExpenses/NewExpense';
 export * from './ExpensesApp/ExpensesList';
 export * from './ExpensesApp/ExpensesFilter';
 export * from './ExpensesApp/ExpensesContainer';
+export * from './DemoComponents/MUICard';
