@@ -26,4 +26,7 @@ yarn-error.log*
 hosting.*.cache
 firebase-debug.log
 
-/src/react-app-env.d.ts
+.next
+.vscode
+.github
+/.gitignore
