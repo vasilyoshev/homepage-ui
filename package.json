@@ -33,6 +33,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test:ci": "npm install && npm run lint && npm run build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
